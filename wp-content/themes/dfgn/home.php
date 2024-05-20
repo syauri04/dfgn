@@ -1132,22 +1132,18 @@
                 </div>
             </div>
 
-            <div class="container mb-30">
-                <div class="row border-head-cnt">
-                    <div class="col-xl-12 d-flex boxies">
-                        <div class="txt-left">
-                            Start or join a design factory!
-                        </div>
-                        
-                        <div class="txt-right">
-                            
-                            <a href="mailto:felipe.garate@aalto.fi">Contact us</a>
-                        </div>
+        <div id="contact-us-cta" class="container mb-30">
+            <div class="row border-head-cnt">
+                <div class="col-xl-12 d-flex boxies">
+                    <div class="txt-left">
+                        Start or join a design factory!
+                    </div>
+                    <div class="txt-right">
+                        <a href="mailto:felipe.garate@aalto.fi">Contact us</a>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
 <?php get_footer(); ?>
 
 <script>
