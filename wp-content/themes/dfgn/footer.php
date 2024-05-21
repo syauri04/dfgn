@@ -45,6 +45,12 @@
     ?>
 </style>
 
+<script>
+    <?php
+    RenderJS::PrintJS();
+    ?>
+</script>
+
 </body>
 </html>
 <?= MinifyHtml::endMinifyHTML() ?>
