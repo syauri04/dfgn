@@ -38,3 +38,12 @@
         <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/pub5.png'; ?>" alt="">
     </div>
 </div>
+
+
+<?php RenderStyle::Style(); ?>
+<style>
+    .hover-dw {
+        width: 100%;
+    }
+</style>
+<?php RenderStyle::EndStyle(); ?>

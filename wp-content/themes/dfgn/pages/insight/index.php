@@ -58,7 +58,7 @@
     <!-- Recent Publication -->
     <!-- Struktur Array Object bisa kaya gini -->
     <?php
-    $recentPublication = [
+    $data = [
         [
             "title" => "asdasdasdasd",
             "thumbnail_url" => "",
@@ -77,149 +77,28 @@
         ],
     ];
     ?>
-    <?php _include(get_template_directory() . "/pages/insight/components/recent-publications.php",[
-        "data" => $recentPublication
+    <?php _include(get_template_directory() . "/pages/insight/components/recent-publications.php", [
+        "data" => $data
     ]) ?>
 
-    <section class="section-area pt-120">
-        <div class="container">
-            <div class="row border-head-inm">
-                <div class="col-xl-12 js-center pb-120">
-                    <div class="col-xl-5 col-md-5 pl-0">
-                        <h1>Experiments and chronicles of DF's</h1>
+    <!-- Experiments & Chronicles -->
+    <?php
+    $data = [
+        [
+            "title" => "asdasdasdasd",
+            "thumbnail_url" => "",
+            "category_name" => "PDF",
+            "category_slug" => "",
+        ],
+    ];
+    ?>
+    <?php _include(get_template_directory() . "/pages/insight/components/experiments-chronicles.php", [
+        "data" => $data
+    ]) ?>
 
-                    </div>
-
-                    <div class="col-xl-7 col-md-7">
-                        <p>We give space to a bunch of miscellaneous contributions from bold and creative humans in our network, and we would like to share some resources with you.</p>
-                    </div>
-                </div>
-                <div class="col-xl-12 js-center">
-                    <div class="list-chronicles">
-                        <ul class="filter-cron">
-                            <li><a href="" class="active" data-filter="*">All<ss /a>
-                            </li>
-                            <li><a href="" class="" data-filter=".multimedia">Multimedia</a></li>
-                            <li><a href="" class="" data-filter=".blogpost">Blog post</a></li>
-                            <li><a href="" class="" data-filter=".sosmed">Social media</a></li>
-                            <li><a href="" class="" data-filter=".publication">Publications</a></li>
-                            <li><a href="" class="" data-filter=".other">Others</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row pt-27 cron-active">
-                <div class="col-xl-4 col-md-4 grid-cron multimedia">
-                    <div class="boxies-cronicles">
-                        <div class="img-cronicles">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/cronicle_1.jpg'; ?>" alt="">
-                        </div>
-                        <div class="info-cronicles">
-                            <p>Podcast</p>
-                            <h1>ADF: The Design Factory where it all started</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-4 grid-cron blogpost">
-                    <div class="boxies-cronicles">
-                        <div class="img-cronicles">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/cronicle_2.jpg'; ?>" alt="">
-                        </div>
-                        <div class="info-cronicles">
-                            <p>Blog Post</p>
-                            <h1>What is there for students in Design Thinking inside the Design Factory Global Network family?</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-4 grid-cron sosmed">
-                    <div class="boxies-cronicles">
-                        <div class="img-cronicles">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/cronicle_3.jpg'; ?>" alt="">
-                        </div>
-                        <div class="info-cronicles">
-                            <p>Linkedin Post</p>
-                            <h1>New Member! Design Factory Birmingham launched at Ansto</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-4 grid-cron publication">
-                    <div class="boxies-cronicles">
-                        <div class="img-cronicles">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/cronicle_4.jpg'; ?>" alt="">
-                        </div>
-                        <div class="info-cronicles">
-                            <p>Book</p>
-                            <h1>Passion Based Co-creation</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-4 grid-cron other">
-                    <div class="boxies-cronicles">
-                        <div class="img-cronicles">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/chornicles-5.png'; ?>" alt="">
-                        </div>
-                        <div class="info-cronicles">
-                            <p>Toolkits</p>
-                            <h1>Toolkits for cocreation</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-4 grid-cron sosmed">
-                    <div class="boxies-cronicles">
-                        <div class="img-cronicles">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/cronicle_6.jpg'; ?>" alt="">
-                        </div>
-                        <div class="info-cronicles">
-                            <p>Linkedin Post</p>
-                            <h1>Celebrating IDFW</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-4 grid-cron multimedia">
-                    <div class="boxies-cronicles">
-                        <div class="img-cronicles">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/chornicles-6.png'; ?>" alt="">
-                        </div>
-                        <div class="info-cronicles">
-                            <p>Podcast</p>
-                            <h1>Academic Innovation</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-4 grid-cron sosmed">
-                    <div class="boxies-cronicles">
-                        <div class="img-cronicles">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/cronicle_8.jpg'; ?>" alt="">
-                        </div>
-                        <div class="info-cronicles">
-                            <p>Linkedin Post</p>
-                            <h1>THE (PEACING) EMOTIONAL EFFECT OF BELONGING TO A COMMUNITY OF PRACTICE</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 </main>
 
 <?php RenderJS::start(); ?>
-<script>
-    $(".filter-cron a").on("click", function(event) {
-        // Hapus class active dari semua elemen di dalam ul
-        $('.filter-cron a.active').removeClass('active');
-
-        // Tambahkan class active ke elemen yang diklik
-        $(this).addClass('active');
-        event.preventDefault();
-    });
-</script>
 <script>
     $(document).ready(function() {
         $('#select-primer').awselect({
@@ -279,5 +158,4 @@
 
     });
 </script>
-
 <?php RenderJS::end(); ?>
