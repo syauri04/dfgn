@@ -22,5 +22,5 @@ class RenderStyle
         }
     }
 }
-
+include('render-js.php');
 include('minify-html.php');
