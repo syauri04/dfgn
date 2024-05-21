@@ -104,10 +104,13 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- <script src="js/vendor/jquery-1.12.4.min.js"></script> -->
     <?php wp_footer(); ?>
-    
-    
-    
-   
-</body>
+
+    <style>
+        <?php
+        Render::PrintStyles(); 
+        ?>
+    </style>
+
+    </body>
 
 </html>

@@ -1,3 +1,7 @@
+<?php
+include 'library/Render/index.php';
+?>
+
 <?php session_start(); ?>
 <!doctype html>
 <html lang="en">
