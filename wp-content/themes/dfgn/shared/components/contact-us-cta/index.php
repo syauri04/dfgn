@@ -1,8 +1,16 @@
+<?php
+if(!isset($param)){
+    $param = [
+        "title" => " Start or join a design factory!"
+    ];
+}
+?>
+
 <div id="contact-us-cta" class="container mb-30">
     <div class="row border-head-cnt">
         <div class="col-xl-12 d-flex boxies">
             <div class="txt-left">
-                Start or join a design factory!
+                <?= $param["title"] ?>
             </div>
             <div class="txt-right">
                 <a class="button" href="mailto:felipe.garate@aalto.fi">Contact us</a>

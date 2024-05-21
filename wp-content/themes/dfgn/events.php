@@ -228,25 +228,9 @@
                 </div>
             </div>
 
-            <div class="container pb-27">
-                <div class="row border-head-cnt">
-                    <div class="col-xl-12 d-flex boxies">
-                        <div class="txt-left">
-                            Get support for your institution
-                        </div>
-                        
-                        <div class="txt-right">
-                            
-                            <a href="mailto:felipe.garate@aalto.fi">Contact us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-      
-       
-        
-    </main>
+        <?php _include('shared/components/contact-us-cta/index.php', [
+            "title" => "Get support for your institution"
+        ]); ?>
 <?php get_footer(); ?>
 
     <script>
