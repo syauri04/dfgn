@@ -41,7 +41,7 @@
                     <div class="col-xl-8 col-lg-8 text-center text-lg-left">
                         
                         <div class="copyright-text">
-                            <p>  Copyright © 2022 Design Factory Global Network. All rights reserved. </p>
+                            <p>  Copyright © 2022 Design Factory Global Network. <br>All rights reserved. </p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 d-none d-lg-block text-right">

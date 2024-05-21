@@ -1,3 +1,7 @@
+.footer-section .container .copyright-text br {
+	display: none;
+}
+
 /* XL Device :1200px. */
 @media (min-width: 1200px) and (max-width: 1500px) {
 	.wrapper-box.wrapper-padding {
@@ -161,6 +165,24 @@
 		text-align: center;
 		font-size: 24px;
 		margin-bottom: 25px;
+	}
+
+	.footer-section .container {
+		padding: 20px;
+		text-align: center;
+	}
+	.footer-section .container .row {
+		gap: 20px;
+	}
+	.footer-section .container .footer-logo img {
+		height: 64px;
+		margin-bottom: 39px;
+	}
+	.footer-section .container .copyright-text p {
+		color: #d9d9d9;
+	}
+	.footer-section .container .copyright-text br {
+		display: block;
 	}
 
 	/* header,
