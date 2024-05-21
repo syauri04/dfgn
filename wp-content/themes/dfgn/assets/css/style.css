@@ -43,18 +43,50 @@ html, body{
 	background-color: #0C1618;
 	overflow-x: hidden;
 }
-.section-title{
+
+html.modal-open {
+    overflow: hidden;
+}
+
+.section-title {
 	overflow: hidden;
 }
 
-.shade{
-	background: linear-gradient(90deg, rgba(12, 22, 24, 0.72) 25.38%, rgba(12, 22, 24, 0.00) 91.95%);
+.shade {
+	background: linear-gradient(90deg, rgba(12, 22, 24, 0.72) 25.38%, rgba(12, 22, 24, 0) 91.95%);
 	position: absolute;
 	z-index: 3;
 	top: 0;
 }
-.mobile_ver{
-	
+
+.scroll-container::-webkit-scrollbar {
+	background-color: transparent;
+	width: 8px;
+	height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+.scroll-container::-webkit-scrollbar-track:hover {
+	background-color: transparent;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+	background-color: #a0a0a596;
+	border-radius: 16px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+	background-color: #a0a0a596;
+}
+
+.scroll-container::-webkit-scrollbar-button {
+	display: none;
+}
+
+.mobile_ver {
 	margin: 0;
     padding: 0;
 	background-image: url(../img/assets/backgroundmobile.png);

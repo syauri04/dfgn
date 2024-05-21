@@ -146,37 +146,6 @@
 
 <?php RenderStyle::Style() ?>
 <style>
-    /* Bagusnya taro di main css */
-    .scroll-container::-webkit-scrollbar {
-        background-color: transparent;
-        width: 8px;
-        height:8px
-    }
-
-    .scroll-container::-webkit-scrollbar-track {
-        background-color: transparent
-    }
-
-    .scroll-container::-webkit-scrollbar-track:hover {
-        background-color: transparent
-    }
-
-    .scroll-container::-webkit-scrollbar-thumb {
-        background-color: #a0a0a596;
-        border-radius: 16px;
-        /* border: 2px solid #fff */
-    }
-
-    .scroll-container::-webkit-scrollbar-thumb:hover {
-        background-color: #a0a0a596;
-        /* border: 2px solid #f4f4f4 */
-    }
-
-    .scroll-container::-webkit-scrollbar-button {
-        display: none
-    }
-    /*  */
-
     #experiments-chronicles .row.border-head-inm {
         margin: 20px;
     }
