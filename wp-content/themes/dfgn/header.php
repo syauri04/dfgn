@@ -3,6 +3,8 @@ include 'library/Render/index.php';
 ?>
 
 <?php session_start(); ?>
+
+<?= MinifyHtml::startMinifyHTML() ?>
 <!doctype html>
 <html lang="en">
 

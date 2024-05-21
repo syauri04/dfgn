@@ -41,9 +41,10 @@
 
 <style>
     <?php
-    Render::PrintStyles();
+    RenderStyle::PrintStyles();
     ?>
 </style>
 
 </body>
 </html>
+<?= MinifyHtml::endMinifyHTML() ?>

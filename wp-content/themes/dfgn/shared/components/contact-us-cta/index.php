@@ -11,7 +11,7 @@
     </div>
 </div>
 
-<?php Render::Style(); ?>
+<?php RenderStyle::Style(); ?>
 <style>
 @media (max-width: 991px) {
     #contact-us-cta .row.border-head-cnt {
@@ -34,4 +34,4 @@
     }
 }
 </style>
-<?php Render::EndStyle(); ?>
+<?php RenderStyle::EndStyle(); ?>

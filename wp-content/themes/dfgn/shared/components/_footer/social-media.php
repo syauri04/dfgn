@@ -8,7 +8,7 @@
     </ul>
 </div>
 
-<?php Render::Style(); ?>
+<?php RenderStyle::Style(); ?>
 <style>
     .footer-sosmed {
         display: flex;
@@ -31,4 +31,4 @@
     }
     }
 </style>
-<?php Render::EndStyle(); ?>
+<?php RenderStyle::EndStyle(); ?>

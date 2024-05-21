@@ -1,16 +1,20 @@
 <?php
-class Render {
+class RenderStyle
+{
     private static $styles = '';
 
-    public static function Style() {
+    public static function Style()
+    {
         ob_start();
     }
 
-    public static function EndStyle() {
+    public static function EndStyle()
+    {
         self::$styles .= ob_get_clean();
     }
 
-    public static function PrintStyles() {
+    public static function PrintStyles()
+    {
         if (!empty(self::$styles)) {
             // Remove <style> tags from the output
             $stylesWithoutTags = str_replace(['<style>', '</style>'], '', self::$styles);
@@ -18,4 +22,5 @@ class Render {
         }
     }
 }
-?>
+
+include('minify-html.php');
