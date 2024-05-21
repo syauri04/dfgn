@@ -274,6 +274,7 @@
 	}
 	.footer-section .container .copyright-text p {
 		color: #d9d9d9;
+		font-size: 12px;
 	}
 	.footer-section .container .copyright-text br {
 		display: block;
