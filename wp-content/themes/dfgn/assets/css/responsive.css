@@ -134,6 +134,20 @@
 
 /* Extra small Device. */
 @media (max-width: 767px) {
+	#factory h1 {
+		font-size: 30px;
+		text-align: center;
+	}
+	#factory
+	.col-xl-12.col-12.mb-90.d-flex {
+		margin-bottom: 42px;
+	}
+	#factory .marquee,
+	#factory .marquee2,
+	#factory .marquee3 {
+		padding-bottom: 45px;
+	}
+
 	#contact-us-cta .row.border-head-cnt {
 		display: flex;
 		margin: 10px;

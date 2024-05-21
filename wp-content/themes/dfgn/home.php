@@ -1076,7 +1076,7 @@
             </div>
         </div>
     </section>
-    <section class="section-area pt-120">
+    <section id="factory" class="section-area pt-120">
         <div class="container">
             <div class="row r-df">
                 <div class="col-xl-12 col-12 mb-90 d-flex">
@@ -1097,9 +1097,6 @@
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s1_df_5.png'; ?>" alt="Logo 2">
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s1_df_6.png'; ?>" alt="Logo 3">
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s1_df_7.png'; ?>" alt="Logo 3">
-
-
-
                 <!-- Tambahkan gambar logo yang lain di sini -->
             </div>
         </div>
