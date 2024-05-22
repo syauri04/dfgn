@@ -1,19 +1,24 @@
 <?php
 if(!isset($param)){
-    $param = [
-        "title" => " Start or join a design factory!"
+    $defaultParam = [
+        "title" => "Start or join a design factory!",
+        "button_text" => "Contact us",
+        "link" => "mailto:felipe.garate@aalto.fi"
     ];
+    $param = array_merge($defaultParam, $param);
 }
 ?>
 
-<div id="contact-us-cta" class="container mb-30">
-    <div class="row border-head-cnt">
-        <div class="col-xl-12 d-flex boxies">
-            <div class="txt-left">
-                <?= $param["title"] ?>
-            </div>
-            <div class="txt-right">
-                <a class="button" href="mailto:felipe.garate@aalto.fi">Contact us</a>
+<div class="container">
+    <div id="contact-us-cta" class="container mb-30">
+        <div class="row border-head-cnt">
+            <div class="col-xl-12 d-flex boxies">
+                <div class="txt-left">
+                    <?= $param["title"] ?>
+                </div>
+                <div class="txt-right">
+                    <a class="button" href="<?= $param["link"] ?>"> <?= $param["button_text"] ?></a>
+                </div>
             </div>
         </div>
     </div>
@@ -24,7 +29,6 @@ if(!isset($param)){
 @media (max-width: 991px) {
     #contact-us-cta .row.border-head-cnt {
         display: flex;
-        margin: 10px;
         border-radius: 41px;
         justify-content: center;
     }
