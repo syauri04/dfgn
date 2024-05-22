@@ -28,9 +28,9 @@
 
 
                             <!-- SVG -->
-                            <svg viewBox="0 0 1431 702" preserveAspectRatio="xMidYMid meet">
+                            <svg id="shape" viewBox="0 0 1431 822" preserveAspectRatio="xMidYMid meet">
                                 <!-- Define the mask -->
-                                <mask id="mask" viewBox="0 0 1431 702">
+                                <mask id="mask" viewBox="0 0 1431 822">
                                     <!-- Path untuk pola yang diinginkan -->
                                     <path id="inspat1" d="M731.184 113.904C727.862 51.5778 777.416 0 839.014 0C877.98 0 912.082 20.6635 931.055 51.6027C937.027 61.331 947.391 67.489 958.799 67.489H962.196C973.605 67.489 983.981 61.331 989.94 51.6027C1008.91 20.651 1043.02 0 1081.98 0C1143.58 0 1193.15 51.5778 1189.81 113.904C1186.78 170.831 1138.28 216.338 1081.27 215.965C1042.64 215.716 1008.88 195.165 990.002 164.462C984.006 154.696 973.642 148.476 962.183 148.476H958.812C947.353 148.476 936.99 154.696 930.993 164.462C912.119 195.165 878.341 215.716 839.723 215.965C782.716 216.326 734.22 170.831 731.184 113.904ZM1323.01 0C1263.36 0 1215.02 48.3433 1215.02 107.982C1215.02 182.525 1154.58 242.96 1080.03 242.96H839.026C779.382 242.96 731.035 291.304 731.035 350.943V377.939C731.035 437.578 682.688 485.921 623.043 485.921H594.067C534.423 485.921 486.076 534.264 486.076 593.903C486.076 653.543 534.423 701.886 594.067 701.886H1323.01C1382.65 701.886 1431 653.543 1431 593.903V107.982C1431 48.3433 1382.65 0 1323.01 0Z" fill="#fff" />
                                 </mask>
@@ -94,11 +94,13 @@
     } */
 
     .background-animate-image {
+        margin-right: -90px;
         display: flex;
         justify-content: end;
         align-items: center;
         position: relative;
     }
+
 
     .background-animate-image img {
         width: 100%;
@@ -118,8 +120,8 @@
     #shape-1 {
         position: absolute;
         top: 0px;
-        width: 180%;
-        height: 31%;
+        width: 175%;
+        height: 26.1%;
     }
 
     #shape-2 {
@@ -129,6 +131,58 @@
         width: 180%;
         height: 31%;
         opacity: 1;
+    }
+
+    @media (max-width: 1200px) {
+        .slide-content {
+            position: unset;
+            width: 100%;
+            top: 0
+        }
+
+        .background-animate-image {
+            margin-top: -300px;
+            /* margin-left: -550px; */
+            width: 1300px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .slide-content {
+            position: unset;
+            width: 100%;
+            top: 0
+        }
+
+        .background-animate-image {
+            margin: 0 auto;
+            /* margin-left: -550px; */
+            width: 100%;
+        }
+
+        #shape image {
+            mask: unset;
+
+        }
+
+        #shape-1 {
+            display: none;
+        }
+
+        #shape-2 {
+            position: absolute;
+            top: 0;
+            width: 305%;
+            height: 106.1%;
+        }
+
+        .background-animate-image {
+            margin-top: 60px;
+            overflow: hidden;
+            border-radius: 41px;
+        }
+
+
     }
 </style>
 <?php RenderStyle::EndStyle() ?>
@@ -146,7 +200,7 @@
 
     gsap.set("#s-blue", {
         // transformOrigin: "center center",
-        translate: "154% 0px",
+        translate: "148.5% 0px",
         opacity: 0.7,
         visibility: "visible",
     });
