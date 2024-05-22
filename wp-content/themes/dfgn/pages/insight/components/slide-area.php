@@ -223,7 +223,7 @@
             trigger: ".slider-scroll",
             scrub: 1,
             pin: true,
-            start: "top top",
+            start: "center center",
             end: "+=50%",
         },
     });
@@ -238,7 +238,7 @@
     gsap.to("#patlonj-inisight", {
         scrollTrigger: {
             trigger: ".slider-scroll",
-            start: "top top",
+            start: "center center",
             end: "+=800",
             scrub: 2,
         },
