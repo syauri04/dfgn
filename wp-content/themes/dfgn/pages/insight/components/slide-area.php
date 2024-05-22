@@ -222,9 +222,9 @@
         scrollTrigger: {
             trigger: ".slider-scroll",
             scrub: 1,
-            pin: true,
+            // pin: true,
             start: "center center",
-            end: "+=50%",
+            end: "-=1%",
         },
     });
 
@@ -232,7 +232,7 @@
         x: "-100%",
         opacity: 0,
         ease: "power1.out",
-        duration: 5,
+        duration: 1,
     });
 
     gsap.to("#patlonj-inisight", {
