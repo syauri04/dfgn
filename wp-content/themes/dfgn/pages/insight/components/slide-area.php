@@ -204,7 +204,6 @@
 <?php RenderJS::start(); ?>
 <script>
     gsap.registerPlugin(ScrollTrigger, MorphSVGPlugin);
-
     gsap.set("#inspat1", {
         transformOrigin: "center center",
         translate: "-100px 0px",
@@ -225,22 +224,22 @@
             scrub: 1,
             pin: true,
             start: "top top",
-            end: "+=100%",
+            end: "+=50%",
         },
     });
 
     timeline.from("#s-blue", {
         x: "-100%",
-        opacity: 0, // Dimulai dengan keadaan tidak terlihat
+        opacity: 0,
         ease: "power1.out",
-        duration: 0.4,
+        duration: 5,
     });
 
     gsap.to("#patlonj-inisight", {
         scrollTrigger: {
             trigger: ".slider-scroll",
             start: "top top",
-            end: "+=50",
+            end: "+=800",
             scrub: 2,
         },
         translate: "70% 0",

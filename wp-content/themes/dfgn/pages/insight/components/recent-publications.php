@@ -1,4 +1,4 @@
-<section class="service-area">
+<section class="service-area" style="margin-bottom: 90px;">
     <div class="container">
         <div class="row">
             <div class="col-xl-12 mb-80 d-inline-flex">
@@ -9,7 +9,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid-cus sec-publication">
+    <div class="container sec-publication">
         <div class="slider-publication">
 
             <?php foreach ($param["data"] as $data) : ?>
@@ -184,3 +184,35 @@
 
         </div>
     </div>
+
+</section>
+
+
+<?php RenderStyle::Style() ?>
+.slick-list.draggable {
+overflow: visible;
+}
+<?php RenderStyle::EndStyle() ?>
+
+<script>
+    $(document).ready(function() {
+        $('.slider-publication').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            centerMode: false,
+            variableWidth: true,
+            prevArrow: '<a class="slick-prev"><img src="' + theme_directory + '/assets/img/assets/slide-left.png" /></a>',
+            nextArrow: '<a class="slick-next"><img src="' + theme_directory + '/assets/img/assets/slide-right.png" /></a>',
+            responsive: [{
+                breakpoint: 768, // Adjust breakpoint as needed
+                settings: {
+                    variableWidth: false, // Change to false for smaller screens
+                    slidesToShow: 1, // Adjust slides to show on smaller screens
+                }
+            }]
+        });
+    });
+</script>
