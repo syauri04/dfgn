@@ -163,7 +163,7 @@
         margin-top: 40px;
     }
 
-    .list-chronicles {
+    #experiments-chronicles .list-chronicles {
         display: flex;
         justify-content: center;
         overflow-x: auto;
@@ -171,12 +171,20 @@
         box-sizing: border-box;
     }
 
-    .list-chronicles {
+    #experiments-chronicles .list-chronicles {
         white-space: nowrap;
     }
 
-    .list-chronicles a {
+    #experiments-chronicles .list-chronicles a {
         cursor: pointer;
+    }
+
+    #experiments-chronicles .cron-active {
+        margin:20px
+    }
+
+    #experiments-chronicles .cron-active .boxies-cronicles {
+        border-radius: 41px;
     }
 
     @media (max-width: 991px) {
