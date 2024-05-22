@@ -3,7 +3,7 @@
         <div class="wrapper">
             <div class="container" style="position: relative;">
                 <div class="slide-content">
-                    <div style="max-width:500px;">
+                    <div class="text-wrapper">
                         <h1 class="title">
                             Want to know more <br>
                             about the network? <br>
@@ -48,6 +48,10 @@
 
 <?php RenderStyle::Style() ?>
 <style>
+    .text-wrapper {
+        max-width: 500px;
+    }
+
     .slide-content {
         position: absolute;
         width: 100%;
@@ -148,6 +152,9 @@
     }
 
     @media (max-width: 900px) {
+        .text-wrapper {
+            max-width: unset;
+        }
 
         .head-animation h1 {
             font-size: 36px;
