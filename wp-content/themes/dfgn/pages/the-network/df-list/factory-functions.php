@@ -156,12 +156,12 @@ function createFactoryModal()
 
 <?php RenderStyle::Style() ?>
 <style>
-    #factoryModal {
-        padding: 40px;
-    }
-
     #factoryModal .modal-dialog {
         width: 100%;
+        margin: 0;
+        padding: 16px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 
     @media (max-width: 991px) {

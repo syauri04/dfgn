@@ -21,6 +21,11 @@
         margin-bottom: 40px;
     }
 
+    #the-network .header-content .section-title h1 {
+        font-size: 35px;
+        line-height: normal;
+    }
+
     #the-network .header-content>* {
         width: 50%;
     }

@@ -96,6 +96,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         $('#factoryModal').on('show.bs.modal', function(event) {
+            $('html').addClass('modal-open');
             var button = $(event.relatedTarget); 
             var factory = button.data('factory'); 
 
@@ -108,7 +109,6 @@
             modal.find('#modalFocus').text(factory.focus);
             modal.find('#modalDescription').text(factory.description);
             
-            $('html').addClass('modal-open');
         });
 
         $('#factoryModal').on('hidden.bs.modal', function() {
