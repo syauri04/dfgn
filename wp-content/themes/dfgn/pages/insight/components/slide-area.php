@@ -148,6 +148,13 @@
     }
 
     @media (max-width: 900px) {
+
+        .head-animation h1 {
+            font-size: 36px;
+            line-height: normal;
+            margin-bottom: 30px;
+        }
+
         .slide-content {
             position: unset;
             width: 100%;
