@@ -87,7 +87,10 @@
         bottom: -100%;
         transition: bottom 0.5s ease;
         padding: 0 57px 57px 57px;
+        width: 100%;
     }
+
+
 
     .card-publication:hover::before {
         bottom: 0;
@@ -128,6 +131,19 @@
 
         .card-publication .details {
             padding: 0 15px 15px 15px;
+        }
+
+        .card-publication .icwd a {
+            width: 40px;
+            height: 40px;
+            padding:10px;
+        }
+        .card-publication .icwd img {
+            width: 100%;
+        }
+
+        .card-publication * {
+            font-size: 13px !important;
         }
     }
 </style>

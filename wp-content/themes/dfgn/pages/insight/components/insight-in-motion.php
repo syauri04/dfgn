@@ -16,57 +16,99 @@
         </div>
     </div>
 
-    <div class="row grid-v-motion pt-40">
-        <div class="col-12">
-            <div class="bg-m-video" style="background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 37.06%, rgba(0, 0, 0, 0.80) 100%), url(<?php echo get_template_directory_uri() . '/assets/img/assets/vimeo/thumb3.jpg'; ?>) lightgray 50% / cover no-repeat;">
-                <div class="vm-info">
-                    <div class="vm-title">
-                        <h1>WDFD’23</h1>
-                        <span>Research Innovation across DFGN. A virtual roundtable</span>
-                    </div>
-                    <div class="w-vimeo">
-                        <a class="wv" href="#" data-toggle="modal" data-target="#vim-1">Watch in Vimeo</a>
-                        <!-- <div class="rounded-play">
-                                        <a href="#" data-toggle="modal" data-target="#vim-1"><img src="" alt=""></a> 
-                                    </div> -->
-                        <a href="#" data-toggle="modal" data-target="#vim-1">
-                            <div class="rounded-play">
-                                <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/play.png'; ?>" alt="">
-                            </div>
-                        </a>
-
-                    </div>
+    <div class="video-content">
+        <div class="main-video">
+            <div class="info">
+                <div class="vm-title">
+                    <h2>WDFD’23</h2>
+                    <p>Research Innovation across DFGN. A virtual roundtable</p>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!-- POP UP VIDEO -->
-    <div id="vim-1" class="modal fade" role="dialog">
-        <div class="modal-dialog vimeo-p">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="containter body-vpop">
-
-                        <div class="row">
-                            <div class="v-close">
-                                <a href="" class="close" data-dismiss="modal"><img src="<?php echo get_template_directory_uri() . '/assets/img/assets/close-popup.png'; ?>" alt=""></a>
-
-                            </div>
-                            <div class="col-12">
-                                <iframe src="https://player.vimeo.com/video/840052304" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
-                            </div>
+                <div class="w-vimeo">
+                    <a class="wv video-btn" data-video-url="https://player.vimeo.com/video/840052304" >Watch in Vimeo</a>
+                    <a class="video-btn" data-video-url="https://player.vimeo.com/video/840052304" >
+                        <div class="rounded-play">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/play.png'; ?>" alt="">
                         </div>
-                    </div>
-
+                    </a>
                 </div>
-                <!-- <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div> -->
             </div>
-
         </div>
+        <?php RenderStyle::Style() ?>
+        <style>
+            .video-content {
+                margin-top: 50px;
+            }
+
+            #insight-in-motion .main-video {
+                background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 37.06%, rgba(0, 0, 0, 0.80) 100%), url(<?php echo get_template_directory_uri() . '/assets/img/assets/vimeo/thumb3.jpg'; ?>) lightgray 50% / cover no-repeat;
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                height: auto;
+                border-radius: 108px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            #insight-in-motion .main-video .info {
+                position: absolute;
+                bottom: 0;
+                display: flex;
+                gap: 33px;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 6%;
+
+            }
+
+            #insight-in-motion .main-video .info h2 {
+                color: #fff;
+                font-size: 46px;
+                font-style: normal;
+                font-weight: 700;
+            }
+
+            #insight-in-motion .main-video .info p {
+                color: #fff;
+                font-size: 16px;
+                font-style: normal;
+            }
+
+
+
+            @media (max-width: 991px) {
+                #insight-in-motion .main-video {
+                    aspect-ratio: 16 / 12;
+                    border-radius: 41px;
+                    padding: 0px 0 0px 0;
+                }
+
+                #insight-in-motion .main-video .info h2 {
+                    color: #fff;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                #insight-in-motion .main-video .info p {
+                    color: #fff;
+                    font-size: 13px;
+                    font-style: normal;
+                }
+
+                #insight-in-motion .main-video .info {
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 10px;
+
+                }
+            }
+        </style>
+        <?php RenderStyle::EndStyle() ?>
+
     </div>
+
+
 </div>
 <div class="container-fluid-cus sec-v-inmotion" id="morevideo">
     <div class="slider-v-inm">
@@ -301,6 +343,91 @@
 
 </section>
 
+
+<!-- Popup untuk modal -->
+<!-- buat jadi komponen di panggil di page yg membutuhkan aja -->
+
+<!-- 
+    Pemanggilan cukup tambahkan
+    class="video-btn" data-video-url="#" 
+ -->
+
+<div id="videoModal" class="modal fade" role="dialog">
+    <div class="modal-dialog vimeo-p">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="containter body-vpop">
+                    <div class="row">
+                        <div class="v-close">
+                            <a>
+                                <img class="closeModal" src="<?php echo get_template_directory_uri() . '/assets/img/assets/close-popup.png'; ?>" alt="">
+                            </a>
+                        </div>
+                        <div class="col-12">
+                            <iframe id="videoIframe" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-backdrop"></div>
+<!-- style & script bisa di wrap pakai RenderJS & RenderStyle -->
+<script>
+    function openModal(element) {
+        var videoUrl = element.getAttribute('data-video-url');
+        document.getElementById('videoIframe').src = videoUrl;
+        document.getElementById('videoModal').classList.add('show');
+        document.body.classList.add('modal-open');
+        document.querySelector('.modal-backdrop').classList.add('show');
+    }
+
+    function closeModal() {
+        document.getElementById('videoIframe').src = '';
+        document.getElementById('videoModal').classList.remove('show');
+        document.body.classList.remove('modal-open');
+        document.querySelector('.modal-backdrop').classList.remove('show');
+    }
+    window.onclick = function(event) {
+        var modal = document.getElementById('videoModal');
+        console.log(event.target)
+        console.log(event.target.classList.contains('closeModal'));
+        if (event.target == modal || event.target.classList.contains('closeModal')) {
+            closeModal();
+        }
+    }
+    document.querySelectorAll('.video-btn').forEach(function(button) {
+        button.onclick = function(event) {
+            event.preventDefault();
+            openModal(this);
+        };
+    });
+</script>
+<style>
+    #videoModal {
+        display: none;
+    }
+
+    #videoModal .modal-dialog {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .modal-backdrop {
+        display: none;
+    }
+
+    #videoModal.show,
+    .modal-backdrop.show {
+        display: flex;
+        align-items: center;
+    }
+</style>
+<!--  -->
+
+
+
 <?php RenderStyle::Style() ?>
 <style>
     #insight-in-motion .header-content {
@@ -310,6 +437,10 @@
         flex-wrap: nowrap;
         flex-direction: row;
         gap: 70px;
+    }
+
+    #insight-in-motion .header-content .text p {
+        font-size: 46px;
     }
 
     #insight-in-motion .header-content .summary {
