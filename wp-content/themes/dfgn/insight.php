@@ -1,7 +1,7 @@
-<?php 
-    /***
-     * Template Name: Insight Template
-     */
+<?php
+/***
+ * Template Name: Insight Template
+ */
 ?>
 
 <?php get_header(); ?>

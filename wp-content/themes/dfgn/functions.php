@@ -203,6 +203,13 @@ function my_acf_init() {
 }
 add_action('acf/init', 'my_acf_init');
 
-
+// custom include
+function _include($path, $param = null, $type = null){
+   if($type == "once"){
+      include_once($path);
+   } else {
+      include($path);
+   }
+}
 
 ?>
