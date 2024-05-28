@@ -144,8 +144,8 @@
             }
 
             .custom-box {
-                border-radius: 30px;
-                padding: 10%;
+                border-radius: 108px;
+                padding: 20%;
                 margin-bottom: 30px;
                 box-sizing: border-box;
                 aspect-ratio: 1/1;
@@ -171,6 +171,9 @@
                 .custom-box {
                     width: 100%;
                     text-align: center;
+                    border-radius: 41px;
+                    padding: 40px;
+                    padding-top: 80px;
                 }
             }
         </style>
