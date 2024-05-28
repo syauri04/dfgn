@@ -11,7 +11,7 @@
         <!-- slider-area -->
         <section class="slider-scroll">
             <div class="container">
-                <div class="main-slide-scroll insight pt-50">
+                <div class="main-slide-scroll insight ">
                     <div class="text-ss">
                         <div class="main-text">
                             <p>
@@ -208,12 +208,12 @@
                 
                 <div class="row in-motion">
                     
-                    <div class="col-xl-4 col-lg-4 col-md-5 mb-30 js-center">
+                    <div class="col-xl-4 col-lg-4 col-md-5 mb-25 js-center">
                         <div class="text" >
                            <p>Insights in motion</p>
                         </div>
                     </div>
-                    <div class="col-xl-8 col-lg-8 col-md-5 mb-30">
+                    <div class="col-xl-8 col-lg-8 col-md-5 mb-25">
                         <div class="summary">
                             <p>
                                <?php the_field('summary'); ?>
@@ -545,9 +545,9 @@
         gsap.registerPlugin(ScrollTrigger, MorphSVGPlugin);
         var endShape = document.getElementById("pat2");
         gsap.set("#inspat1", {
-            // scale:0.9,
+            scale:0.88,
             transformOrigin: "center center",
-            translate: "-20px 0px",
+            translate: "-125px -30px",
             opacity: 1,
             visibility: "visible",
         });
@@ -557,32 +557,30 @@
             scrub: 1,
             pin: true,
             // markers: true,
-            start: "top top",
-            end: "+=100%",
+            start: "-60 top",
+            end: "+=50%",
             // toggleActions: "play pause play reset",
             },
         });
         tl.to("#s-blue", {
-            translate: "484px 0px",
+            translate: "34% 0px",
             ease: "power1.out",
-            opacity: 1,
-            duration:1,
+            duration:2,
             
         });
         gsap.to("#patlonj-inisight", {
             scrollTrigger: {
                 trigger: ".slider-scroll",
-                start: "top top",
+                start: "-60 top",
                 end: "+=50",
-                scrub: 2,
+                scrub: 1,
                 // markers:true,
                 
             },
-            translate: "100% 0",
+            translate: "80% 0",
             // x: "-100%", // Geser ke kiri sejauh 100%
-            duration:5,
-            ease: "power1.out",
-            opacity: 1
+            duration:2,
+            ease: "power1.out"
         
         });
     </script>

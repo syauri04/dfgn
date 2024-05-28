@@ -128,10 +128,11 @@
 
   $('.slider-publication').slick({
     dots: false,
+    centerMode: true,
+    centerPadding: '24px',
     infinite: true,
     speed: 300,
     slidesToShow: 1,
-    centerMode: false,
     variableWidth: true,
     prevArrow: '<a class="slick-prev"><img src="' + theme_directory + '/assets/img/assets/slide-right.png" /></a>',
       nextArrow:
@@ -140,12 +141,14 @@
 
   $('.slider-v-inm').slick({
     dots: false,
+    centerMode: true,
+    centerPadding: '200px',
     infinite: true,
     speed: 300,
-    slidesToShow: 1,
-    centerMode: false,
+    slidesToShow: 4,
     variableWidth: true,
     prevArrow: false,
+    prevArrow: '<a class="slick-prev"><img src="' + theme_directory + '/assets/img/assets/slide-right.png" /></a>',
       nextArrow:
         '<a class="slick-next"><img src="' + theme_directory + '/assets/img/assets/slide-right.png" /></a>',
   });
