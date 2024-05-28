@@ -119,8 +119,17 @@
                                                     <div class="mon">
                                                         <img src="<?php echo get_template_directory_uri().'/assets/img/assets/Isolation_Mode.png'; ?>" alt="">
                                                         <span>Typically held in  <?php echo $month_st; ?>-<?php echo $month_end; ?></span>
+                                                    
                                                     </div>
-                                                    <div class="wbs">
+                                                    <div class="loc">
+                                                        <img src="<?php echo get_template_directory_uri().'/assets/img/assets/Isolation_loc_white.png'; ?>" alt="">
+                                                        <span>zoom</span>
+                                                    
+                                                    </div>
+                                                </div>
+                                                <div class="eventlinks">
+                                                   
+                                                    <div class="wbs innel_left">
                                                         <?php 
                                                             if($item['link'] != ''){
                                                         ?>
@@ -130,6 +139,13 @@
                                                         ?>
                                                         
                                                     </div>
+                                                    <div class="wbs">
+                                                        
+                                                        <a href="<?php echo $item['link']; ?>">Add to calendar</a>
+                                                        
+                                                        
+                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>

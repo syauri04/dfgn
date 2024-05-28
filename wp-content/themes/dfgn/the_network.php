@@ -233,6 +233,9 @@
                                                 </div>
                                                 <div class="col-xl-7 col-md-7">
                                                     <div class="border-black">
+                                                        <div class="df-institue">
+                                                            <p><?php the_field('institution') ?></p>
+                                                        </div>
                                                         <div class="list-smd">
                                                             <a href="#"><img src="<?php echo get_template_directory_uri().'/assets/img/assets/df/icw-fb.png'; ?>" alt=""></a>
                                                             <a href="#"><img src="<?php echo get_template_directory_uri().'/assets/img/assets/df/icw-ig.png'; ?>" alt=""></a>
