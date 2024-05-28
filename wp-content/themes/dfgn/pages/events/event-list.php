@@ -1,6 +1,6 @@
 <section class="section-area">
     <div class="container c-event">
-        <div class="row border-head-df">
+        <div class="row border-head-df xasdqw">
             <div class="col-xl-12 d-flex boxies even">
                 <div class="tab-left">
                     <h1>
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="row pt-27 grid-events">
-        <?php include 'event-list-card.php' ?>
+            <?php include 'event-list-card.php' ?>
         </div>
 
         <div class="row pb-27" style=" margin: 0; ">
@@ -32,8 +32,46 @@
                 </div>
             </div>
         </div>
+        <?php RenderStyle::Style() ?>
+        <style>
+            .bread-ev {
+                position: relative;
+                border-radius: 108px;
+                width: 100%;
+                height: 702px;
+            }
 
-        <div class="row border-head-df train">
+            @media screen and (max-width: 768px) {
+
+                .bread-ev {
+                    position: relative;
+                    border-radius: 41px;
+                    padding: 40px;
+                    display: flex;
+                    align-items: end;
+                }
+
+                .trainings-ev {
+                    position: relative;
+                    right: 0%;
+                    top: 0%;
+                    width: 100%;
+                }
+
+                .trainings-ev h1 {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+
+                .trainings-ev p {
+                    font-size: 12px;
+                    line-height: 1.8;
+                }
+            }
+        </style>
+        <?php RenderStyle::EndStyle() ?>
+
+        <div class="row border-head-df train mjqweu">
             <div class="col-xl-12 d-flex boxies even">
                 <div class="tab-left">
                     <h1>
@@ -81,10 +119,29 @@
 <style>
     /* penamaan kelas seharusnya khusus */
     @media (max-width: 991px) {
-        .row.border-head-df {
+        .xasdqw {
             margin: 90px 0 0;
             padding: 28px;
             border-radius: 41px;
+        }
+
+        .mjqweu {
+            padding: 40px !important;
+            margin: 0;
+            border-radius: 41px;
+        }
+
+        .mjqweu .col-xl-12.d-flex.boxies.even {
+            padding: 0;
+            width: 100%;
+        }
+
+        .mjqweu h1 {
+            margin-bottom: 20px
+        }
+        .mjqweu p {
+            width: auto;
+            font-size: 12px;
         }
 
         .col-xl-12.d-flex.boxies.even {
