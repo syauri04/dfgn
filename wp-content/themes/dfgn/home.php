@@ -13,7 +13,7 @@
         <!-- slider-area -->
         <section class="slider-scroll" >
             <div class="container" >
-                <div class="main-slide-scroll pt-50">
+                <div class="main-slide-scroll">
                     <div class="text-ss">
                         <div class="main-text">
                             <p><?php the_field('text_hero_first'); ?></p>
@@ -64,10 +64,13 @@
                                 
                                 </svg>
                                 
-                                <svg xmlns="http://www.w3.org/2000/svg" id="main-shape-blw" width="438" height="216" viewBox="0 0 459 218" fill="none">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="main-shape-blw" width="408" height="193" viewBox="0 0 459 218" fill="none">
                                     
                                     <path id="patlonj" d="M350.884 0.0761719H107.964C48.3372 0.0761719 0 48.3868 0 107.981C0 167.575 48.3372 215.886 107.964 215.886H350.884C410.511 215.886 458.848 167.575 458.848 107.981C458.848 48.3868 410.511 0.0761719 350.884 0.0761719Z" fill="#A4A2E0"/>
-                                    <!-- <circle id="crc" r="120" cx="120" cy="120" fill="red" /> -->
+                                    
+                                </svg>
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="408" height="193" viewBox="0 0 408 193" fill="none">
+                                    <path id="patlonj" d="M311.811 0.979004H95.9419C42.9547 0.979004 0 43.913 0 96.8747C0 149.837 42.9547 192.771 95.9419 192.771H311.811C364.798 192.771 407.753 149.837 407.753 96.8747C407.753 43.913 364.798 0.979004 311.811 0.979004Z" fill="#A4A2E0"/> -->
                                 </svg>
                             </div>
                
@@ -85,7 +88,7 @@
         </section>
 
         <!-- service-area -->
-        <section class="service-area pt-100 " id="scroll-container">
+        <section class="service-area pt-70 " id="scroll-container">
             <div class="container df-in-numbers">
                 <div class="row">
                     <div class="col-xl-12 mb-80 d-inline-flex">
@@ -98,7 +101,7 @@
                 <div class="row" id="s_nums">
                     <div class="col-xl-4 col-lg-4 col-md-5 mb-30">
                         <div class="df-numb" data-animation="fadeInDown" data-delay=".4s">
-                            <div class="nums si countert" data-count="<?php the_field('student_involved'); ?>"><span class="number">10K</span><span class="plus">+</span></div>
+                            <div class="nums si counter" data-count="<?php the_field('student_involved'); ?>"><span class="number">10K</span><span class="plus">+</span></div>
                             <div class="ic-title">
                                 <img src="<?php echo get_template_directory_uri().'/assets/img/assets/Icon-student.png'; ?>" alt="">
                                 <span>Student Involved</span>
@@ -1018,48 +1021,57 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid-cus"></div>
-            <div class="marquee-container">
-                <div class="marquee">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s1_df_1.png'; ?>" alt="Logo 1">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s1_df_2.png'; ?>" alt="Logo 2">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s1_df_3.png'; ?>" alt="Logo 3">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s1_df_4.png'; ?>" alt="Logo 1">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s1_df_5.png'; ?>" alt="Logo 2">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s1_df_6.png'; ?>" alt="Logo 3">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s1_df_7.png'; ?>" alt="Logo 3">
-                    <!-- Tambahkan gambar logo yang lain di sini -->
-                </div>
-            </div>
-            </div>
-            <div class="container-fluid-cus"></div>
-            <div class="marquee-container">
-                <div class="marquee2">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s2_df_1.png'; ?>" alt="Logo 1">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s2_df_2.png'; ?>" alt="Logo 2">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s2_df_3.png'; ?>" alt="Logo 3">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s2_df_4.png'; ?>" alt="Logo 1">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s2_df_5.png'; ?>" alt="Logo 2">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s2_df_6.png'; ?>" alt="Logo 3">
-                    <!-- Tambahkan gambar logo yang lain di sini -->
-                </div>
-            </div>
-            </div>
-            <div class="container-fluid-cus"></div>
-            <div class="marquee-container">
-                <div class="marquee3">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s3_df_1.png'; ?>" alt="Logo 1">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s3_df_2.png'; ?>" alt="Logo 2">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s3_df_3.png'; ?>" alt="Logo 3">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s3_df_4.png'; ?>" alt="Logo 1">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s3_df_5.png'; ?>" alt="Logo 2">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s3_df_6.png'; ?>" alt="Logo 3">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s3_df_7.png'; ?>" alt="Logo 3">
 
-                    <!-- Tambahkan gambar logo yang lain di sini -->
+
+            <div class="bx_marq">
+                <div class="shadow"></div>
+                
+                <div class="container-fluid-cus">
+                    <div class="marquee-container">
+                        <div class="marquee">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s1_df_1.png'; ?>" alt="Logo 1">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s1_df_2.png'; ?>" alt="Logo 2">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s1_df_3.png'; ?>" alt="Logo 3">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s1_df_4.png'; ?>" alt="Logo 1">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s1_df_5.png'; ?>" alt="Logo 2">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s1_df_6.png'; ?>" alt="Logo 3">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s1_df_7.png'; ?>" alt="Logo 3">
+                            <!-- Tambahkan gambar logo yang lain di sini -->
+                        </div>
+                    </div>
                 </div>
+                <div class="container-fluid-cus">
+                    <div class="marquee-container">
+                        <div class="marquee2">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s2_df_1.png'; ?>" alt="Logo 1">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s2_df_2.png'; ?>" alt="Logo 2">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s2_df_3.png'; ?>" alt="Logo 3">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s2_df_4.png'; ?>" alt="Logo 1">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s2_df_5.png'; ?>" alt="Logo 2">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s2_df_6.png'; ?>" alt="Logo 3">
+                            <!-- Tambahkan gambar logo yang lain di sini -->
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid-cus">
+                    <div class="marquee-container">
+                        <div class="marquee3">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s3_df_1.png'; ?>" alt="Logo 1">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s3_df_2.png'; ?>" alt="Logo 2">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s3_df_3.png'; ?>" alt="Logo 3">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s3_df_4.png'; ?>" alt="Logo 1">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s3_df_5.png'; ?>" alt="Logo 2">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s3_df_6.png'; ?>" alt="Logo 3">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/s3_df_7.png'; ?>" alt="Logo 3">
+
+                            <!-- Tambahkan gambar logo yang lain di sini -->
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow_r"></div>
             </div>
-            </div>
+
+            
 
             <?php _include('shared/components/contact-us-cta/index.php'); ?>
 
@@ -2050,14 +2062,15 @@
 
     gsap.set("#patdots", {
         transformOrigin: "top top",
-        translate: "-46px -161px",
-        scale: 0.96
+        translate: "-150px -170px",
+        scale: 0.9
     });
     gsap.set("#pat1", {
         transformOrigin: "top top",
-        translate: "-62px -170px",
+        translate: "-125px -170px",
         opacity: 1,
         visibility: "visible",
+        scale: 0.9
     });
 
     gsap.set(endShape, {
@@ -2078,8 +2091,8 @@
             scrub: 1,
             pin: true,
             // markers: true,
-            start: "top top",
-            end: "+=110%",
+            start: "-60 top",
+            end: "+=100%",
             // toggleActions: "play pause play reset",
         },
     });
@@ -2091,11 +2104,11 @@
             origin: "50% 70%",
             // map: "complexity"
         },
-        translate: "0px 0px",
+        translate: "-55px 0px",
         duration: 1,
         delay: 1,
         ease: "Power0.easeNone",
-        scale: 1,
+        scale: 0.89,
 
     });
 
@@ -2127,84 +2140,59 @@
         },
         visibility: "visible",
         delay: 3,
-        ease: "slow(0.7,0.7,false)",
+        duration: 3,
+        ease: "power1.out",
         yPercent: -100
 
     });
     gsap.set("#patlonj", {
-        scale: 0.96,
         transformOrigin: "center center",
-        translate: "-66% 2px",
+        translate: "-64% -36px",
     });
     gsap.to("#patlonj", {
         scrollTrigger: {
             trigger: ".slide-frist",
-            start: "100 top",
+            start: "top top",
             end: "+=100",
             scrub: 3,
             // markers:true,
 
         },
-        x: "-160%",
+        x: "-180%",
         // x: "-100%", // Geser ke kiri sejauh 100%
         duration: 3,
+        delay: 3,
         ease: "power1.out",
 
     });
 
     gsap.set("#s-yellow", {
-        translate: "64.6% -3px"
+        translate: "64.5% -12px",
+        scale: 0.9
     });
-    gsap.to("#s-yellow", {
+    gsap.to("#s-yellow, #patdots", {
         scrollTrigger: {
             trigger: ".slide-frist",
-            start: "100 top",
+            start: "top top",
             end: "+=100",
             scrub: 3,
             // markers:true
 
         },
-        x: "-100%",
+        x: "-350%",
         // x: "-100%", // Geser ke kiri sejauh 100%
         duration: 3,
         delay: 3,
         ease: "power1.out",
 
     });
-    gsap.to("#patdots", {
-        scrollTrigger: {
-            trigger: ".slide-frist",
-            start: "100 top",
-            end: "+=100",
-            scrub: 3,
-            // markers:true
-
-        },
-        visibility: "hidden",
-        // x: "-100%", // Geser ke kiri sejauh 100%
-        duration: 3,
-        delay: 3,
-        ease: "power1.out",
-
-    });
-    gsap.to("#patdots", {
-        scrollTrigger: {
-            trigger: "#pat1",
-            start: "400 top",
-            end: "+=150",
-            scrub: 1,
-            // markers:true,
-
-        },
-        // morphSVG: { shape: "#pat2", map: "complexity" }
-        opacity: 0
-
-    });
+   
+  
 
 
     gsap.to(".text-ss", {
         scrollTrigger: {
-            trigger: ".slider-scroll",
+            trigger: ".menu-area",
             start: "top top",
             end: "+=100",
             scrub: 3,

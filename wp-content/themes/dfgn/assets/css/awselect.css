@@ -67,7 +67,7 @@ Github: https://github.com/prevwong/awesome-select/
       position: relative;
       z-index: 2; }
     .awselect .front_face span {
-      font-size: 19px;
+      font-size: 16px;
       -webkit-transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
       -moz-transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
       -o-transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);

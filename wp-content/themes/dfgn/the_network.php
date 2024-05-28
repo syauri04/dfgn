@@ -17,7 +17,7 @@
                             <h1> <?php the_field('title_hero_regular'); ?> <br> <span><?php the_field('title_hero_span'); ?></span> </h1>
                             <!-- <p>Kabupaten Bogor </p> -->
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 p-0">
                             <p>
                                 <?php 
                                     $txt_area = get_field('summary_hero');
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="row" id="s_nums">
-                    <div class="col-xl-4 col-lg-4 col-md-5 mb-30">
+                    <div class="col-xl-4 col-lg-4 col-md-5 mb-30 bx_ct_f">
                         <div class="df-numb-fc df" >
                             <div class="nums si counter" id="counter" data-target="<?php the_field('total_df'); ?>">
                                 <?php the_field('total_df'); ?>
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-xl-4 col-lg-4 col-md-5 mb-30">
+                    <div class="col-xl-4 col-lg-4 col-md-5 mb-30 bx_ct_f">
                         <div class="df-numb-fc ctn">
                             <div class="nums ip counter" id="counter" data-target="<?php the_field('total_countries'); ?>">
                                 <?php the_field('total_countries'); ?>
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-5 mb-30">
+                    <div class="col-xl-4 col-lg-4 col-md-5 mb-30 bx_ct_f">
                         <div class="df-numb-fc dfp">
                             <div class="nums ar counter" id="counter" data-target="<?php the_field('total_df_people'); ?>">
                                 <?php the_field('total_df_people'); ?>
@@ -185,7 +185,7 @@
                                                             <p>
                                                                 Founded year &nbsp;&nbsp;<strong><?php the_field('year_of_joining') ?></strong>
                                                             </p>
-                                                            <a href=""  class="close" data-dismiss="modal"><img src="img/assets/close-popup.png" alt=""></a>
+                                                            <a href=""  class="close" data-dismiss="modal"><img src="<?php echo get_template_directory_uri().'/assets/img/assets/close-popup.png'; ?>" alt=""></a>
                                                     
                                                         
                                                         </div>
