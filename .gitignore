@@ -4,3 +4,5 @@ wp-admin/
 wp-includes/
 wp-content/themes/*
 !wp-content/themes/dfgn
+
+wp-config.php
