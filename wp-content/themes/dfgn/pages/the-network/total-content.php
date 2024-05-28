@@ -2,8 +2,8 @@
     <div style="display:flex;flex-wrap:wrap; justify-content:center; gap:40px">
         <div class="card-count" style="display: flex;flex-wrap:wrap">
             <div class="df-numb-fc df">
-                <div class="nums si counter" data-target="29">
-                    0
+                <div class="nums si counter" data-target="<?php the_field('total_df'); ?>">
+                    <?php the_field('total_df'); ?>
                 </div>
                 <div class="ic-title">
                     <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/Icon-home.png'; ?>" alt="">
@@ -14,8 +14,8 @@
 
         <div class="card-count" style="display: flex;flex-wrap:wrap">
             <div class="df-numb-fc ctn">
-                <div class="nums ip counter" data-target="25">
-                    0
+                <div class="nums ip counter" data-target="<?php the_field('total_countries'); ?>">
+                    <?php the_field('total_countries'); ?>
                 </div>
                 <div class="ic-title">
                     <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/Icon-contries.png'; ?>" alt="">
@@ -26,8 +26,8 @@
 
         <div class="card-count" style="display: flex;flex-wrap:wrap">
             <div class="df-numb-fc dfp">
-                <div class="nums ar counter" data-target="160">
-                    0
+                <div class="nums ar counter" data-target="<?php the_field('total_df_people'); ?>">
+                    <?php the_field('total_df_people'); ?>
                 </div>
                 <div class="ic-title">
                     <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/Icon-student.png'; ?>" alt="">
@@ -56,11 +56,10 @@
         justify-content: center;
         align-items: center;
     }
-
     @media (max-width: 991px) {
         .count-total .df-numb-fc {
-        border-radius: 41px;
-    }
+            border-radius: 41px;
+        }
     }
 </style>
 <?php RenderStyle::EndStyle() ?>
