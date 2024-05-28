@@ -51,3 +51,11 @@
         </div>
     </div>
 </section>
+
+<?php RenderStyle::Style() ?>
+<style>
+    svg#pink-bulet-ev {
+        opacity: 0;
+    }
+</style>
+<?php RenderStyle::EndStyle() ?>

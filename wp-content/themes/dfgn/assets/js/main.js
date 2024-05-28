@@ -111,6 +111,8 @@
 
 
   // isotope
+  
+  
   $(".factory-active").imagesLoaded(function() {
     var $grid = $(".factory-active").isotope({
       itemSelector: ".grid-facto",
