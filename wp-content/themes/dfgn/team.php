@@ -15,15 +15,11 @@
                     <div class="text-ss">
                         <div class="main-text">
                             <p>
-                                Collaborative facilitation mindset
+                                <?php the_field('title_hero'); ?>
                             </p>
                         </div>
                         <div class="summary-text">
-                            <p>
-                                The DFGN team looks after the continuous development and maintenance of the network by facilitating the collaboration between the members, the real heroes of this movie. One of the team's core role is to facilitate the collaboration between network members. An example of that are the annual events and gathering DFGN hosts, such as the International Design Factory Week (IDFW), the DFGN UnBoxed, and the World Design Factory Day (WDFD). Yes, we love acronyms…
-                                <br><br>
-                                Our small (but mighty) team is based in Aalto University's Design Factory, in Otaniemi Campus, Espoo, Finland, Europe, Earth.
-                            </p>
+                            <?php the_field('summary_hero'); ?>
                         </div>
                         
                     </div>
@@ -44,7 +40,7 @@
                                     <!-- </g> -->
                                   </svg>
                                 <div class="main-image-team">
-                                    <img src="<?php echo get_template_directory_uri().'/assets/img/assets/slide-team.png'; ?>" alt="Balloons">
+                                    <img src="<?php the_field('image_hero'); ?>" alt="Balloons">
                                 </div>
                                 <svg xmlns="http://www.w3.org/2000/svg" id="kuning-bulet" width="216" height="216" viewBox="0 0 216 216" fill="none">
                                     <path d="M107.92 215.692C167.522 215.692 215.84 167.408 215.84 107.846C215.84 48.2844 167.522 0 107.92 0C48.3174 0 0 48.2844 0 107.846C0 167.408 48.3174 215.692 107.92 215.692Z" fill="#FEC601"/>
@@ -62,18 +58,16 @@
             <div class="container-history pteam">
                 <div class="r-team">
                     <div class="part-history">
-                        <div class="imageh" style="background: linear-gradient(0deg, rgba(24, 34, 36, 0.4) 0%, rgba(24, 34, 36, 0.4) 100%), url(<?php echo get_template_directory_uri().'/assets/img/assets/team-background.png'; ?>) lightgray 50% / cover no-repeat;">
+                        <div class="imageh" style="background: linear-gradient(0deg, rgba(24, 34, 36, 0.4) 0%, rgba(24, 34, 36, 0.4) 100%), url(<?php the_field('background_image'); ?>) lightgray 50% / cover no-repeat;">
                             <div class="overly">
                                 
                             </div>
                             <div class="txt-history">
                                 <div class="title">
-                                    History of Aalto Design Factory and DFGN
+                                    <?php the_field('title_history'); ?>
                                 </div>
                                 <div class="summary">
-                                    The first Design Factory ever was created in Finland by Kalevi "Eetu" Ekman in 2008. In 2010, the first Design Factory outside of Finland was established in collaboration with Tongji University. And then, just one year after that, in 2011, on the 29th of November, the Design Factory Melbourne was launched, which set the official start of the Design Factory Global Network.
-                                    <br><br>
-            What a beautiful story… what else will come?
+                                    <?php the_field('desc_history'); ?>
                                 </div>
                             </div>
                         </div>
@@ -90,67 +84,54 @@
                 <div class="row border-head-team">
                     <div class="col-xl-12 js-center">
                         <div class="col-xl-5 col-md-5 pl-0">
-                            <h1>Who runs the network?</h1>
+                            <h1><?php the_field('title_breadcumb'); ?></h1>
                             
                         </div>
                         
                         <div class="col-xl-5 col-md-5">
                             <p>
-                                The network is run by itself, with the support of the 38 existing members. We all do our best to create collaboration projects. Each DF drives change in its own institution with the support and inspiration of like-minded doers.
+                                <?php the_field('summary_breadcumb'); ?>
                             </p>
                         </div>
                     </div>
                     
                 </div>
                 <div class="row pt-30">
-                    <div class="col-xl-6 col-md-6">
-                        <div class="boxies-team" >
-                           
-                            <div class="img-team">
-                                <div class="gradient-overlay"></div>
-                                
-                                <img class="pro" src="<?php echo get_template_directory_uri().'/assets/img/assets/filipe.jpg'; ?>" alt="">
-                                <div class="user-in">
-                                    <div class="nm">
-                                        Felipe Gárate
-                                    </div>
-                                    <div>
-                                        <a href="mailto:felipe.garate@aalto.fi"><img src="<?php echo get_template_directory_uri().'/assets/img/assets/df/icw_email.png'; ?>" alt=""></a>
-                                        <a href="https://www.linkedin.com/in/felipegarate/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/img/assets/df/icw_linkedin.png'; ?>" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="info-team">
-                                <p>
-                                    Felipe is a dynamic and passionate individual with a deep commitment to spreading innovation methodologies worldwide. With a background in business specializing in entrepreneurship and innovation, he has been an active participant in numerous activities since childhood and started small businesses early on. A native of Chile, Felipe has led significant projects across Latin America and has been recognized as an Innovation Fellow by Stanford University and one of the 50 World Leaders by the University of Pittsburgh. He often speaks at global conferences, including a TEDx event. Currently, he manages the operational side of the Design Factory Global Network. He recently became an International Visitor Leader from the US Department of State. Known affectionately as "Pipe" by friends and family, Felipe is known for his simple attire, typically wearing one of his nine identical white t-shirts.
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-6 col-md-6">
-                        <div class="boxies-team" >
-                            <div class="img-team">
-                                <div class="gradient-overlay"></div>
-                                <img class="pro" src="<?php echo get_template_directory_uri().'/assets/img/assets/sara.jpg'; ?>" alt="">
-                                <div class="user-in">
-                                    <div class="nm">
-                                        Sara Figueiredo
-                                    </div>
-                                    <div>
-                                        <a href="mailto:sara.santosfigueiredo@aalto.fi"><img src="<?php echo get_template_directory_uri().'/assets/img/assets/df/icw_email.png'; ?>" alt=""></a>
-                                        <a href="https://www.linkedin.com/in/sara-figueiredo-15689b196/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/img/assets/df/icw_linkedin.png'; ?>" alt=""></a>
+                <?php 
+                    if( have_rows('who_runs') ):  
+                        while( have_rows('who_runs') ): the_row(); 
+                ?>
+                        <div class="col-xl-6 col-md-6">
+                            <div class="boxies-team" >
+                            
+                                <div class="img-team">
+                                    <div class="gradient-overlay"></div>
+                                    
+                                    <img class="pro" src="<?php echo get_sub_field('picture'); ?>" alt="">
+                                    <div class="user-in">
+                                        <div class="nm">
+                                            <?php echo get_sub_field('name_profile'); ?>
+                                        </div>
+                                        <div>
+                                            <a href="mailto:<?php echo get_sub_field('email'); ?>"><img src="<?php echo get_template_directory_uri().'/assets/img/assets/df/icw_email.png'; ?>" alt=""></a>
+                                            <a href="<?php echo get_sub_field('link_linkedin'); ?>" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/img/assets/df/icw_linkedin.png'; ?>" alt=""></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="info-team">
-                                <p>
-                                    Sara is an optimist chatterbox who sees design as an act to impact society positively. Leveraging her design background, she tackles complex challenges through systemic strategies, aiming to create meaningful solutions. As a Creative Strategist and Doctoral Researcher at Aalto University, she focuses on enhancing multidisciplinary, problem-based learning in product development education, drawing from her international experiences, including the Master of European Design program. At DFGN, her roles span from strategic research to workshop facilitation and storytelling, where she balances logical analysis with creative thought. When she's not navigating the complexities of design and research, Sara is known for her green thumb and yoga love, so you can often found in her personal jungle of houseplants. Pro-tip: she will never say no to a nice chat over a glass of wine, and close friends or family call her Sarinha.
-                                </p>
+                                <div class="info-team">
+                                    <p>
+                                        <?php echo get_sub_field('desc_profile'); ?>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                <?php 
+                        endwhile;  
+                    endif; 
+                ?>
+                    
+
+                    
 
                     
                 </div>

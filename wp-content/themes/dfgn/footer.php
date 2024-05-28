@@ -4,7 +4,7 @@
             <div class="row">
                <div class="col-xl-4 col-md-4">
                     <div class="footer-logo">
-                        <a href="index.html"><img src="<?php echo get_template_directory_uri().'/assets/img/assets/logo-footer.png'; ?>" class="img-fluid" alt=""></a>
+                        <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri().'/assets/img/assets/logo-footer.png'; ?>" class="img-fluid" alt=""></a>
                     </div>
                </div>
                <div class="col-xl-4 col-md-4">
@@ -23,12 +23,12 @@
                             Site map
                         </div>
                         <div class="fm-content">
-                            <a href="index.html">Home</a><br>
-                            <a href="index.html">About</a><br>
-                            <a href="insight.html">insight</a><br>
-                            <a href="event.html">Events and trainings</a><br>
-                            <a href="team.html">The DFGN team</a><br>
-                            <a href="factory.html">The network</a>
+                            <a href="<?php echo home_url(); ?>">Home</a><br>
+                            <a href="<?php echo home_url(); ?>">About</a><br>
+                            <a href="<?php echo home_url(); ?>/insight">insight</a><br>
+                            <a href="<?php echo home_url(); ?>/events-and-trainings">Events and trainings</a><br>
+                            <a href="<?php echo home_url(); ?>/the-dfgn-team">The DFGN team</a><br>
+                            <a href="<?php echo home_url(); ?>/the-network">The network</a>
                         </div>
                     </div>
                 </div>

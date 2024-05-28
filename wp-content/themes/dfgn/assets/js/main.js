@@ -122,6 +122,20 @@
 
 
   // isotope
+  $(".grid-events").imagesLoaded(function() {
+    var $grid = $(".grid-events").isotope({
+    itemSelector: ".grid-events-items",
+    layoutMode: 'fitRows'
+    });
+
+    // filter items on button click
+    $('#select-event').on('change', function() {
+        var filterValue = $(this).val();
+        // alert(filterValue);
+        $grid.isotope({ filter: filterValue });
+    });
+});
+  
   $(".factory-active").imagesLoaded(function() {
     var $grid = $(".factory-active").isotope({
       itemSelector: ".grid-facto",
@@ -154,9 +168,9 @@
     // filter items on button click
     $(".filter-cron").on("click", "a", function () {
       // alert("sadsad");
-        var filterValue = $(this).attr("data-filter");
+        var filterValuec = $(this).attr("data-filter");
         
-        $grid.isotope({ filter: filterValue });
+        $grid.isotope({ filter: filterValuec });
     });
   });
   //for menu active class

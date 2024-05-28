@@ -15,12 +15,12 @@
                     <div class="text-ss">
                         <div class="main-text">
                             <p>
-                                DFGN annual events and programs
+                                <?php the_field('title_hero'); ?>
                             </p>
                         </div>
                         <div class="summary-text">
                             <p>
-                                The DFGN team sits in Aalto University’s Design Factory, in Finland. Yes, that cold country in the European Nordics. Despite the cold and the distance, we hosted multiple events and programs throughout the year to keep driving change and to spread the passion around the globe. Below, you'll find the major events we organize each year. These are the big four that we encourage you to mark on your calendars.
+                                <?php the_field('summary_hero'); ?>
                             </p>
                         </div>
                         
@@ -51,7 +51,7 @@
                                     <!-- </g> -->
                                   </svg>
                                 <div class="main-image-team">
-                                    <img src="<?php echo get_template_directory_uri().'/assets/img/assets/event-slide.png'; ?>" alt="Balloons">
+                                    <img src="<?php the_field('image_hero'); ?>" alt="Balloons">
                                 </div>
                             
                             </div>
@@ -78,114 +78,79 @@
                         <div class="txt-right select-df">
                             
                             <select id="select-event" name="pilihan" data-placeholder="All Event">
-                                <option value="nilai1">Courses</option>
-                                <option value="nilai2">Trainings</option>
+                                <option value="*">All Event</option>
+                                <option value=".courses">Courses</option>
+                                <option value=".trainings">Trainings</option>
                             </select>
                         </div>
                     </div>
                     
                 </div>
-                <div class="row pt-27 ">
-                    <div class="col-12 pb-27">
-                        <div class="event-sec">
-                            <div class="ev-image">
-                                <img src="<?php echo get_template_directory_uri().'/assets/img/assets/event1.jpg'; ?>" alt="">
-                            </div>
-                            <div class="ev-info">
-                                <div class="eventso">
-                                    <h1>IDFW - International Design Factory Week</h1>
-                                    <p>Annually, DFGN members gather in varying global locations to collaborate, share best practices, and engage with the local host. Organized by the DFGN team and the local institution, this members-only event re-energizes our community and fosters planning for future cooperation.</p>
-                                </div>
-                                <div class="eventags">
-                                    <div class="mon">
-                                        <img src="<?php echo get_template_directory_uri().'/assets/img/assets/Isolation_Mode.png'; ?>" alt="">
-                                        <span>Typically held in September-October</span>
-                                    </div>
-                                    <div class="wbs">
-                                        <!-- <a href="">Visit site</a> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 pb-27">
-                        <div class="event-sec">
-                            <div class="ev-image">
-                                <img src="<?php echo get_template_directory_uri().'/assets/img/assets/event2.jpg'; ?>" alt="">
-                            </div>
-                            <div class="ev-info">
-                                <div class="eventso">
-                                    <h1>WDFD - World Design Factory Day</h1>
-                                    <p>Our annual virtual celebration highlights initiatives from Design Factories worldwide. Open to the public, this event invites all to join, although some sessions may be exclusive to members. </p>
-                                </div>
-                                <div class="eventags">
-                                    <div class="mon">
-                                        <img src="<?php echo get_template_directory_uri().'/assets/img/assets/Isolation_Mode.png'; ?>" alt="">
-                                        <span>Typically held in May-June</span>
-                                    </div>
-                                    <div class="wbs">
-                                        <a href="http://worlddfday.org" target="_blank">Visit site</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 pb-27">
-                        <div class="event-sec">
-                            <div class="ev-image">
-                                <img src="<?php echo get_template_directory_uri().'/assets/img/assets/event3.jpg'; ?>" alt="">
-                            </div>
-                            <div class="ev-info">
-                                <div class="eventso">
-                                    <h1>DF.Y? Design Factory. Why?</h1>
-                                    <p>
-                                        Held at Aalto Design Factory, this event offers both virtual and onsite training for newcomers eager to immerse themselves in the Design Factory culture and start crafting experimental plans for their own Design Factories. Open to the public, DF.Y is particularly beneficial for those interested in establishing a Design Factory and DFers to re-energize.
-                                    </p>
-                                </div>
-                                <div class="eventags">
-                                    <div class="mon">
-                                        <img src="<?php echo get_template_directory_uri().'/assets/img/assets/Isolation_Mode.png'; ?>" alt="">
-                                        <span>Typically held in February-March</span>
-                                    </div>
-                                    <div class="wbs">
-                                        <!-- <a href="">Visit site</a> -->
+                <div class="row pt-27 grid-events">
+                <?php
+                    // Dapatkan data dari repeater ACF
+                    $repeater_calendar = get_field('input_events');
+
+                    // Balik urutan array
+                    $repeater_calendar = array_reverse($repeater_calendar);
+
+                    // Loop untuk menampilkan data yang telah diurutkan
+                        if ($repeater_calendar) {
+                            
+                            foreach ($repeater_calendar as $item) {
+                                $category_id = $item['type_events']; // Adjust this to match the name of your category field
+                                $category = get_term_by('id', $category_id, 'category');
+                               
+                                $timestamp_st = strtotime($item['date_start']);
+                                $timestamp_end = strtotime($item['date_end']);
+                                $month_st = date('F', $timestamp_st);
+                                $month_end = date('F', $timestamp_end);
+                ?>
+                                <div class="col-12 pb-27 grid-events-items <?php echo $category->slug;?>">
+                                    <div class="event-sec">
+                                        <div class="ev-image">
+                                            <img src="<?php echo $item['thumbnail_events']; ?>" alt="">
+                                        </div>
+                                        <div class="ev-info">
+                                            <div class="eventso">
+                                                <h1><?php echo $item['title_events']; ?></h1>
+                                                <p><?php echo $item['description_events']; ?></p>
+                                            </div>
+                                            <div class="eventags">
+                                                <div class="mon">
+                                                    <img src="<?php echo get_template_directory_uri().'/assets/img/assets/Isolation_Mode.png'; ?>" alt="">
+                                                    <span>Typically held in  <?php echo $month_st; ?>-<?php echo $month_end; ?></span>
+                                                </div>
+                                                <div class="wbs">
+                                                    <?php 
+                                                        if($item['link'] != ''){
+                                                    ?>
+                                                            <a href="<?php echo $item['link']; ?>">Visit site</a>
+                                                    <?php
+                                                        }
+                                                    ?>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 pb-27">
-                        <div class="event-sec">
-                            <div class="ev-image">
-                                <img src="<?php echo get_template_directory_uri().'/assets/img/assets/event4.jpg'; ?>" alt="">
-                            </div>
-                            <div class="ev-info">
-                                <div class="eventso">
-                                    <h1>DFGN UnBoxed</h1>
-                                    <p>
-                                        A new pilot event launching in 2024, evolved from previous DFGN research conferences. This non-traditional conference focuses on unboxing themes relevant to DFGN, inviting practitioners, experts, educators, and academics to collaborate. While primarily for members, interested non-members may contact the DFGN team for participation details. This event is very related to the IDFW, hosted in the same week and annual location.
-                                    </p>
-                                </div>
-                                <div class="eventags">
-                                    <div class="mon">
-                                        <img src="<?php echo get_template_directory_uri().'/assets/img/assets/Isolation_Mode.png'; ?>" alt="">
-                                        <span>Typically held in September-October</span>
-                                    </div>
-                                    <div class="wbs">
-                                        <a href="http://conference.dfgn.org" target="_blank">Visit site</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <?php
+                            }
+                        } else {
+                            echo '<p>No data found.</p>';
+                        }
+                ?>
+                    
+                    
                 </div>
 
                 <div class="row pb-27">
-                    <div class="bread-ev" style="background: linear-gradient(0deg, rgba(24, 34, 36, 0.90) 0%, rgba(24, 34, 36, 0.90) 100%), url(<?php echo get_template_directory_uri().'/assets/img/assets/event-breadjpg.jpg'; ?>) lightgray 50% / cover no-repeat;">
+                    <div class="bread-ev" style="background: linear-gradient(0deg, rgba(24, 34, 36, 0.90) 0%, rgba(24, 34, 36, 0.90) 100%), url(<?php the_field('background_image'); ?>) lightgray 50% / cover no-repeat;">
                         <div class="trainings-ev">
-                            <h1>DFGN trainings</h1>
+                            <h1><?php the_field('title_trainings'); ?></h1>
                             <p>
-                                We also train external institutions by providing them with tools to drive change in their organizations and use their potential and skills to the fullest. One event that is part of our portfolio of trainings is our famous Design Factory. Why? (DF.Y? Also known as ex-DF Bootcamp), a 9-day intensive hands-on experience of the DF concept that provides participant tools to (further) develop an experimentation and innovation platform in their institution. Don’t get scared, it is a combination of 3 gatherings where 2 are online, and 1 is in person, held in Aalto Design Factory in Finland. If you are interested in our DF Y? or in a customized training or program, feel free to reach out and our team will contact you back. Our team loves meeting new people and having virtual coffees!
+                                <?php the_field('description_trainings'); ?>
                             </p>
                         </div>
                     </div>
@@ -195,13 +160,13 @@
                     <div class="col-xl-12 d-flex boxies even">
                         <div class="tab-left">
                            <h1>
-                            Need a specific training?
+                                <?php the_field('title_specific_training'); ?>
                            </h1>
                         </div>
                         
                         <div class="txt-right select-df">
                             <p>
-                                Do you need specific support from DFGN? We’re here to help and eager to hear about your needs. Below, you’ll find examples of customized training we’ve delivered at different institutions.
+                                <?php the_field('desc_specific_training'); ?>
                             </p>
                         </div>
                     </div>
@@ -209,22 +174,28 @@
                 </div>
 
                 <div class="row pt-27">
-                    <div class="col-xl-6 col-md6">
-                        <div class="box-train green">
-                            <h1>DF re-boosting and up-keep</h1>
-                            <p>
-                                Innovation platforms and institutions go through cycles, and every time, they are unavoidable. We help in re-boosting or re-defining the strategy of your design factory and enhancing the team dynamics by providing a customized training program.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-md6">
-                        <div class="box-train red">
-                            <h1>Setting up an innovation hub and DF culture</h1>
-                            <p>
-                                Starting is not easy, and keeping up is not easy either. We help organizations understand how their culture can enable the creation of an innovation platform like a design factory. We support creating an experimentation plan that will help drive change through culture hacking and development.
-                            </p>
-                        </div>
-                    </div>
+                    <?php 
+                        if( have_rows('detail_specific_training') ): 
+                            $index = 0;
+                            while( have_rows('detail_specific_training') ): the_row(); 
+                            
+                            $classc = ($index % 2 === 0) ? 'green' : 'red';
+                    ?>
+                            <div class="col-xl-6 col-md6">
+                                <div class="box-train <?php echo $classc; ?>">
+                                    <h1><?php echo get_sub_field('title_content'); ?></h1>
+                                    <p>
+                                        <?php echo get_sub_field('desc_content'); ?>
+                                    </p>
+                                </div>
+                            </div>
+                    <?php 
+                            $index++;
+                            endwhile;  
+                        endif; 
+                    ?>
+                    
+                
                 </div>
             </div>
 
@@ -248,7 +219,9 @@
         
     </main>
 <?php get_footer(); ?>
-
+    <script>
+        
+    </script>
     <script>
        $(document).ready(function(){
             $('#select-event').awselect({

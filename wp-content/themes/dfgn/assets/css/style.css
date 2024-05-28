@@ -38,6 +38,9 @@
 	background-color: #0C1618;
 	overflow-x: hidden;
 }
+/* .grid-events{
+	height: auto !important;
+} */
 .section-title{
 	overflow: hidden;
 }
@@ -159,13 +162,16 @@
 }
 #main-shape-blw-ins{
 	position: absolute;
-    top: 482px;
+    top: 487px;
     width: 100%;
 }
 #main-shape-blw-ins #patlonj-inisight{
 	transform: translate(-481px, 0px);
 }
-.insight .text-ss{
+.insight .text-ss .main-text{
+	max-width: 600px;
+}
+.insight .text-ss .summary-text{
 	max-width: 622px;
 }
 .insight .text-ss .main-text p{
@@ -178,6 +184,7 @@
 .insight .text-ss .main-text p span{
 	font-family: "Sentinel-Book", serif;
 	font-style: italic;
+	font-weight: 400;
 }
 
 .insight .text-ss .summary-text p{
@@ -351,6 +358,9 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
     font-weight: 400;
     line-height: normal;
 }
+.list-chronicles li a.active{
+	font-weight: 700;
+}
 
 .boxies-cronicles{
 	border-radius: 108px;
@@ -380,6 +390,12 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+	transition: border-bottom 0.5s ease;
+}
+.info-cronicles h1 a:hover{
+	color: #0C1618;
+	border-bottom: 2px solid var(--Rich-Black, #0C1618);
+	padding-bottom: 2px;
 }
 .box-black{
 	position: relative;
@@ -545,6 +561,7 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
 	font-style: normal;
 	font-weight: 400;
 	line-height: 23.408px; /* 23.408px */
+	padding-bottom: 27px;
 }
 .team .text-ss {
     max-width: 622px;
@@ -592,8 +609,9 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
 	font-style: normal;
 	font-weight: 700;
 	line-height: 57.5px; /* 57.5px */
+	margin-bottom: 27px;
 }
-.txt-history .summary{
+.txt-history .summary p{
 	color: #FFF;
 	font-size: 16px;
 	font-style: normal;
@@ -878,11 +896,14 @@ line-height: 57.5px; /* 57.5px */
 /* MAP SVG */ 
 .box-dots{
 	position: absolute;
-	top: 0;
-	margin-left: 85px;
+	width: 90%;
+	height: 100%;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .box-dots .dots-map{
-    position: absolute;
+    position: relative;
     
     width: 10.872px;
     height: 10.882px;
@@ -1224,6 +1245,11 @@ line-height: 57.5px; /* 57.5px */
 	line-height: 57.5px; /* 57.5px */
 	width: 80%;
 }
+.factories .section-title h1 span{
+	font-family: "Sentinel-Book", serif;
+    font-style: italic;
+	font-weight: 400;
+}
 .factories p{
 	color: #FFF;
     font-size: 16px;
@@ -1493,9 +1519,7 @@ line-height: 57.5px; /* 57.5px */
     justify-content: center;
     align-items: center;
 }
-.df-numb .nums span.plus{
-	font-size: 120px;
-}
+
 .df-numb .si{
 	color: #FEC601;
 	
@@ -3624,7 +3648,6 @@ label {
 .counter{
 	color: #fff;
 	display: block;
-	font-family: 'Poppins', sans-serif;
 	font-size: 36px;
 	font-weight: 700;
 	margin-bottom: 0;

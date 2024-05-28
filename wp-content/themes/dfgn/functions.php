@@ -159,6 +159,39 @@ function supporttheme(){
 
 add_action( 'after_setup_theme', 'supporttheme' );
 
+function df_post_type(){
+   register_post_type('design-factories', array(
+         'public' => true,
+         'supports' => array('title'),
+         'labels' => array(
+            'name' => 'DF Post',
+            'add_new_item' => 'Add New DF',
+            'edit_item' => 'Edit DF',
+            'all_items' => 'All DF'
+         ),
+         'menu_icon' => 'dashicons-flag'
+   ));
+
+   
+}
+
+add_action('init', 'df_post_type', 20);
+
+
+ 
+
+function change_default_title_placeholder( $title ) {
+   $screen = get_current_screen();
+
+   if ( 'design-factories' == $screen->post_type ) { // Ganti 'custom_post_type' dengan nama custom post type Anda
+       $title = 'Enter DF Name';
+   }
+
+   return $title;
+}
+
+add_filter( 'enter_title_here', 'change_default_title_placeholder' );
+
 function theme_prefix_rewrite_flush() {
    flush_rewrite_rules();
 }

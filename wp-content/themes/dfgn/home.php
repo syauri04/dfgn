@@ -15,9 +15,17 @@
                 <div class="main-slide-scroll pt-50">
                     <div class="text-ss">
                         <div class="main-text">
-                            <p>Sharing</p>
-                            <p id="changingTitle" class="wipe-up">the passion</p>
-                            <p>for doing</p>
+                            <p><?php the_field('text_hero_first'); ?></p>
+                                <?php 
+                                    $rows = get_field('text_repeater' );
+                                    if( $rows ) {
+                                        $first_row = $rows[0];
+                                        $first_row_title = $first_row['text_hero_repeater'];
+                                        // Do something...
+                                    }
+                                ?>
+                            <p id="changingTitle" class="wipe-up"><?php echo $first_row_title; ?></p>
+                            <p><?php the_field('text_hero_end'); ?></p>
                         </div>
                         <div class="btn-text">
                             <a id="learnmore" href="#">Learn More</a>
@@ -48,7 +56,7 @@
                                 </svg>
                                 
                                 <div class="main-image">
-                                    <img src="<?php echo get_template_directory_uri().'/assets/img/assets/main-slide.png'; ?>" alt="Balloons">
+                                    <img src="<?php the_field('image_hero'); ?>" alt="Balloons">
                                 </div>
                                 <svg xmlns="http://www.w3.org/2000/svg" id="main-shape-ylw" fill="none">
                                     <path id="s-yellow" opacity="0.7" d="M0.288869 113.821C-3.03211 51.5402 46.5089 0 108.102 0C147.059 0 181.152 20.6484 200.12 51.5651C206.09 61.2863 216.451 67.4398 227.857 67.4398H231.252C242.658 67.4398 253.031 61.2863 258.989 51.5651C277.97 20.6484 312.063 0 351.019 0C412.6 0 462.153 51.5402 458.82 113.821C455.785 170.707 407.301 216.18 350.31 215.807C311.69 215.559 277.932 195.022 259.064 164.342C253.069 154.583 242.708 148.368 231.252 148.368H227.882C216.426 148.368 206.065 154.583 200.07 164.342C181.201 195.022 147.432 215.559 108.824 215.807C51.8324 216.168 3.34867 170.707 0.313769 113.821H0.288869Z" fill="#FAC201"/>
@@ -63,7 +71,9 @@
                             </div>
                
                             <div class="main-text-ab" id="">
-                                <p>Design Factory Global Network (DFGN) is a network of innovation hubs in universities and research organisations in five continents of the world. DFGN is on a mission to create change in the world of teaching, learning and research through a passion-based culture and effective problem-solving. Shared understanding and common ways of working enable Design Factories in the network to collaborate efficiently across cultures, time zones and organisational boundaries fostering creativity. Together, we unite diverse minds, cultivate partnerships, and drive meaningful change in education, believing that innovation has no boundaries.</p>
+                                <p>
+                                    <?php the_field('dfgn_mission_statement'); ?>
+                                </p>
                             </div>
                        
                            
@@ -88,7 +98,7 @@
                 <div class="row" id="s_nums">
                     <div class="col-xl-4 col-lg-4 col-md-5 mb-30">
                         <div class="df-numb" data-animation="fadeInDown" data-delay=".4s">
-                            <div class="nums si counter" data-count="10400"><span class="number">0</span><span class="plus">+</span></div>
+                            <div class="nums si countert" data-count="<?php the_field('student_involved'); ?>"><span class="number">10K</span><span class="plus">+</span></div>
                             <div class="ic-title">
                                 <img src="<?php echo get_template_directory_uri().'/assets/img/assets/Icon-student.png'; ?>" alt="">
                                 <span>Student Involved</span>
@@ -98,7 +108,7 @@
                     
                     <div class="col-xl-4 col-lg-4 col-md-5 mb-30">
                         <div class="df-numb">
-                            <div class="nums ip counter" data-count="780">
+                            <div class="nums ip counter" data-count="<?php the_field('student_projects'); ?>">
                                 <span class="number">0</span><span class="plus">+</span>
                             </div>
                             <div class="ic-title">
@@ -109,7 +119,7 @@
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-5 mb-30">
                         <div class="df-numb">
-                            <div class="nums ar counter" data-count="740">
+                            <div class="nums ar counter" data-count="<?php the_field('industry_and_external_partners'); ?>">
                                 <span class="number">0</span><span class="plus">+</span>
                             </div>
                             <div class="ic-title">
@@ -126,8 +136,7 @@
                 <div class="row r-testi">
                     <div class="col-xl-12 col-12 mb-40 d-flex">
                         <div class="col-lg-9 section-title">
-                            <h1 class="fade-tile">Our people in action</h1>
-                            <!-- <p>Kabupaten Bogor </p> -->
+                            <h1 class="fade-tile"><?php the_field('title_section_03'); ?></h1>
                         </div>
                     </div>
                 </div>
@@ -136,14 +145,14 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 mb-30 js-center">
                         <div class="text" >
                             <p>
-                                At the heart of the Design Factory Global Network are our people diverse and unique, yet bound together by the mission to advance education at their local organizations. Who are these awesome humans? They are highly motivated and passionate experts, educators and practitioners, determined to shape the next generation of professionals. Their work varies widely: from designing programs, leading courses and workshops, advancing research and bridging the gap between academia and industry. They form not just a network, but a community of practice, fueled by a collective passion.
+                                <?php the_field('description_section_03'); ?>
                             </p> 
-                            <a href="insight.html#morevideo">Watch more videos</a>
+                            <a href="<?php echo home_url(); ?>/insight#morevideo">Watch more videos</a>
                         </div>
                     </div>
                     <div class="col-xl-8 col-lg-8 col-md-8 mb-30 vimeo-uy">
                       
-                        <div class="video-cover" style="background: url(<?php echo get_template_directory_uri().'/assets/img/assets/cover-video.png'; ?>) lightgray 50% / cover no-repeat;">
+                        <div class="video-cover" style="background: url(<?php the_field('thumbnail_vimeo'); ?>) lightgray 50% / cover no-repeat;">
                            <div class="v-play">
                                <a href="#" data-toggle="modal" data-target="#v-vimeo"><img src="<?php echo get_template_directory_uri().'/assets/img/assets/play-btn.png'; ?>" alt=""></a> 
                            </div>
@@ -169,7 +178,7 @@
                                         
                                     </div>
                                     <div class="col-12">
-                                        <iframe id="vimeoVideo" src="https://player.vimeo.com/video/240992200"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                        <iframe id="vimeoVideo" src="https://player.vimeo.com/video/<?php the_field('id_vimeo'); ?>"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                
                                     </div>
                                 </div>
@@ -190,7 +199,7 @@
                 <div class="row r-testi">
                     <div class="col-xl-12 col-12 mb-80 d-flex">
                         <div class="col-lg-9 section-title">
-                            <h1>What do they say?</h1>
+                            <h1><?php the_field('title_testimonial'); ?></h1>
                             <!-- <p>Kabupaten Bogor </p> -->
                         </div>
                     </div>
@@ -199,102 +208,35 @@
             <div class="container-fluid-cus sec-testimonial">
                 
                 <div class="slider-team">
-              
-                    <div class="box-say grid1">
-                        <div class="inner-left">
-                            <img src="<?php echo get_template_directory_uri().'/assets/img/assets/v-testi-1.png'; ?>" alt="">
-                        </div>
-                        <div class="inner-right">
-                            <div class="content">
-                                <p>
-                                    The DFGN is a special crowd of passionate and driven educators and innovators. It is one of the only places I have truly observed people who deeply believe in what they're doing and want to change the educational world for the better. There is a certain sense of being a community full of troublemakers who come together to share their adventures tips and tricks.
-                                </p>
+            
+                    <?php if( have_rows('add_testimonial') ): 
+                            $index = 1;
+                            while( have_rows('add_testimonial') ): the_row();
+                        ?>
+                            <div class="box-say grid<?php echo $index; ?>">
+                                <div class="inner-left">
+                                    <img src="<?php echo get_sub_field('picture') ?>" alt="">
+                                </div>
+                                <div class="inner-right">
+                                    <div class="content">
+                                        <p>
+                                            <?php echo get_sub_field('quote') ?>
+                                        </p>
+                                    </div>
+                                    <div class="from-c">
+                                        <span><?php echo get_sub_field('author') ?></span>
+                                    </div>
+                                    
+                                </div>
                             </div>
-                            <div class="from-c">
-                                <span>Wonderful anonymous human from Ideasquare @CERN</span>
-                            </div>
-                            
-                        </div>
-                    </div>
+                        <?php
+                            $index++;
+                            endwhile; 
+                        endif;
+                    ?>
+                    
 
-                    <div class="box-say grid2">
-                        <div class="inner-left">
-                            <img src="<?php echo get_template_directory_uri().'/assets/img/assets/v-testi-2.png'; ?>" alt="">
-                        </div>
-                        <div class="inner-right">
-                            <div class="content">
-                                <p>Most positive people and most creative minds in one network!” </p>
-                            </div>
-                            <div class="from-c">
-                                <span>Incredible unnamed individual from University of Tartu Delta Sandbox</span>
-                            </div>
-                            
-                            
-                        </div>
-                    </div>
-                    <div class="box-say grid3">
-                        <div class="inner-left">
-                            <img src="<?php echo get_template_directory_uri().'/assets/img/assets/v-testi-3.png'; ?>" alt="">
-                        </div>
-                        <div class="inner-right">
-                            <div class="content">
-                                <p>DFGN feels both as a home-base to come back to and feel safe, as well as a perfect trampoline to launch your DF to experience the unknown. </p>
-                            </div>
-                            <div class="from-c">
-                                <span>Fabulous anonymous person from Fusion Point</span>
-                            </div>
-                            
-                            
-                        </div>
-                    </div>
-                    <div class="box-say grid4">
-                        <div class="inner-left">
-                            <img src="<?php echo get_template_directory_uri().'/assets/img/assets/v-testi-4.png'; ?>" alt="">
-                        </div>
-                        <div class="inner-right">
-                            <div class="content">
-                                <p>
-                                    The DFGN enables our students and us to collaborate with open-minded and curious minds. It challenges us in many fields and provides the ground to grow personally, professionally and institutionally.
-                                </p>
-                            </div>
-                            <div class="from-c">
-                                <span>Brilliant incognito  from Inno.Space</span>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                    <div class="box-say grid5">
-                        <div class="inner-left">
-                            <img src="<?php echo get_template_directory_uri().'/assets/img/assets/v-testi-5.png'; ?>" alt="">
-                        </div>
-                        <div class="inner-right">
-                            <div class="content">
-                                <p>Beautiful projects start with beautiful people.</p>
-                            </div>
-                            <div class="from-c">
-                                <span>Awesome unnamed human from Design Factory Shenkar</span>
-                            </div>
-                            
-                            
-                        </div>
-                    </div>
-                    <div class="box-say grid6">
-                        <div class="inner-left">
-                            <img src="<?php echo get_template_directory_uri().'/assets/img/assets/v-testi-6.png'; ?>" alt="">
-                        </div>
-                        <div class="inner-right">
-                            <div class="content">
-                                <p>
-                                    DFGN is our bootcamp to share, equip, motivate and empower each other. If you want to go fast, go alone, if you want to go far, go together.
-                                </p>
-                            </div>
-                            <div class="from-c">
-                                <span>Spectacular incognito from Design Factory Stuttgart</span>
-                            </div>
-                            
-                        </div>
-                    </div>
+                   
 
 
                 </div>
@@ -306,10 +248,10 @@
                 <div class="row border-head-mp">
                     <div class="col-xl-12 d-flex boxies">
                         <div class="txt-left">
-                            Our global community
+                            <?php the_field('title_section_05'); ?>
                         </div>
                         <div class="txt-center">
-                            Our community is united by a shared understanding, enabling collaboration across cultures, time zones, and organisational boundaries. Each Design Factory, from corner to corner of the globe, is uniquely shaped by its awesome people. As we often say, the one thing you'll find in every Design Factory is probably a coffee machine and Hugging Point. Beyond that, each Design Factory stands out in its own special way.
+                            <?php the_field('description_section_05'); ?>
                         </div>
                         <div class="txt-right select-gc">
                             
@@ -960,45 +902,49 @@
                         </svg>
 
                         <div class="box-dots" id="b-m-full">
-                            <div class="dots-map america" data-cek="full" data-id="nyc" style="left: 268px;top: 173px;"></div>
-                            <div class="dots-map america" data-cek="full" data-id="queens" style="left: 258px;top: 193px;"></div>
-                            <div class="dots-map america" data-cek="full" data-id="colombia-bogota" style="left: 253px;top: 368px;"></div>
-                            <div class="dots-map america" data-cek="full" data-id="colombia-cali" style="left: 216px;top: 381px;"></div>
-                            <div class="dots-map america" data-cek="full" data-id="chile-santiago" style="left: 268px;top: 568px;"></div>
-                            <div class="dots-map america" data-cek="full" data-id="chile-concepcion" style="left: 261px;top: 583px;"></div>
-                            <!-- Europe & Midle east -->
-                            <div class="dots-map europe" data-cek="full" data-id="spain-barcelona" style="left: 553px;top: 185px;"></div>
-                            <div class="dots-map europe" data-cek="full" data-id="swiss-geneva" style="left: 573px;top: 154px;"></div>
-                            <div class="dots-map europe" data-cek="full" data-id="italy-bologna" style="left: 596px;top: 163px;"></div>
-                            <div class="dots-map europe" data-cek="full" data-id="italy-salerno" style="left: 612px;top: 187px;"></div>
-                            <div class="dots-map europe" data-cek="full" data-id="estonia-tartu" style="left: 648px;top: 95px;"></div>
-                            <div class="dots-map europe" data-cek="full" data-id="portugal" style="left: 514px;top: 196px;"></div>
-                            <div class="dots-map europe" data-cek="full" data-id="germany" style="left: 597px;top: 130px;"></div>
-                            <div class="dots-map europe" data-cek="full" data-id="germany-stuttgart" style="left: 590px;top: 148px;"></div>
-                            <div class="dots-map europe" data-cek="full" data-id="portugal-porto" style="left: 520px;top: 180px;"></div>
-                            <div class="dots-map europe" data-cek="full" data-id="latvia-riga" style="left: 648px;top: 108px;"></div>
-                            <div class="dots-map europe" data-cek="full" data-id="uk-london" style="left: 549px;top: 131px;"></div>
-                            <div class="dots-map europe" data-cek="full" data-id="uk-manchester" style="left: 544px;top: 114px;"></div>    
-                            <div class="dots-map europe" data-cek="full" data-id="nl-friesland" style="left: 575px;top: 128px;"></div>
-                            <div class="dots-map europe" data-cek="full" data-id="lithuania-vilnius" style="left: 636px;top: 114px;"></div>
-                            <div class="dots-map europe" data-cek="full" data-id="spain" style="left: 538px;top: 196px;"></div>
-                            <div class="dots-map europe" data-cek="full" data-id="france-nantes" style="left: 554px;top: 159px;"></div>
-                            <div class="dots-map-dob europe" data-cek="full" data-id="finland-espoo" style="left: 633px;top: 72px;"></div>
-                            <div class="dots-map europe-middle" data-cek="full" data-id="turkey-ankara" style="left: 682px;top: 186px;"></div>
-                            <div class="dots-map europe-middle" data-cek="full" data-id="israel" style="left: 697px;top: 227px;"></div>
-                            <div class="dots-map europe" data-cek="full" data-id="ireland" style="left: 526px;top: 123px;"></div>
-                            <div class="dots-map europe" data-cek="full" data-id="poland-warsaw" style="left: 621px;top: 128px;"></div>
-                            <div class="dots-map europe" data-cek="full" data-id="germany-pforzheim" style="left: 584px;top: 137px;"></div>
-                            <!-- Asia -->
-                            <div class="dots-map asia" data-cek="full" data-id="au-sydney" style="left: 1157px;top: 563px;"></div>
-                            <div class="dots-map asia" data-cek="full" data-id="au-melbourne" style="left: 1133px;top: 585px;"></div>
-                            <div class="dots-map asia" data-cek="full" data-id="nz-hamilton" style="left: 1223px;top: 587px;"></div>
-                            <div class="dots-map asia" data-cek="full" data-id="cina-sanghai" style="left: 1043px;top: 243px;"></div>
-                            <div class="dots-map asia" data-cek="full" data-id="korea-seol" style="left: 1057px;top: 215px;"></div>
-                            <div class="dots-map asia" data-cek="full" data-id="singapore" style="left: 991px;top: 383px;"></div>
-                            <div class="dots-map asia" data-cek="full" data-id="jpn-kyoto" style="left: 1097px;top: 213px;"></div>
-                            <div class="dots-map asia" data-cek="full" data-id="korea-hannam" style="left: 1057px;top: 202px;"></div>
+                        <?PHP
+                            $listdf = new WP_Query(
+                                array(
+                                    'post_type' => 'design-factories',
+                                    'order'          => 'ASC',
+                                )
+                            );
+                            $double_displayed = false; 
+                            if($listdf->have_posts()) :
+                                $index = 1;
+                                while($listdf->have_posts()) : $listdf->the_post();
+                                
+                                $continents = get_field('continents');
+                                $stat = get_field('status');
+                               
+                            
+                                if($continents == "Europe and the middle east"){
+                                    $class_continents = 'europe';
+                                }else  if($continents == "Americas"){
+                                    $class_continents = 'america';
+                                }else  if($continents == "Asia pacific"){
+                                    $class_continents = 'asia';
+                                }
+                                $cx = get_field('cx').'%';
+                                $cy = get_field('cy').'%';
+                                if($stat == "Single"){
+                        ?>
+                                    <div class="dots-map <?php echo $class_continents; ?>" data-cek="full" data-id="<?php the_title(); ?>" style="left: <?php echo $cx ?>;top: <?php echo $cy ?>;"></div>
+                        <?php
+                                }elseif ($stat == 'Double' && !$double_displayed) {
+                        ?>
+                                    <div class="dots-map-dob <?php echo $class_continents; ?>" data-cek="full" data-id="finland-espoo" style="left: <?php echo $cx ?>;top: <?php echo $cy ?>"></div>
+                        <?php
+                                    $double_displayed = true;
+                                }
+                                $index++;
+                                endwhile;
+                            endif;
+                            wp_reset_postdata();
+                        ?>
+                            
                         </div>
+
                         <div class="box-dots" id="b-m-europe">
                             <!-- Europe & Midle east -->
                             <div class="dots-map europe" data-cek="detail" data-id="spain-barcelona" style="left: 402px;top: 294px;"></div>
@@ -1150,7 +1096,7 @@
     </main>
 <?php get_footer(); ?>
 
-<script>
+    <script>
         document.getElementById('learnmore').addEventListener('click', function(event) {
           event.preventDefault(); // Mencegah tindakan bawaan dari link
           var currentScroll = window.pageYOffset || document.documentElement.scrollTop; // Mendapatkan posisi scroll saat ini
@@ -1190,9 +1136,25 @@
         }
     </script>
     <script>
-      // Daftar judul yang akan digunakan
+      <?php
+       
+        $repeater_data = array();
 
-      var titles = ["la pasión", "intohimo", "a paixão", "情熱", "the passion"];
+        if( have_rows('text_repeater') ):
+            while ( have_rows('text_repeater') ) : the_row();
+                $repeater_data[] = get_sub_field('text_hero_repeater'); // Ganti 'sub_field_name' dengan nama sub field yang sesuai
+            endwhile;
+        endif;
+        if (!empty($repeater_data)) {
+            $first_element = array_shift($repeater_data); // Ambil elemen pertama dan hapus dari array
+            $repeater_data[] = $first_element; // Tambahkan elemen pertama ke akhir array
+        }
+        
+        // Konversi array ke JSON
+        $ss = json_encode($repeater_data);
+    ?>
+    
+      var titles = <?php echo $repeater_data_json; ?>;
       // Fungsi untuk mengubah judul dengan efek fadeIn
       function changeTitle() {
         var titleElement = document.getElementById("changingTitle");
@@ -1816,55 +1778,55 @@
 
 
 
-        var txtl = gsap.timeline({
-            scrollTrigger: {
-            trigger: ".df-in-numbers",
-            scrub: 1,
-            // markers: true,
-            start: "50 top",
-            end: "+=100%",
-            toggleActions: 'play none none none'
-            },
-        });
+        // var txtl = gsap.timeline({
+        //     scrollTrigger: {
+        //     trigger: ".df-in-numbers",
+        //     scrub: 1,
+        //     // markers: true,
+        //     start: "50 top",
+        //     end: "+=100%",
+        //     toggleActions: 'play none none none'
+        //     },
+        // });
 
-        txtl.from(".fsec-title", {
-            y: "100%",
-            opacity: 1,
-            stagger: 0.3,
-            duration: 1.2,
-            delay: 0.6,
-            ease: "power4.out",
-            stagger: {
-                each: 0.3,
-                from: "start",
-                ease: "none"
-            }
-        });
+        // txtl.from(".fsec-title", {
+        //     y: "100%",
+        //     opacity: 1,
+        //     stagger: 0.3,
+        //     duration: 1.2,
+        //     delay: 0.6,
+        //     ease: "power4.out",
+        //     stagger: {
+        //         each: 0.3,
+        //         from: "start",
+        //         ease: "none"
+        //     }
+        // });
 
-        var t_fade = gsap.timeline({
-            scrollTrigger: {
-            trigger: ".title-fade",
-            scrub: 1,
-            // markers: true,
-            start: "top top",
-            end: "+=100%",
-            toggleActions: 'play none none none'
-            },
-        });
+        // var t_fade = gsap.timeline({
+        //     scrollTrigger: {
+        //     trigger: ".title-fade",
+        //     scrub: 1,
+        //     // markers: true,
+        //     start: "top top",
+        //     end: "+=100%",
+        //     toggleActions: 'play none none none'
+        //     },
+        // });
 
-        t_fade.from(".fade-tile, .text", {
-            y: "100%",
-            opacity: 1,
-            stagger: 0.3,
-            duration: 1.2,
-            delay: 0.6,
-            ease: "power4.out",
-            stagger: {
-                each: 0.3,
-                from: "start",
-                ease: "none"
-            }
-        });
+        // t_fade.from(".fade-tile, .text", {
+        //     y: "100%",
+        //     opacity: 1,
+        //     stagger: 0.3,
+        //     duration: 1.2,
+        //     delay: 0.6,
+        //     ease: "power4.out",
+        //     stagger: {
+        //         each: 0.3,
+        //         from: "start",
+        //         ease: "none"
+        //     }
+        // });
 
         gsap.set("#patdots", {
             transformOrigin: "top top",
