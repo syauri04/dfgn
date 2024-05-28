@@ -64,7 +64,7 @@
                 }
 
                 .trainings-ev p {
-                    font-size: 12px;
+                    /* font-size: 12px; */
                     line-height: 1.8;
                 }
             }
@@ -210,7 +210,8 @@
 
         .mjqweu p {
             width: auto;
-            font-size: 12px;
+            /* font-size: 12px; */
+            line-height: 1.8;
         }
 
         .col-xl-12.d-flex.boxies.even {
