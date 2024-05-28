@@ -10,106 +10,110 @@
             </div>
             <div class="summary">
                 <p>
-                    Throughout our journey, the Design Factory Global Network has hosted numerous events across the globe. On our Vimeo channel, we've gathered a selection of video resources from these events and activities that we believe you'll find valuable. So grab your favorite snack, be it popcorn, M&M's, or anything else, and enjoy the insights we've captured on film. Happy watching!
+                    <?php the_field('summary'); ?>
                 </p>
             </div>
         </div>
     </div>
 
-    <div class="video-content">
-        <div class="main-video">
-            <div class="info">
-                <div class="vm-title">
-                    <h2>WDFD’23</h2>
-                    <p>Research Innovation across DFGN. A virtual roundtable</p>
-                </div>
-                <div class="w-vimeo">
-                    <a class="wv video-btn" data-video-url="https://player.vimeo.com/video/840052304" >Watch in Vimeo</a>
-                    <a class="video-btn" data-video-url="https://player.vimeo.com/video/840052304" >
-                        <div class="rounded-play">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/play.png'; ?>" alt="">
-                        </div>
-                    </a>
+    <?php $videoContents = get_field('list_vimeo'); ?>
+    <?php if (!empty($videoContents)) : $data = $videoContents[0] ?>
+        <!-- Kalobisa setiap data dibuat array dulu -->
+        <div class="video-content">
+            <div class="main-video">
+                <div class="info">
+                    <div class="vm-title">
+                        <h2><?php echo $data['title']; ?></h2>
+                        <p><?php echo $data['sub_title']; ?></p>
+                    </div>
+                    <div class="w-vimeo">
+                        <a class="wv video-btn" data-video-url="https://player.vimeo.com/video/<?php echo $data['id_vimeo']; ?>">Watch in Vimeo</a>
+                        <a class="video-btn" data-video-url="https://player.vimeo.com/video/<?php echo $data['id_vimeo']; ?>">
+                            <div class="rounded-play">
+                                <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/play.png'; ?>" alt="">
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <?php RenderStyle::Style() ?>
-        <style>
-            .video-content {
-                margin-top: 50px;
-            }
+            <?php RenderStyle::Style() ?>
+            <style>
+                .video-content {
+                    margin-top: 50px;
+                }
 
-            #insight-in-motion .main-video {
-                background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 37.06%, rgba(0, 0, 0, 0.80) 100%), url(<?php echo get_template_directory_uri() . '/assets/img/assets/vimeo/thumb3.jpg'; ?>) lightgray 50% / cover no-repeat;
-                width: 100%;
-                aspect-ratio: 16 / 9;
-                height: auto;
-                border-radius: 108px;
-                position: relative;
-                overflow: hidden;
-            }
-
-            #insight-in-motion .main-video .info {
-                position: absolute;
-                bottom: 0;
-                display: flex;
-                gap: 33px;
-                align-items: center;
-                justify-content: space-between;
-                width: 100%;
-                padding: 6%;
-
-            }
-
-            #insight-in-motion .main-video .info h2 {
-                color: #fff;
-                font-size: 46px;
-                font-style: normal;
-                font-weight: 700;
-            }
-
-            #insight-in-motion .main-video .info p {
-                color: #fff;
-                font-size: 16px;
-                font-style: normal;
-            }
-
-
-
-            @media (max-width: 991px) {
                 #insight-in-motion .main-video {
-                    aspect-ratio: 16 / 12;
-                    border-radius: 41px;
-                    padding: 0px 0 0px 0;
+                    background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 37.06%, rgba(0, 0, 0, 0.80) 100%), url(<?php echo get_template_directory_uri() . '/assets/img/assets/vimeo/thumb3.jpg'; ?>) lightgray 50% / cover no-repeat;
+                    width: 100%;
+                    aspect-ratio: 16 / 9;
+                    height: auto;
+                    border-radius: 108px;
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                #insight-in-motion .main-video .info {
+                    position: absolute;
+                    bottom: 0;
+                    display: flex;
+                    gap: 33px;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding: 6%;
+
                 }
 
                 #insight-in-motion .main-video .info h2 {
                     color: #fff;
-                    font-size: 20px;
+                    font-size: 46px;
                     font-style: normal;
                     font-weight: 700;
                 }
 
                 #insight-in-motion .main-video .info p {
                     color: #fff;
-                    font-size: 13px;
+                    font-size: 16px;
                     font-style: normal;
                 }
 
-                #insight-in-motion .main-video .info {
-                    flex-direction: column;
-                    align-items: start;
-                    gap: 10px;
 
+
+                @media (max-width: 991px) {
+                    #insight-in-motion .main-video {
+                        aspect-ratio: 16 / 12;
+                        border-radius: 41px;
+                        padding: 0px 0 0px 0;
+                    }
+
+                    #insight-in-motion .main-video .info h2 {
+                        color: #fff;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                    }
+
+                    #insight-in-motion .main-video .info p {
+                        color: #fff;
+                        font-size: 13px;
+                        font-style: normal;
+                    }
+
+                    #insight-in-motion .main-video .info {
+                        flex-direction: column;
+                        align-items: start;
+                        gap: 10px;
+
+                    }
                 }
-            }
-        </style>
-        <?php RenderStyle::EndStyle() ?>
-
-    </div>
+            </style>
+            <?php RenderStyle::EndStyle() ?>
+        </div>
+    <?php endif ?>
 
 
 </div>
+
 <div class="container-fluid-cus sec-v-inmotion" id="morevideo">
     <div class="slider-v-inm">
 
