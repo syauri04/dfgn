@@ -87,7 +87,8 @@
             </div>
         </div>
 
-        <div class="row pt-27">
+
+        <div class="row pt-27 parent-box">
             <?php
             if (have_rows('detail_specific_training')) :
                 $index = 0;
@@ -95,8 +96,8 @@
 
                     $classc = ($index % 2 === 0) ? 'green' : 'red';
             ?>
-                    <div class="col-xl-6 col-md6">
-                        <div class="box-train <?php echo $classc; ?>">
+                    <div class="col-xl-6 col-md-6">
+                        <div class="custom-box <?php echo $classc; ?>">
                             <h1><?php echo get_sub_field('title_content'); ?></h1>
                             <p>
                                 <?php echo get_sub_field('desc_content'); ?>
@@ -108,9 +109,73 @@
                 endwhile;
             endif;
             ?>
-
-
         </div>
+
+
+        <?php RenderStyle::Style() ?>
+        <style>
+            .parent-box {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -15px;
+            }
+
+            .custom-box.red {
+                background: #fe5448;
+            }
+
+            .custom-box h1 {
+                font-weight: bold;
+            }
+
+            .custom-box.red h1,
+            .custom-box.red p {
+                color: white;
+            }
+
+            .custom-box.green {
+                background: #00cc74;
+                color: black;
+            }
+
+            .custom-box.green h1,
+            .custom-box.green p {
+                color: black;
+            }
+
+            .custom-box {
+                border-radius: 30px;
+                padding: 10%;
+                margin-bottom: 30px;
+                box-sizing: border-box;
+                aspect-ratio: 1/1;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .custom-box h1 {
+                color: #ffffff;
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+
+            .custom-box p {
+                color: #ffffff;
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            @media screen and (max-width: 768px) {
+                .custom-box {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        </style>
+        <?php RenderStyle::EndStyle() ?>
+
     </div>
 </section>
 
@@ -139,6 +204,7 @@
         .mjqweu h1 {
             margin-bottom: 20px
         }
+
         .mjqweu p {
             width: auto;
             font-size: 12px;
