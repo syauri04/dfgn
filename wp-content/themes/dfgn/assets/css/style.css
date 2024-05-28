@@ -1933,6 +1933,7 @@ line-height: 57.5px; /* 57.5px */
 	display: flex;
     justify-content: center;
     padding-top: 60px;
+    padding-bottom: 60px;
 }
 .browse-factory a{
 	padding: 25px 82px;

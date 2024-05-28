@@ -96,6 +96,18 @@
       nextArrow:false
   });
 
+  $('.slider-publication').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    centerMode: false,
+    variableWidth: true,
+    prevArrow: '<a class="slick-prev"><img src="' + theme_directory + '/assets/img/assets/slide-right.png" /></a>',
+      nextArrow:
+        '<a class="slick-next"><img src="' + theme_directory + '/assets/img/assets/slide-right.png" /></a>',
+  });
+
   $('.slider-v-inm').slick({
     dots: false,
     infinite: true,
