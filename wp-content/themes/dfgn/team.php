@@ -1,7 +1,8 @@
-<?php 
-    /***
-     * Template Name: Team Template
-     */
+<?php
+
+/***
+ * Template Name: Team Template
+ */
 ?>
 
 <?php get_header(); ?>
