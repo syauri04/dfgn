@@ -605,11 +605,12 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
 }
 .team .text-ss .summary-text p{
 	color: #FFF;
-	font-size: 16px;
+	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 23.408px; /* 23.408px */
+	line-height: 21px; /* 23.408px */
 	padding-bottom: 27px;
+	width: 70%;
 }
 .team .text-ss {
     max-width: 622px;
@@ -624,7 +625,7 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
     margin-left: auto;
 }
 .r-team {
-	width: 90%;
+	width: 83%;
 	position: relative;
 	/* display: flex; */
 	border-radius: 108px;
@@ -674,17 +675,17 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
 }
 .border-head-team h1{
 	color: #FE5448;
-font-size: 46px;
-font-style: normal;
-font-weight: 700;
-line-height: 57.5px; /* 57.5px */
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 21px; /* 57.5px */
 }
 .border-head-team p{
 	color: #FFF;
-	font-size: 16px;
+	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 23.408px; /* 23.408px */
+	line-height: 21px; /* 23.408px */
 }
 
 .boxies-team{
@@ -703,7 +704,7 @@ line-height: 57.5px; /* 57.5px */
 .user-in{
 	position: absolute;
     display: flex;
-    top: 44%;
+    top: 40%;
     width: 96%;
     padding: 0 62px;
     align-items: center;
@@ -747,18 +748,21 @@ line-height: 57.5px; /* 57.5px */
 
 #pink-bulet{
     position: absolute;
-    right: 17%;
+	right: 19.4%;
 }
 #kuning-bulet{
 	position: absolute;
     top: 69.333333%;
-    left: 16%;
+	left: 5.6%;
 }
 .shape1.team{
 	position: relative;
 }
 
 /* PAGE EVENT */
+.event-mask path{
+	scale: 0.88;
+}
 .team.eve .text-ss .main-text p{
 	color: #00CC74;
 }
@@ -770,10 +774,13 @@ line-height: 57.5px; /* 57.5px */
 }
 #pink-bulet-ev{
 	position: absolute;
-    right: 33%;
-    top: 34.2%;
+	right: 31.5%;
+    top: 29.9%;
     z-index: 2;
     opacity: .8;
+}
+#pink-bulet-ev path{
+	scale: 0.89;
 }
 .event-sec{
 	position: relative;
@@ -799,7 +806,7 @@ line-height: 57.5px; /* 57.5px */
     font-style: normal;
     font-weight: 700;
     line-height: 36.75px;
-    margin-bottom: 36px;
+    margin-bottom: 26px;
 }
 .eventso P{
     color: #FFF;
@@ -872,10 +879,10 @@ line-height: 57.5px; /* 57.5px */
 }
 .even h1{
 	color: #00CC74;
-	font-size: 46px;
+	font-size: 32px;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 57.5px ; 
+	line-height: 40px ; 
 	width: 555px;
 	margin: 0;
 }
@@ -929,11 +936,12 @@ line-height: 57.5px; /* 57.5px */
 }
 .even p{
 	color: #FFF;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 23.408px; /* 23.408px */
-	width: 432px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    width: 442px;
+	margin: 0;
 }
 .bread-ev{
 	position: relative;
@@ -2068,15 +2076,15 @@ line-height: 57.5px; /* 57.5px */
 .border-head-cnt .txt-left{
     flex: 1 0;
     color: var(--White, var(--White, #FFF));
-    font-size: 46px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 700;
-    line-height: 125%;
+    line-height: 40px;
 }
 .border-head-cnt .txt-right a{
 	color: #FFF;
     text-align: center;
-    font-size: 19px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -2390,6 +2398,9 @@ top: 0;
 	border-radius: 108px;
     border: 1px solid #D9D9D9;
 	padding: 54px 40px;
+}
+.boxies{
+	align-items: center;
 }
 .border-head-mp .boxies{
 	justify-content: center;
