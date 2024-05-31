@@ -2050,14 +2050,15 @@
 
     gsap.set("#patdots", {
         transformOrigin: "top top",
-        translate: "-46px -161px",
-        scale: 0.96
+        translate: "-150px -170px",
+        scale: 0.9
     });
     gsap.set("#pat1", {
         transformOrigin: "top top",
-        translate: "-62px -170px",
+        translate: "-125px -170px",
         opacity: 1,
         visibility: "visible",
+        scale: 0.9
     });
 
     gsap.set(endShape, {
@@ -2078,8 +2079,8 @@
             scrub: 1,
             pin: true,
             // markers: true,
-            start: "top top",
-            end: "+=110%",
+            start: "-60 top",
+            end: "+=100%",
             // toggleActions: "play pause play reset",
         },
     });
@@ -2091,11 +2092,11 @@
             origin: "50% 70%",
             // map: "complexity"
         },
-        translate: "0px 0px",
+        translate: "-55px 0px",
         duration: 1,
         delay: 1,
         ease: "Power0.easeNone",
-        scale: 1,
+        scale: 0.89,
 
     });
 
@@ -2127,84 +2128,59 @@
         },
         visibility: "visible",
         delay: 3,
-        ease: "slow(0.7,0.7,false)",
+        duration: 3,
+        ease: "power1.out",
         yPercent: -100
 
     });
     gsap.set("#patlonj", {
-        scale: 0.96,
         transformOrigin: "center center",
-        translate: "-66% 2px",
+        translate: "-64% -36px",
     });
     gsap.to("#patlonj", {
         scrollTrigger: {
             trigger: ".slide-frist",
-            start: "100 top",
+            start: "top top",
             end: "+=100",
             scrub: 3,
             // markers:true,
 
         },
-        x: "-160%",
+        x: "-180%",
         // x: "-100%", // Geser ke kiri sejauh 100%
         duration: 3,
+        delay: 3,
         ease: "power1.out",
 
     });
 
     gsap.set("#s-yellow", {
-        translate: "64.6% -3px"
+        translate: "64.5% -12px",
+        scale: 0.9
     });
-    gsap.to("#s-yellow", {
+    gsap.to("#s-yellow, #patdots", {
         scrollTrigger: {
             trigger: ".slide-frist",
-            start: "100 top",
+            start: "top top",
             end: "+=100",
             scrub: 3,
             // markers:true
 
         },
-        x: "-100%",
+        x: "-350%",
         // x: "-100%", // Geser ke kiri sejauh 100%
         duration: 3,
         delay: 3,
         ease: "power1.out",
 
     });
-    gsap.to("#patdots", {
-        scrollTrigger: {
-            trigger: ".slide-frist",
-            start: "100 top",
-            end: "+=100",
-            scrub: 3,
-            // markers:true
-
-        },
-        visibility: "hidden",
-        // x: "-100%", // Geser ke kiri sejauh 100%
-        duration: 3,
-        delay: 3,
-        ease: "power1.out",
-
-    });
-    gsap.to("#patdots", {
-        scrollTrigger: {
-            trigger: "#pat1",
-            start: "400 top",
-            end: "+=150",
-            scrub: 1,
-            // markers:true,
-
-        },
-        // morphSVG: { shape: "#pat2", map: "complexity" }
-        opacity: 0
-
-    });
+   
+  
 
 
     gsap.to(".text-ss", {
         scrollTrigger: {
-            trigger: ".slider-scroll",
+            trigger: ".menu-area",
             start: "top top",
             end: "+=100",
             scrub: 3,
