@@ -1,10 +1,10 @@
 
 <main>
-    <section id="the-network" class="service-area pt-100 ">
+    <section id="the-network" class="">
         <div class="container">
-            <?php include 'head-content.php' ?>
-            <?php include 'total-content.php' ?>
-            <?php include 'design-factory-list.php' ?>
+            <?php include 'sections/header-content.php' ?>
+            <?php include 'sections/count-content.php' ?>
+            <?php include 'sections/df-list-content.php' ?>
         </div>
     </section>
     <?php _include('shared/components/contact-us-cta/index.php'); ?>
