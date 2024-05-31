@@ -91,11 +91,9 @@
             width: 100%;
             top: 0
         }
-
         .background-animate-image {
-            margin-top: -300px;
-            /* margin-left: -550px; */
-            width: 1300px;
+            margin-top: -17%;
+            width: 100%;
         }
     }
 
