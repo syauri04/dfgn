@@ -3,7 +3,7 @@
 function register_designfactoryDetail_routes()
 {
     register_rest_route('api/v1', '/designfactory/detail/(?P<id>\d+)', array(
-        'methods' => 'GET',
+        'methods' => 'POST',
         'callback' => 'designfactoryDetail_get_data',
     ));
 }

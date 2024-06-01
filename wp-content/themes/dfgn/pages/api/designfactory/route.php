@@ -12,6 +12,7 @@ function register_designfactory_routes()
 function designfactory_get_data(WP_REST_Request $request)
 {
     $continent = $request->get_param('continent');
+    $keyword = $request->get_param('keyword');
 
     $query_args = array(
         'post_type'      => 'design-factories',
@@ -20,6 +21,10 @@ function designfactory_get_data(WP_REST_Request $request)
         'order'          => 'ASC',
         'posts_per_page' => -1,
     );
+
+    if (!empty($keyword)) {
+        $query_args['s'] = $keyword;
+    }
 
     $data = new WP_Query($query_args);
 
@@ -39,7 +44,7 @@ function designfactory_get_data(WP_REST_Request $request)
                 $continents = 'asia';
             }
 
-            if ($continents == $continent || $continent === null) {
+            if ($continents == $continent || $continent == null) {
                 $factoriesData = array(
                     'id'                     => get_the_ID(),
                     'continentClass'         => get_field('continents'),
@@ -63,6 +68,8 @@ function designfactory_get_data(WP_REST_Request $request)
                 $formatted_data[] = $factoriesData;
             }
         }
+    }else{
+        return new WP_REST_Response([$data], 400);
     }
     wp_reset_postdata();
     return new WP_REST_Response($formatted_data, 200);
