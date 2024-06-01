@@ -12,9 +12,9 @@ include 'style.css.php';
 <footer class="footer-dfgn">
     <div class="container">
 
-        <div class="background" style="font-size: 0;">
+        <div class="background" style="font-size: 0; position:relative">
 
-            <svg class="circle" width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="footer-circle" width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="96" cy="96" r="96" fill="white" />
             </svg>
 
@@ -99,20 +99,35 @@ include 'style.css.php';
     window.onload = function() {
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.fromTo(".footer-dfgn .background .circle", {
+        var tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".footer-dfgn",
+                start: "top bottom",
+                end: "+=30%",
+                scrub: true,
+                // markers: true
+            }
+        });
+
+        tl.fromTo(".footer-dfgn .background .footer-circle", {
             opacity: 0,
-            y: -100
+            y: -100,
+            // right: 0,
         }, {
+            // top: 0,
             y: 0,
             opacity: 1,
             duration: 3,
-            ease: "Power0.easeNone",
-            scrollTrigger: {
-                trigger: ".footer-dfgn",
-                start: "-400 top", // When the top of the trigger section reaches the center of the viewport
-                end: "+=40%", // When the bottom of the trigger section reaches the center of the viewport
-                scrub: true // Smoothly scrubs the animation based on the scroll position
-            }
+            ease: "Power0.easeNone"
+        });
+
+        function refreshAnimationFooter() {
+            tl.invalidate().restart(); // Refresh the animation
+        }
+
+        // Event listener for window resize
+        window.addEventListener('resize', function() {
+            refreshAnimationFooter(); // Refresh animation on window resize
         });
     };
 </script>

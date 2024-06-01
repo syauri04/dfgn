@@ -2,6 +2,7 @@
 <style>
     .footer-dfgn {
         padding-bottom: 24px;
+        /* position: relative; */
     }
     .footer-dfgn .logo {
         width: 100%;
@@ -18,7 +19,7 @@
         height: auto;
     }
 
-    svg.circle {
+    svg.footer-circle {
         position: absolute;
         top: 0;
         right: 0;
