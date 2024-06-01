@@ -3,6 +3,8 @@ define( 'WLT_DIR', plugin_dir_path ( __FILE__ ) );
 define( 'WLT_INCLUDES_DIR', trailingslashit ( WLT_DIR . 'includes' ) );
 define( 'WLT_TEXT_DOMAIN', 'wp-list-table' );
 
+include('library/AutoRouteAPI/index.php');
+
 function callbackMenu(){
    
    include('templates/view-user.php');

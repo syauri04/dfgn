@@ -1,8 +1,8 @@
 <?php
 include 'df-list-content.css.php';
-include 'df-list-content.js.php';
-include get_template_directory() .'/pages/the-network/components/factory-functions.php';
-echo createFactoryModal();
+// include 'df-list-content.js.php';
+// include get_template_directory() .'/pages/the-network/components/factory-functions.php';
+// echo createFactoryModal();
 ?>
 
 <div class="df-list">
@@ -22,56 +22,100 @@ echo createFactoryModal();
         </div>
     </div>
 
-    <div class="df-list-items row">
-        <!-- nanti bisa pake ajax biar load per jumlah -->
-        <?php
-        $data = new WP_Query([
-            'post_type' => 'design-factories',
-            'meta_key' => 'year_of_joining',
-            'orderby' => 'meta_value_num',
-            'order' => 'ASC',
-        ]);
-        ?>
+    <div class="df-list-items row" id="factoryItemsContainer">
 
-        <?php if ($data->have_posts()) : ?>
-            <?php $index = 0; ?>
-            <?php foreach ($data->get_posts() as $post) : ?>
-                <?php
-                setup_postdata($post);
-                $index++;
-                $continents = get_field('continents') ?? '';
-                if ($continents == "Europe and the middle east") {
-                    $continentClass = 'europe';
-                } else  if ($continents == "Americas") {
-                    $continentClass = 'america';
-                } else  if ($continents == "Asia pacific") {
-                    $continentClass = 'asia';
-                }
-
-                $factoriesData = [
-                    'continentClass' => $continentClass,
-                    'flagImage' => get_template_directory_uri() . '/assets/img/assets/country/flags/' . get_field('alpha_code_countries') . '.svg',
-                    'country' => get_field('city') . ', ' . get_field('countries'),
-                    'year' => get_field('year_of_joining'),
-                    'name' => get_the_title(),
-                    'image' => get_field('df_logo'),
-                    'profileImage' => get_field('picture'),
-                    'profileName' => get_field('contact'),
-                    'profilePosition' => get_field('position_of_cp'),
-                    'profileLinkedIn' => '#',
-                    'profileEmail' => get_field('email_of_cp'),
-                    'description' => 'Fusion Point believes that creativity and innovation are the tools and mindset that future leaders need to navigate uncertainty and create a positive impact for a sustainable future.',
-                    'focus' => nl2br(get_field('unique_focus')),
-                    'signatureCourses' => nl2br(get_field('signature_courses')),
-                    'collaborationPartners' => nl2br(get_field('collaboration_partners')),
-                    'countryFlag' => '',
-                    'logo' => ''
-                ];
-
-                echo createFactoryEntry($factoriesData);
-                ?>
-            <?php endforeach; ?>
-        <?php endif; ?>
-        <?php wp_reset_postdata(); ?>
     </div>
 </div>
+
+<div id="factoryCardsContainer" style="display:none;">
+    <div class="card-factory col-xl-6 col-md-6 grid-facto">
+        <div class="factory-box">
+            <div class="f-top">
+                <div class="f-country">
+                    <img src="" alt="" class="factory-flag">
+                    <span class="factory-country"></span>
+                </div>
+                <div class="f-year">
+                    <span class="factory-year"></span>
+                </div>
+            </div>
+
+            <div class="f-bottom">
+                <div class="f-factories">
+                    <img src="" alt="" class="factory-image">
+                </div>
+                <div class="f-factories-name">
+                    <span class="factory-name"></span>
+                    <ul>
+                        <li class="mr-0">
+                            <a href="#" class="rm" data-toggle="modal" data-target="#factoryModal" data-factory="<?= htmlspecialchars(json_encode("data")) ?>">Read more</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="f-profil">
+                <div class="inn-left">
+                    <div class="user-image"></div>
+                    <span class="factory-profileName"></span>
+                </div>
+                <div class="inn-right">
+                    <a href="#" class="factory-profileLinkedIn">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/icw_linkedin.png'; ?>" alt="">
+                    </a>
+                    <a href="#" class="factory-profileEmail">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/icw_email.png'; ?>" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetchFactoryData();
+    });
+
+    function fetchFactoryData() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '<?php echo home_url(); ?>/wp-json/api/v1/designfactory', true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    renderFactoryItems(data);
+                    console.log(data);
+                } else {
+                    console.error('Error fetching factory data:', xhr.status);
+                }
+            }
+        };
+        xhr.send();
+    }
+
+    function renderFactoryItems(data) {
+        var factoryItemsContainer = document.getElementById('factoryItemsContainer');
+        factoryItemsContainer.innerHTML = '';
+        console.log(data);
+
+        // Iterate over each factory in the data array
+        data.forEach(function(factory) {
+            // Clone the factory card template
+            var factoryCard = document.querySelector('#factoryCardsContainer .card-factory').cloneNode(true);
+
+            // Set the values for each element in the factory card
+            factoryCard.querySelector('.factory-flag').src = factory.flagImage;
+            factoryCard.querySelector('.factory-country').textContent = factory.country;
+            factoryCard.querySelector('.factory-year').textContent = factory.year;
+            factoryCard.querySelector('.factory-image').src = factory.image;
+            factoryCard.querySelector('.factory-name').textContent = factory.name;
+            factoryCard.querySelector('.factory-profileName').textContent = factory.profileName;
+            factoryCard.querySelector('.factory-profileLinkedIn').href = factory.profileLinkedIn;
+            factoryCard.querySelector('.factory-profileEmail').href = 'mailto:' + factory.profileEmail;
+
+            // Append the factory card to the container
+            factoryItemsContainer.appendChild(factoryCard);
+        });
+    }
+</script>
