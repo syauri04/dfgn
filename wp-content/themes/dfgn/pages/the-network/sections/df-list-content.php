@@ -91,13 +91,13 @@ include 'df-list-content.css.php';
         <div class="container modal-content">
             <div class="modal-body">
                 <div class="body-pop">
-                    <div class="row mb-50" style="align-items: center;">
+                    <div class="row mb-50 flex-column-reverse flex-sm-row" style="align-items: center;gap:30px">
                         <div class="col-xl-5 col-md-5 f-country">
                             <img id="modalCountryFlag" src="" alt="">
                             <span id="modalCountryName"></span>
                         </div>
                         <div class="col-xl-7 col-md-7">
-                            <div class="innerf">
+                            <div class="innerf flex-column-reverse flex-sm-row" style="gap:30px">
                                 <div id="modalFactoryName" class="fussion-title"></div>
                                 <div class="fussion-year">
                                     <p>Founded year &nbsp;&nbsp;<strong id="modalFactoryYear"></strong></p>
@@ -108,12 +108,31 @@ include 'df-list-content.css.php';
                     </div>
                     <div class="row">
                         <div class="col-xl-5 col-md-5 logo-factories">
-                            <img id="modalLogo" src="" alt="">
+                            <img id="modalLogo" src="" alt="" style="margin-bottom: 50px;">
                         </div>
                         <div class="col-xl-7 col-md-7">
                             <div class="text">
                                 <div id="modalFactoryFocus" class="text-wrapper"></div>
-                                <p id="modalFactoryDescription" class="div"></p>
+                                <div id="modalFactoryDescription">
+                                    <div class="desc-title" style="font-weight: bold;margin:10px 0">Unique Focus</div>
+                                    <div id="modalUniqueFocus">
+                                        Fusion Point believes that creativity and innovation are the tools and mindset that future leaders need to
+                                        navigate uncertainty and create a positive impact for a sustainable future.
+                                    </div>
+                                    <div class="desc-title" style="font-weight: bold;margin:10px 0">Signature Courses</div>
+                                    <div id="modalSignatureCourses">
+                                        Challenge Based Innovation (CBI): A program at CERN IdeaSquare that connects its research with societal
+                                        challenges, leveraging technologies to address Sustainable Development Goals through multidisciplinary student
+                                        teams.<br />Technology for Social Innovation (TeSI): This program integrates CERN&#39;s science and technology
+                                        to tackle societal issues, focusing on disruptive applications and innovative business models. It teaches
+                                        students to develop, assess, and communicate the impacts of new technologies on society.
+                                    </div>
+                                    <div class="desc-title" style="font-weight: bold;margin:10px 0">Collaboration Partners</div>
+                                    <div id="modalCollaborationPartners">
+                                        Health &amp; Wellness​, <br />Mobility &amp; Transport​, <br />Twin Transition (Green&amp;Digital),
+                                        <br />Sustainability.
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -129,19 +148,19 @@ include 'df-list-content.css.php';
                                 <div class="somd">
                                     <h1 id="modalProfileName"></h1>
                                     <p id="modalProfilePosition"></p>
-                                    <a id="modalProfileEmail" href="#"><img src="img/assets/df/icw_email.png" alt=""></a>
+                                    <a id="modalProfileEmail" href="#"><img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/icw_email.png' ?>" alt=""></a>
+                                    <a id="modalLinkedIn" href="#"><img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/icw_linkedin.png'; ?>" alt=""></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-7 col-md-7">
-                            <div class="border-black">
+                            <div class="border-black flex-column flex-sm-row" style=" gap: 20px; ">
                                 <div class="list-smd">
-                                    <a id="modalLinkedIn" href="#"><img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/icw_linkedin.png'; ?>" alt=""></a>
                                     <a id="modalFacebook" href="#"><img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/icw-fb.png'; ?>" alt=""></a>
                                     <a id="modalInstagram" href="#"><img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/icw-ig.png'; ?>" alt=""></a>
                                     <a id="modalX" href="#"><img src="<?php echo get_template_directory_uri() . '/assets/img/assets/df/icw-x.png'; ?>" alt=""></a>
                                 </div>
-                                <div class="btn-f-web">
+                                <div class="btn-f-web d-flex">
                                     <a id="modalWebsiteLink" href="#" target="_blank">Visit website</a>
                                 </div>
                             </div>
@@ -159,10 +178,10 @@ include 'df-list-content.css.php';
     $(document).ready(function() {
         fetchFactoryData();
 
-        function fetchFactoryData(continent) {
+        async function fetchFactoryData(continent) {
             var url = '<?php echo home_url(); ?>/wp-json/api/v1/designfactory';
             showLoading();
-            $.ajax({
+            await $.ajax({
                 url: url,
                 type: 'GET',
                 data: {
@@ -198,26 +217,28 @@ include 'df-list-content.css.php';
             }
         });
 
-        async function renderFactoryItems(data) {
+        function renderFactoryItems(data) {
             var factoryItemsContainer = $('#factoryItemsContainer');
             factoryItemsContainer.empty();
+            $.each(data, function(index, factory) {
+                if (factory) {
+                    var factoryCard = $('#factoryCardsContainer .card-factory').clone();
+                    factoryCard.find('.rm').attr('data-factory-id', factory.id);
+                    factoryCard.find('.factory-flag').attr('src', factory.flagImage);
+                    factoryCard.find('.factory-country').text(factory.country);
+                    factoryCard.find('.factory-year').text(factory.year);
+                    factoryCard.find('.factory-image').attr('src', factory.image);
+                    factoryCard.find('.factory-name').text(factory.name);
+                    factoryCard.find('.factory-profileImage').attr('src', factory.profile_image ?? '');
+                    if (!factory.profile_image) {
+                        factoryCard.find('.factory-profileImage').remove();
+                    }
+                    factoryCard.find('.factory-profileName').text(factory.profileName);
+                    factoryCard.find('.factory-profileLinkedIn').attr('href', factory.profileLinkedIn);
+                    factoryCard.find('.factory-profileEmail').attr('href', 'mailto:' + factory.profileEmail);
 
-            await $.each(data, function(index, factory) {
-                var factoryCard = $('#factoryCardsContainer .card-factory').clone();
-                factoryCard.find('.factory-flag').attr('src', factory.flagImage);
-                factoryCard.find('.factory-country').text(factory.country);
-                factoryCard.find('.factory-year').text(factory.year);
-                factoryCard.find('.factory-image').attr('src', factory.image);
-                factoryCard.find('.factory-name').text(factory.name);
-                factoryCard.find('.factory-profileImage').attr('src', factory.profile_image ?? '');
-                if (!factory.profile_image) {
-                    factoryCard.find('.factory-profileImage').remove();
+                    factoryItemsContainer.append(factoryCard);
                 }
-                factoryCard.find('.factory-profileName').text(factory.profileName);
-                factoryCard.find('.factory-profileLinkedIn').attr('href', factory.profileLinkedIn);
-                factoryCard.find('.factory-profileEmail').attr('href', 'mailto:' + factory.profileEmail);
-
-                factoryItemsContainer.append(factoryCard);
             });
 
             gsap.utils.toArray('.card-factory').forEach(function(card) {
@@ -279,7 +300,7 @@ include 'df-list-content.css.php';
             // showLoading();
             $.ajax({
                 url: url,
-                type: 'GET',
+                type: 'POST',
                 success: function(data) {
                     renderFactoryDetail(data);
                     // hideLoading();
@@ -292,19 +313,22 @@ include 'df-list-content.css.php';
         }
 
         function renderFactoryDetail(factoryDetail) {
-            $('#modalCountryFlag').attr('src', factoryDetail.flagImage);
-            $('#modalCountryName').text(factoryDetail.country);
-            $('#modalFactoryName').text(factoryDetail.name);
-            $('#modalFactoryYear').text(factoryDetail.year);
-            $('#modalLogo').attr('src', factoryDetail.image);
-            $('#modalFactoryFocus').html(factoryDetail.description.focus);
-            $('#modalFactoryDescription').html(factoryDetail.description.signatureCourses + "<br>" + factoryDetail.description.collaborationPartners);
-            $('#modalProfilePicture').attr('src', factory.profile_image ?? '');
-            $('#modalProfileName').text(factoryDetail.profileName);
-            $('#modalProfilePosition').text(factoryDetail.profilePosition);
-            $('#modalProfileEmail').attr('href', 'mailto:' + factoryDetail.profileEmail);
-            $('#modalLinkedIn').attr('href', factoryDetail.profileLinkedIn);
-            // Set other elements similarly
+            $('#modalCountryFlag').attr('src', factoryDetail.flagImage ?? '');
+            $('#modalCountryName').text(factoryDetail.country ?? '');
+            $('#modalFactoryName').text(factoryDetail?.name ?? '');
+            $('#modalFactoryYear').text(factoryDetail.year ?? '');
+            $('#modalLogo').attr('src', factoryDetail.image ?? '');
+            $('#modalFactoryFocus').html(factoryDetail.description.focus ?? '');
+
+            $('#modalUniqueFocus').html(factoryDetail.description.focus);
+            $('#modalSignatureCourses').html(factoryDetail.description.signatureCourses ?? '');
+            $('#modalCollaborationPartners').html(factoryDetail.description.collaborationPartners ?? '');
+
+            $('#modalProfilePicture').attr('src', factoryDetail.profile_image ?? '');
+            $('#modalProfileName').text(factoryDetail.profileName ?? '');
+            $('#modalProfilePosition').text(factoryDetail.profilePosition ?? '');
+            $('#modalProfileEmail').attr('href', 'mailto:' + factoryDetail.profileEmail ?? '');
+            $('#modalLinkedIn').attr('href', factoryDetail.profileLinkedIn ?? '');
         }
     });
 </script>

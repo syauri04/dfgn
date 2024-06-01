@@ -104,14 +104,21 @@
 <style>
     /* <!-- modal --> */
     #factoryModal {
-    padding: 0 !important;
-}
+        padding: 0 !important;
+    }
+
     #factoryModal .modal-dialog {
         width: 100%;
         margin: 0;
         padding: 16px;
         margin-top: 50px;
         margin-bottom: 50px;
+    }
+
+    #modalFactoryDescription .desc-title {
+        font-size: 15px;
+        font-weight: bold;
+        margin: 10px 0
     }
 
 
