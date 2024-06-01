@@ -6,9 +6,9 @@ include 'df-list-content.css.php';
 ?>
 <div class="df-list">
     <div class="df-list-tab border-head-df">
-        <div style="display:flex; justify-content:center;width:100%;justify-content: end;">
-            <div class="scroll-container boxies" style="overflow-x: auto;display: flex;width: 100%;justify-content: end;">
-                <div class="list-tab tab-left" style="width:max-content">
+        <div style="display:flex; justify-content:center;width:100%;justify-content:space-between;">
+            <div class="scroll-container boxies" style="overflow-x: auto;display: flex;width: 100%;">
+                <div class="list-tab tab-left" style="width:max-content;padding:0 20px">
                     <ul class="filter-factory">
                         <li><a href="#" class="active">All Continents</a></li>
                         <li><a href="#" class="" data-filter="america">Americas</a></li>
@@ -16,12 +16,12 @@ include 'df-list-content.css.php';
                         <li><a href="#" class="" data-filter="europe">Europe and the Middle East</a></li>
                     </ul>
                 </div>
-                <div class="searchField" style=" display: flex; border: 1px solid white; padding: 9px; border-radius: 25px; justify-content: end;">
-                    <input id="searchInput" type="text" style="padding:0 10px;color:white;background: transparent;border: none;display: none;" />
-                    <svg id="searchIcon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.3754 3C6.74505 3 3 6.65921 3 11.1834C3 15.7076 6.74505 19.3668 11.3754 19.3668C13.0285 19.3668 14.5585 18.8929 15.8556 18.0881L21.9062 24L24 21.9542L18.0264 16.1325C19.1003 14.7561 19.7507 13.0506 19.7507 11.1834C19.7507 6.65921 16.0057 3 11.3754 3ZM11.3754 4.9255C14.9222 4.9255 17.7801 7.71785 17.7801 11.1834C17.7801 14.6489 14.9222 17.4413 11.3754 17.4413C7.82854 17.4413 4.97067 14.6489 4.97067 11.1834C4.97067 7.71785 7.82854 4.9255 11.3754 4.9255Z" fill="white" />
-                    </svg>
-                </div>
+            </div>
+            <div class="searchField" style=" display: flex; border: 1px solid white; padding: 9px; border-radius: 25px; justify-content: end;">
+                <input id="searchInput" type="text" style="padding:0 10px;color:white;background: transparent;border: none;display: none;" />
+                <svg id="searchIcon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.3754 3C6.74505 3 3 6.65921 3 11.1834C3 15.7076 6.74505 19.3668 11.3754 19.3668C13.0285 19.3668 14.5585 18.8929 15.8556 18.0881L21.9062 24L24 21.9542L18.0264 16.1325C19.1003 14.7561 19.7507 13.0506 19.7507 11.1834C19.7507 6.65921 16.0057 3 11.3754 3ZM11.3754 4.9255C14.9222 4.9255 17.7801 7.71785 17.7801 11.1834C17.7801 14.6489 14.9222 17.4413 11.3754 17.4413C7.82854 17.4413 4.97067 14.6489 4.97067 11.1834C4.97067 7.71785 7.82854 4.9255 11.3754 4.9255Z" fill="white" />
+                </svg>
             </div>
         </div>
     </div>
@@ -29,12 +29,16 @@ include 'df-list-content.css.php';
     <script>
         $(document).ready(function() {
             $("#searchIcon").click(function() {
+                var $scrollContainer = $(".df-list-tab .scroll-container");
                 var $searchField = $(".searchField");
                 var $inputField = $("#searchInput");
                 var $tabList = $(".list-tab");
 
                 if ($inputField.css("display") === "none" || $inputField.css("opacity") == 0) {
                     $tabList.fadeOut(500, function() {
+                        $scrollContainer.css({
+                        width: "0"
+                    })
                         $searchField.animate({
                             width: "100%"
                         }, 500);
@@ -44,6 +48,9 @@ include 'df-list-content.css.php';
                         }, 500).focus();
                     });
                 } else {
+                    $scrollContainer.css({
+                        width: "auto"
+                    })
                     $searchField.css({
                         width: "auto"
                     }, 500);
@@ -230,6 +237,7 @@ include 'df-list-content.css.php';
         }
 
         function handleSearchInput() {
+            $('.filter-factory a.active').removeClass('active');
             var keyword = $("#searchInput").val();
             fetchFactoryData(null, keyword);
         }
