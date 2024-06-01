@@ -103,6 +103,9 @@
 </style>
 <style>
     /* <!-- modal --> */
+    #factoryModal {
+    padding: 0 !important;
+}
     #factoryModal .modal-dialog {
         width: 100%;
         margin: 0;

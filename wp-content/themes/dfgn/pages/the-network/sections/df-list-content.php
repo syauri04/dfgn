@@ -101,7 +101,7 @@ include 'df-list-content.css.php';
                                 <div id="modalFactoryName" class="fussion-title"></div>
                                 <div class="fussion-year">
                                     <p>Founded year &nbsp;&nbsp;<strong id="modalFactoryYear"></strong></p>
-                                    <a href="#" class="close" data-dismiss="modal"><img src="<?php echo get_template_directory_uri() ?>img/assets/close-popup.png" alt=""></a>
+                                    <a href="#" class="close" data-dismiss="modal"><img src="<?php echo get_template_directory_uri() ?>/assets/img/assets/close-popup.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
