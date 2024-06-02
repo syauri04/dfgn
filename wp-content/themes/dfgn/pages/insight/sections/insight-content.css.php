@@ -63,12 +63,12 @@
         height: 100%;
         height: 100%;
         border-radius: 108px;
-        padding: 8%;
+        padding: 11%;
     }
 
     .inm-txt h2 {
         color: #FFF;
-        font-size: 26px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 700;
         line-height: 32.5px;

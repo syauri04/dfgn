@@ -5,7 +5,7 @@ include 'df-list-content.css.php';
 // echo createFactoryModal();
 ?>
 <div class="df-list">
-    <div class="df-list-tab border-head-df">
+    <div class="df-list-tab section-tool-bar">
         <div style="display:flex; justify-content:center;width:100%;justify-content:space-between;">
             <div class="scroll-container boxies" style="overflow-x: auto;display: flex;width: 100%;">
                 <div class="list-tab tab-left" style="width:max-content;padding:0 20px">

@@ -72,7 +72,7 @@
                 start: "top top",
                 end: "+=20%",
                 scrub: true,
-                markers: true
+                // markers: true
             });
 
             if (window.innerWidth <= 900) {
@@ -109,88 +109,3 @@
         });
     });
 </script>
-
-
-<?php RenderStyle::Style() ?>
-<style>
-    .main-slide-scroll {
-        padding-top: 24px;
-        padding-bottom: 24px;
-        position: relative;
-    }
-
-    .text-ss {
-        padding: 0;
-        width: 49%;
-    }
-
-    .team.eve .text-ss .main-text p {
-        font-size: 2.6vw;
-        line-height: normal;
-    }
-
-    .background-shape .image-container {
-        mask: url(#mask0_789_41357);
-    }
-
-    .background-shape {
-        position: relative;
-        /* background: black; */
-    }
-
-    .background-shape svg.red-circle,
-    .background-shape svg.red-circle path {
-        position: absolute;
-        top: 33.8%;
-        right: 33.8%;
-        width: 15.2%;
-        opacity: 1;
-        height: auto;
-    }
-
-    /* responsive */
-
-    @media (max-width: 991px) {
-        .background-shape svg.red-circle path {
-            position: absolute;
-            top: 33.8%;
-            right: 33.8%;
-            width: auto;
-            opacity: 1;
-            height: auto;
-        }
-
-        .text-ss {
-            position: relative;
-            width: 100%;
-            max-width: none !important;
-        }
-
-        .team.eve .text-ss .main-text p {
-            font-size: 30px;
-            line-height: normal;
-        }
-
-        .team .text-ss .main-text {
-            margin-bottom: 24px;
-        }
-
-        .team.eve .text-ss .summary-text p {
-            width: 100%;
-        }
-
-        .background-shape .image-container {
-            mask: unset;
-        }
-
-        .background-shape {
-            border-radius: 41px;
-            overflow: hidden;
-        }
-
-        .background-shape svg.background {
-            height: 362px !important;
-        }
-    }
-</style>
-<?php RenderStyle::EndStyle() ?>

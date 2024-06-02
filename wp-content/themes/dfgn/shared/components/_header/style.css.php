@@ -5,7 +5,8 @@
         gap: 40px;
         justify-content: space-between;
         align-items: center;
-        height: 105px;
+        /* height: 105px; */
+        padding: 23px 0px;
     }
 
     .menu-navigation a {
@@ -34,6 +35,7 @@
         font-weight: bold;
         text-align: center;
     }
+
     .navbar-nav a:hover {
         color: #00cc74;
     }
@@ -45,41 +47,11 @@
             align-items: center;
             gap: 20px;
         }
+
         header .wrapper {
-        height: 50px;
-    }
-    }
-
-    /* buttom style bisa buat global */
-
-    .btn.btn-gradient-red {
-        color: #FFF;
-        text-align: center;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        border-radius: 54px;
-        background-color: #FE5448;
-        background: linear-gradient(90deg, #FE5448 0%, #A4A2E0 100%);
-        display: flex;
-
-        padding: 25px 82px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        flex-shrink: 0;
-
-        background-size: 200% 200%;
-        background-position: center;
-        transition: background-position 0.5s ease;
-
-    }
-
-    .btn.btn-gradient-red:hover {
-        /* background: linear-gradient(90deg, #FE5448 100%, #A4A2E0 100%); */
-        /* background-position: 300% 0; */
-        background-position: left;
+            /* height: 50px; */
+            padding: 0;
+        }
     }
 </style>
 <?php RenderStyle::EndStyle() ?>

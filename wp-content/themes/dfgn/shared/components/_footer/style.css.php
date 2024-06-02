@@ -19,7 +19,7 @@
         height: auto;
     }
 
-    svg.footer-circle {
+    .footer-dfgn svg.footer-circle {
         position: absolute;
         top: 0;
         right: 0;
@@ -42,9 +42,10 @@
 
     .footer-dfgn .wrapper-sosmed-copyright {
         display: flex;
-        justify-content: space-between;
-        gap: 20px;
         flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
         margin-right: -26%;
         margin-top: 40px;
         margin-bottom: -9%;

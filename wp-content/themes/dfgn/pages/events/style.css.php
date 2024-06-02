@@ -1,63 +1,89 @@
-<section class="section-area">
-    <div class="container">
-        <div class="border-head-df xasdqw">
-            <div class="col-xl-12 d-flex boxies even">
-                <div class="tab-left">
-                    <h1>
-                        WorldSync: <br>The DFGN calendar
-                    </h1>
-                </div>
-                <div class="txt-right select-df">
-                    <select id="select-event" name="pilihan" data-placeholder="All Event">
-                        <option value="*">All Event</option>
-                        <option value=".courses">Courses</option>
-                        <option value=".trainings">Trainings</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="row pt-27 grid-events">
-            <?php include 'event-list-card.php' ?>
-        </div>
-        <div class="pb-27 bread-ev-container">
-            <div class="bread-ev" style="background: linear-gradient(0deg, rgba(24, 34, 36, 0.90) 0%, rgba(24, 34, 36, 0.90) 100%), url(<?php the_field('background_image'); ?>) lightgray 50% / cover no-repeat;">
-                <div class="trainings-ev">
-                    <h1><?php the_field('title_trainings'); ?></h1>
-                    <p><?php the_field('description_trainings'); ?></p>
-                </div>
-            </div>
-        </div>
-        <div class="row border-head-df train mjqweu">
-            <div class="col-xl-12 d-flex boxies even">
-                <div class="tab-left">
-                    <h1><?php the_field('title_specific_training'); ?></h1>
-                </div>
-                <div class="txt-right select-df">
-                    <p><?php the_field('desc_specific_training'); ?></p>
-                </div>
-            </div>
-        </div>
-        <div class="row pt-27 parent-box">
-            <?php
-            if (have_rows('detail_specific_training')) :
-                $index = 0;
-                while (have_rows('detail_specific_training')) : the_row();
-                    $classc = ($index % 2 === 0) ? 'green' : 'red';
-            ?>
-                    <div class="col-xl-6 col-md-6 custom-box-container">
-                        <div class="custom-box <?php echo $classc; ?>">
-                            <h1><?php echo get_sub_field('title_content'); ?></h1>
-                            <p><?php echo get_sub_field('desc_content'); ?></p>
-                        </div>
-                    </div>
-            <?php
-                    $index++;
-                endwhile;
-            endif;
-            ?>
-        </div>
-    </div>
-</section>
+<!-- Slider Scroll -->
+<?php RenderStyle::Style() ?>
+<style>
+    .main-slide-scroll {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        position: relative;
+    }
+
+    .text-ss {
+        padding: 0;
+        width: 49%;
+    }
+
+    .team.eve .text-ss .main-text p {
+        font-size: 2.6vw;
+        line-height: normal;
+    }
+
+    .background-shape .image-container {
+        mask: url(#mask0_789_41357);
+    }
+
+    .background-shape {
+        position: relative;
+        /* background: black; */
+    }
+
+    .background-shape svg.red-circle,
+    .background-shape svg.red-circle path {
+        position: absolute;
+        top: 33.8%;
+        right: 33.8%;
+        width: 15.2%;
+        opacity: 1;
+        height: auto;
+    }
+
+    /* responsive */
+
+    @media (max-width: 991px) {
+        .background-shape svg.red-circle path {
+            position: absolute;
+            top: 33.8%;
+            right: 33.8%;
+            width: auto;
+            opacity: 1;
+            height: auto;
+        }
+
+        .text-ss {
+            position: relative;
+            width: 100%;
+            max-width: none !important;
+        }
+
+        .team.eve .text-ss .main-text p {
+            font-size: 30px;
+            line-height: normal;
+        }
+
+        .team .text-ss .main-text {
+            margin-bottom: 24px;
+        }
+
+        .team.eve .text-ss .summary-text p {
+            width: 100%;
+        }
+
+        .background-shape .image-container {
+            mask: unset;
+        }
+
+        .background-shape {
+            border-radius: 41px;
+            overflow: hidden;
+        }
+
+        .background-shape svg.background {
+            height: 362px !important;
+        }
+    }
+</style>
+<?php RenderStyle::EndStyle() ?>
+
+<!-- Event list -->
 
 <?php RenderStyle::Style() ?>
 <style>
@@ -216,6 +242,49 @@
 
         .txt-right.select-df {
             min-width: 162px;
+        }
+    }
+</style>
+<?php RenderStyle::EndStyle() ?>
+
+<!-- Event list card -->
+<?php RenderStyle::Style() ?>
+<style>
+    .btn-outline-white:hover {
+        background: #fff;
+        color: #0c1618;
+    }
+
+    .btn-outline-white {
+        display: flex;
+        width: fit-content;
+        padding: 13px 22px;
+        border-radius: 54px;
+        border: 1px solid #FFF;
+        background: rgba(217, 217, 217, 0.00);
+        color: #FFF;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: all 1s ease;
+    }
+
+    /* penamaan kelas seharusnya khusus */
+    @media (max-width: 1240px) {
+        .event-sec {
+            max-height: unset;
+            flex-direction: column;
+            border-radius: 41px;
+        }
+
+        .ev-image img {
+            width: 100%;
+        }
+
+        .ev-info {
+            padding: 35px;
         }
     }
 </style>

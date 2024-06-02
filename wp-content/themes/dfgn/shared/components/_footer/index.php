@@ -65,9 +65,7 @@ include 'style.css.php';
                         <div>
                             <div class="wrapper-sosmed-copyright">
                                 <div>
-                                    <div class="copyright-text">
-                                        <p> Copyright © 2022 Design Factory Global Network. All rights reserved. </p>
-                                    </div>
+                                    <p> Copyright © 2022 Design Factory Global Network. All rights reserved. </p>
                                 </div>
                                 <div>
                                     <?php include 'social-media.php'; ?>
