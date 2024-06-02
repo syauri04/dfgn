@@ -58,7 +58,7 @@
                                         <b class="minutes">0</b> Minutes
                                     </div>
                                 </div>
-                                <a class="btn-outline-white" href="javascript:void(0);" onclick="addToCalendar('<?php echo $event_id; ?>', '<?php echo $item['title_events']; ?>', '<?php echo $item['description_events']; ?>', '<?php echo $item['date_start']; ?>', '<?php echo $item['date_end']; ?>', '<?php echo $item['location_events']; ?>')">Add to calendar</a>
+                                <a class="btn-outline-white" href="javascript:void(0);" onclick="addToCalendar('<?php echo $event_id; ?>', '<?php echo htmlspecialchars(@$item['title_events'], ENT_QUOTES); ?>', '<?php echo htmlspecialchars(@$item['description_events'], ENT_QUOTES); ?>', '<?php echo htmlspecialchars(@$item['date_start'], ENT_QUOTES); ?>', '<?php echo htmlspecialchars(@$item['date_end'], ENT_QUOTES); ?>', '<?php echo htmlspecialchars(@$item['location_events'], ENT_QUOTES); ?>')">Add to calendar</a>
                             </div>
                         </div>
                     </div>

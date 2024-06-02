@@ -44,7 +44,7 @@
         function updateCountdown() {
             const now = new Date();
             const nowFormatted = now.toDateString();
-            const nowTime = now.getTime(); 
+            const nowTime = now.getTime();
             const distance = endTime - nowTime;
 
             console.log(`Now: ${nowTime}, End time: ${endTime}, Distance: ${distance}`);
@@ -64,8 +64,8 @@
             }
         }
 
-        updateCountdown(); 
-        setInterval(updateCountdown, 60000); 
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
     }
 
     document.querySelectorAll('.countdown').forEach(initializeCountdown);
