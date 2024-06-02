@@ -104,8 +104,8 @@
 
                     $classc = ($index % 2 === 0) ? 'green' : 'red';
             ?>
-                    <div class="col-xl-6 col-md-6">
-                        <div class="custom-box <?php echo $classc; ?>">
+                    <div class="col-xl-6 col-md-6" style=" flex: 1 0; display: flex; ">
+                        <div class="custom-box <?php echo $classc; ?>" style=" flex: 1 0;">
                             <h1><?php echo get_sub_field('title_content'); ?></h1>
                             <p>
                                 <?php echo get_sub_field('desc_content'); ?>
@@ -134,6 +134,8 @@
 
             .custom-box h1 {
                 font-weight: bold;
+                font-size: 3vw;
+                line-height: normal;
             }
 
             .custom-box.red h1,
@@ -153,8 +155,8 @@
 
             .custom-box {
                 border-radius: 108px;
-                padding: 20%;
-                margin-bottom: 30px;
+                padding: 15%;
+                margin-bottom: 24px;
                 box-sizing: border-box;
                 aspect-ratio: 1/1;
 
@@ -165,7 +167,7 @@
 
             .custom-box h1 {
                 color: #ffffff;
-                font-size: 22px;
+                /* font-size: 22px; */
                 margin-bottom: 15px;
             }
 
@@ -178,10 +180,19 @@
             @media screen and (max-width: 768px) {
                 .custom-box {
                     width: 100%;
-                    text-align: center;
+                    /* text-align: center; */
+                    font-size: 30px;
                     border-radius: 41px;
                     padding: 40px;
                     padding-top: 80px;
+                }
+                .custom-box h1 {
+                font-size: 30px;
+                margin-bottom: 30px;
+            }
+
+                .row.pt-27.parent-box {
+                    flex-direction: column;
                 }
             }
         </style>
