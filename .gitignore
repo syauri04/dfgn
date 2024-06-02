@@ -1,0 +1,8 @@
+# Ignore all files and folders in wp-admin
+/wp-admin/
+
+# Ignore all files and folders in wp-includes
+/wp-includes/
+
+# Ignore .htaccess file
+.htaccess
