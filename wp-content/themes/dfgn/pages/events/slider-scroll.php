@@ -53,42 +53,60 @@
     $(window).on('load', function() {
         gsap.registerPlugin(ScrollTrigger);
 
-        var tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".background-shape",
-                start: "-400 top",
-                end: "+=50%",
+        var tlEvent;
+        var scrollTriggerInstanceEvent;
+
+        function createTimelineEvent() {
+            if (tlEvent) {
+                tlEvent.kill();
+            }
+            if (scrollTriggerInstanceEvent) {
+                scrollTriggerInstanceEvent.kill();
+            }
+
+            tlEvent = gsap.timeline();
+
+            scrollTriggerInstance = ScrollTrigger.create({
+                animation: tlEvent,
+                trigger: ".main-slide-scroll",
+                start: "top top",
+                end: "+=20%",
                 scrub: true,
                 markers: true
+            });
+
+            if (window.innerWidth <= 900) {
+                tlEvent.fromTo(".red-circle", {
+                    opacity: 1,
+                    y: -90,
+                    x: 0,
+                    width: "150%",
+                }, {
+                    x: 120,
+                    opacity: 0,
+                    duration: 5,
+                    ease: "Power0.easeNone"
+                });
+            } else {
+                tlEvent.fromTo(".red-circle", {
+                    opacity: 0.5,
+                    width: "15.2%",
+                    top: "33.8%",
+                    right: "33.8%",
+                    y: 0
+                }, {
+                    opacity: 1,
+                    duration: 5,
+                    ease: "Power0.easeNone"
+                });
             }
-        });
-
-        tl.fromTo(".red-circle", {
-                opacity: 0.1,
-                // y: -90,
-                // x: 0,
-                // width: "150%",
-            }, {
-                // x: 120,
-                opacity: 1,
-                duration: 5,
-                ease: "Power0.easeNone"
-            });
-
-        if (window.innerWidth <= 900) {
-
-            tl.fromTo(".red-circle", {
-                opacity: 1,
-                y: -90,
-                x: 0,
-                width: "150%",
-            }, {
-                x: 120,
-                opacity: 0,
-                duration: 5,
-                ease: "Power0.easeNone"
-            });
         }
+
+        createTimelineEvent();
+
+        $(window).on('resize', function() {
+            createTimelineEvent();
+        });
     });
 </script>
 
@@ -97,6 +115,7 @@
 <style>
     .main-slide-scroll {
         padding-top: 24px;
+        padding-bottom: 24px;
         position: relative;
     }
 
@@ -116,6 +135,7 @@
 
     .background-shape {
         position: relative;
+        /* background: black; */
     }
 
     .background-shape svg.red-circle,

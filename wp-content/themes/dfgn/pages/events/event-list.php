@@ -1,6 +1,6 @@
 <section class="section-area">
-    <div class="container c-event">
-        <div class="row border-head-df xasdqw">
+    <div class="container">
+        <div class="border-head-df xasdqw">
             <div class="col-xl-12 d-flex boxies even">
                 <div class="tab-left">
                     <h1>
@@ -42,6 +42,14 @@
             }
 
             @media screen and (max-width: 768px) {
+
+                .xasdqw .col-xl-12.d-flex.boxies.even {
+                    flex-direction: column;
+                    gap: 23px;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                }
 
                 .bread-ev {
                     position: relative;
@@ -188,7 +196,7 @@
     /* penamaan kelas seharusnya khusus */
     @media (max-width: 991px) {
         .xasdqw {
-            margin: 90px 0 0;
+            /* margin: 90px 0 0; */
             padding: 28px;
             border-radius: 41px;
         }
