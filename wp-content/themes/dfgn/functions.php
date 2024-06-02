@@ -5,6 +5,32 @@ define( 'WLT_TEXT_DOMAIN', 'wp-list-table' );
 
 include('library/AutoRouteAPI/index.php');
 
+
+
+
+function check_passcode(){
+   if (isset($_POST['passcode'])) {
+      $input_passcode = sanitize_text_field($_POST['passcode']);
+      $page_id = 303; // ID halaman beranda (sesuaikan sesuai kebutuhan Anda)
+      $stored_passcode = get_field('passcode', $page_id);
+      
+      if ($input_passcode === $stored_passcode) {
+         // echo "masuk";
+          wp_send_json_success();
+      } else {
+         // echo "gagal";
+          wp_send_json_error('Passcode tidak valid.');
+      }
+   }
+ 
+    
+}
+add_action('wp_ajax_check_passcode', 'check_passcode');
+add_action('wp_ajax_nopriv_check_passcode', 'check_passcode');  
+
+
+ 
+
 function callbackMenu(){
    
    include('templates/view-user.php');
