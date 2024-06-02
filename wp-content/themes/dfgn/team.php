@@ -83,12 +83,12 @@
             <div class="container mb-30">
                 <div class="row border-head-team">
                     <div class="col-xl-12 js-center">
-                        <div class="col-xl-5 col-md-5 pl-0">
+                        <div class="col-xl-6 col-md-6 pl-0">
                             <h1><?php the_field('title_breadcumb'); ?></h1>
                             
                         </div>
                         
-                        <div class="col-xl-5 col-md-5">
+                        <div class="col-xl-6 col-md-6">
                             <p>
                                 <?php the_field('summary_breadcumb'); ?>
                             </p>
@@ -194,7 +194,7 @@
         tl2.to(".imageh", {
             // background: "linear-gradient(0deg, rgba(24, 34, 36, 0.2) 0%, rgba(24, 34, 36, 0.2) 100%), , url(img/assets/team-background.png) lightgray 50% / cover no-repeat",
             opacity: 0.2,
-            width: "55%",
+            width: "63%",
             height: "799",
             borderRadius: "0",
             opacity: 1,
@@ -206,7 +206,7 @@
 
         gsap.set(".txt-history", {
             
-            right: "130px",
+            right: "260px",
         });
         var tl3 = gsap.timeline({
             scrollTrigger: {
@@ -219,7 +219,7 @@
             },
         });
         tl3.to(".txt-history", {
-            right: "200px",
+            right: "300px",
             duration: 1,
             ease: "Power0.easeNone",
             

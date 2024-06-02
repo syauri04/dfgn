@@ -9,7 +9,7 @@
 <!-- main-start -->
     <main>
         <!-- service-area -->
-        <section class="service-area pt-100 ">
+        <section class="service-area pt-70 ">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12 mb-70 d-inline-flex factories">
