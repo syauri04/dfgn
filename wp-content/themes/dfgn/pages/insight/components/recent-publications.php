@@ -4,15 +4,12 @@
             <div class="col-xl-12 mb-80 d-inline-flex">
                 <div class="col-lg-9 section-title">
                     <h1>Recent publications</h1>
-                    <!-- <p>Kabupaten Bogor </p> -->
                 </div>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="multiple-items">
-
-
             <?php if (have_rows('data_publications')) : ?>
                 <?php while (have_rows('data_publications')) : the_row(); ?>
                     <?php
@@ -24,25 +21,12 @@
                         'image' => get_sub_field('tumbnail_cover') ?: ''
                     ];
                     ?>
-
                     <?php include 'recent-publications-card.php'; ?>
-
                 <?php endwhile; ?>
             <?php endif; ?>
-
-
-
-
-
-
         </div>
     </div>
-
 </section>
-
-
-
-
 
 <?php RenderStyle::Style() ?>
 <style>
@@ -81,7 +65,7 @@
         $('.multiple-items').slick({
             infinite: true,
             speed: 300,
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 1,
             centerMode: true,
 

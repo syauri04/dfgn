@@ -1,5 +1,5 @@
 <div class="footer-sosmed">
-    <ul>
+    <ul style="display:flex;gap:20px;">
         <li><a href="https://www.linkedin.com/company/design-factory-global-network" target="_blank"><img src="<?php echo get_template_directory_uri() . '/assets/img/assets/ssmd/LinkedIn.png'; ?>" alt=""></a></li>
         <li><a href="https://vimeo.com/dfgn" target="_blank"><img src="<?php echo get_template_directory_uri() . '/assets/img/assets/ssmd/Vimeo.png'; ?>" alt=""></a></li>
         <li><a href="https://www.flickr.com/photos/107310216@N06/sets/" target="_blank"><img src="<?php echo get_template_directory_uri() . '/assets/img/assets/ssmd/Flickr.png'; ?>" alt=""></a></li>
@@ -27,7 +27,7 @@
         .footer-sosmed {
         display: flex;
         justify-content: center;
-        margin-bottom: 40px;
+        /* margin-bottom: 40px; */
     }
     }
 </style>

@@ -1,32 +1,11 @@
 <main>
-    <!-- slider-area -->
-    <?php _include(get_template_directory() . "/pages/insight/components/slide-area.php") ?>
-
-    <!-- Recent Publication -->
-    <!-- Struktur Array Object bisa kaya gini -->
     <?php
-    $data = [
-        [
-            "title" => "asdasdasdasd",
-            "thumbnail_url" => "",
-            "file_type" => "PDF",
-            "file_url" => "",
-            "img_url" => "",
+    include 'sections/header-content.php';
+    include 'sections/recent-publication.php';
+    include 'sections/insight-content.php';
 
-        ],
-        [
-            "title" => "asdasdasdasd",
-            "thumbnail_url" => "",
-            "file_type" => "PDF",
-            "file_url" => "",
-            "img_url" => "",
-
-        ],
-    ];
+    include_once  get_template_directory() . '/shared/components/video-modal/index.php';
     ?>
-    <?php _include(get_template_directory() . "/pages/insight/components/recent-publications.php", [
-        "data" => $data
-    ]) ?>
 
     <!-- Insight in Motion -->
     <?php _include(get_template_directory() . "/pages/insight/components/insight-in-motion.php", [
@@ -47,6 +26,8 @@
     <?php _include(get_template_directory() . "/pages/insight/components/experiments-chronicles.php", [
         "data" => $data
     ]) ?>
+
+    
 
 </main>
 

@@ -1,8 +1,10 @@
 <main>
 
     <?php
-    include 'slider-scroll.php';
-    include 'event-list.php';
+    include 'sections/slider-scroll.php';
+    include 'sections/event-list.php';
+    include 'style.css.php';
+    include 'script.js.php';
     ?>
 
     <?php _include('shared/components/contact-us-cta/index.php', [

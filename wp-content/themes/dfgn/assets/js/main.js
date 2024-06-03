@@ -85,52 +85,61 @@
   mainSlider();
 
   // slider-three
+  // $('.slider-team').slick({
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 300,
+  //   slidesToShow: 1,
+  //   centerMode: false,
+  //   variableWidth: true,
+  //   prevArrow:false,
+  //     nextArrow:false
+  // });
+
   $('.slider-team').slick({
-    dots: true,
-    infinite: true,
-    speed: 300,
+    centerMode: true,
+    centerPadding: '24px',
     slidesToShow: 1,
-    centerMode: false,
     variableWidth: true,
     prevArrow:false,
-      nextArrow:false
+    nextArrow:false,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
-  $('.slider-v-inm').slick({
+  $('.slider-publication').slick({
     dots: false,
+    centerMode: true,
+    centerPadding: '24px',
     infinite: true,
     speed: 300,
     slidesToShow: 1,
-    centerMode: false,
     variableWidth: true,
-    prevArrow: false,
+    prevArrow: '<a class="slick-prev"><img src="' + theme_directory + '/assets/img/assets/slide-right.png" /></a>',
       nextArrow:
         '<a class="slick-next"><img src="' + theme_directory + '/assets/img/assets/slide-right.png" /></a>',
   });
-  
-
 
   // isotope
-  
-  
-  $(".factory-active").imagesLoaded(function() {
-    var $grid = $(".factory-active").isotope({
-      itemSelector: ".grid-facto",
-      percentPosition: true,
-      masonry: {
-        // use outer width of grid-sizer for columnWidth
-        // columnWidth: 1
-      }
-    });
-
-    // filter items on button click
-    $(".filter-factory").on("click", "a", function () {
-      // alert("sadsad");
-        var filterValue = $(this).attr("data-filter");
-        
-        $grid.isotope({ filter: filterValue });
-    });
-  });
 
   $(".cron-active").imagesLoaded(function() {
     var $grid = $(".cron-active").isotope({
