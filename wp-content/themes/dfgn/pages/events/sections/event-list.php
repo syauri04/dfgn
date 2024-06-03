@@ -1,6 +1,6 @@
 <section class="section-area">
     <div class="container">
-        <div class="section-tool-bar xasdqw">
+        <!-- <div class="section-tool-bar xasdqw">
             <div class="col-xl-12 d-flex boxies even">
                 <div class="tab-left">
                     <h1>
@@ -17,8 +17,16 @@
             </div>
         </div>
         <div class="row pt-27 grid-events">
-            <?php include 'event-list-card.php' ?>
-        </div>
+            <?php // include 'event-list-card.php' 
+            ?>
+        </div> -->
+
+        <?php
+            _include('shared/components/event/index.php', [
+                "eventData" => get_field('input_events')
+            ]);
+            ?>
+
         <div class="pb-27 bread-ev-container">
             <div class="bread-ev" style="background: linear-gradient(0deg, rgba(24, 34, 36, 0.90) 0%, rgba(24, 34, 36, 0.90) 100%), url(<?php the_field('background_image'); ?>) lightgray 50% / cover no-repeat;">
                 <div class="trainings-ev">
