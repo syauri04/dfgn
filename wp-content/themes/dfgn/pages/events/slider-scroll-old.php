@@ -33,7 +33,7 @@
                         </mask>
                     </svg> -->
 
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1273" height="624" viewBox="0 0 1273 624" fill="none" style="width: 100%;height: auto;">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1273" height="624" viewBox="0 0 1273 624" fill="none" style="&#10;    width: 100%;&#10;    height: auto;&#10;">
                         <mask id="mask0_789_41357" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1273" height="624">
                             <g clip-path="url(#clip0_789_41357)">
                                 <path d="M744.985 405.377C798.006 405.377 840.988 362.405 840.988 309.396C840.988 256.387 798.006 213.415 744.985 213.415C691.964 213.415 648.982 256.387 648.982 309.396C648.982 362.405 691.964 405.377 744.985 405.377Z" fill="#D1D3D1" />
