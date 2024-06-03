@@ -1,8 +1,9 @@
-# Ignore all files and folders in wp-admin
-/wp-admin/
+!.gitignore
 
-# Ignore all files and folders in wp-includes
-/wp-includes/
+# wp-admin/
+# wp-includes/
+# wp-content/uploads/
+wp-content/themes/*
+!wp-content/themes/dfgn
 
-# Ignore .htaccess file
-.htaccess
+wp-config.php

@@ -12,45 +12,23 @@
     <div class="container">
         <div class="multiple-items">
 
-            <?php
-            $param = [
-                "data" => [
-                    [
-                        'title' => "1st Design Factory Global Network Research Conference ‘Designing the Future’ 5-6 October 2022",
-                        'link' => "https://research.aalto.fi/en/publications/1st-design-factory-global-network-research-conference-designing-t",
-                        'image' => get_template_directory_uri() . '/assets/img/assets/pub3.png',
-                        'year' => "2022",
-                    ],
-                    [
-                        'title' => "DFGN 10th Anniversary Cookbook",
-                        'link' => "img/assets/pdf/DFGN_cookbook.pdf",
-                        'image' => get_template_directory_uri() . '/assets/img/assets/pub1.png',
-                        'year' => "2021",
-                    ],
-                    [
-                        'title' => "DFGN: We are not like the other design factories",
-                        'link' => "https://issuu.com/aaltodesignfactory/docs/dfgn_issuu",
-                        'image' => get_template_directory_uri() . '/assets/img/assets/pub2.png',
-                        'year' => "2020",
-                    ],
-                    [
-                        'title' => "The Interstellar Family Album",
-                        'link' => "img/assets/pdf/Interstellar_FamilyAlbum.pdf",
-                        'image' => get_template_directory_uri() . '/assets/img/assets/pub3.png',
-                        'year' => "2019",
-                    ],
-                ]
-            ];
-            ?>
 
+            <?php if (have_rows('data_publications')) : ?>
+                <?php while (have_rows('data_publications')) : the_row(); ?>
+                    <?php
+                    $data = [
+                        'title' => get_sub_field('title_file') ?: '',
+                        'year' => get_sub_field('year') ?: '',
+                        'file_publications' => get_sub_field('file_publications') ?: '',
+                        'link' => get_sub_field('link') ?: '',
+                        'image' => get_sub_field('tumbnail_cover') ?: ''
+                    ];
+                    ?>
 
-            <?php foreach ($param["data"] as $data) : ?>
-                <?php
-                include 'recent-publications-card.php'
-                ?>
+                    <?php include 'recent-publications-card.php'; ?>
 
-
-            <?php endforeach; ?>
+                <?php endwhile; ?>
+            <?php endif; ?>
 
 
 
@@ -67,29 +45,34 @@
 
 
 <?php RenderStyle::Style() ?>
-.slick-list.draggable {
-overflow: visible;
-}
-.multiple-items .slick-prev {
-    position: absolute;
-    bottom: 45%;
-    left: 10px;
-    cursor: pointer;
-    z-index: 7;
-}
-.multiple-items .slick-next {
-    position: absolute;
-    bottom: 45%;
-    right: 10px;
-    cursor: pointer;
-}
-@media (max-width: 991px) {
-    #publication-list h1 {
-        font-size:30px;
-        text-align:center
+<style>
+    .slick-list.draggable {
+        overflow: visible;
     }
 
-}
+    .multiple-items .slick-prev {
+        position: absolute;
+        bottom: 45%;
+        left: 10px;
+        cursor: pointer;
+        z-index: 7;
+    }
+
+    .multiple-items .slick-next {
+        position: absolute;
+        bottom: 45%;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 991px) {
+        #publication-list h1 {
+            font-size: 30px;
+            text-align: center
+        }
+
+    }
+</style>
 <?php RenderStyle::EndStyle() ?>
 
 <script>
@@ -101,7 +84,7 @@ overflow: visible;
             slidesToShow: 3,
             slidesToScroll: 1,
             centerMode: true,
-            
+
             responsive: [{
                     breakpoint: 1200, // Adjust breakpoint as needed
                     settings: {

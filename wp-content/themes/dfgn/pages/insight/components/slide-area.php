@@ -5,12 +5,11 @@
                 <div class="slide-content">
                     <div class="text-wrapper">
                         <h1 class="title">
-                            Want to know more <br>
-                            about the network? <br>
-                            <span>Check our stuff!</span>
+                            <?php the_field('title_reguler'); ?><br>
+                            <span><?php the_field('title_span'); ?></span>
                         </h1>
                         <p class="desc">
-                            Our community's diverse skillset is mirrored by an equally varied collection of creations. We call them "stuff" because, in our experimental culture, we often venture into projects that defy conventional labels, be it an experiment, a publication, a useful template, or simply a book that inspires. We encourage you to adopt this spirit of experimentation. Below, you’ll find some resources, these not only offer insights into DFGN and our community but are also designed to entertain and inspire. Enjoy your exploration and happy reading!
+                            <?php the_field('summary_hero'); ?>
                         </p>
                     </div>
                 </div>
@@ -26,17 +25,12 @@
                                 <path id="patlonj-inisight" d="M350.884 0.0761719H107.964C48.3372 0.0761719 0 48.3868 0 107.981C0 167.575 48.3372 215.886 107.964 215.886H350.884C410.511 215.886 458.848 167.575 458.848 107.981C458.848 48.3868 410.511 0.0761719 350.884 0.0761719Z" fill="#119DA4" />
                             </svg>
 
-
-                            <!-- SVG -->
                             <svg id="shape" viewBox="0 0 1431 822" preserveAspectRatio="xMidYMid meet">
-                                <!-- Define the mask -->
                                 <mask id="mask" viewBox="0 0 1431 822">
-                                    <!-- Path untuk pola yang diinginkan -->
                                     <path id="inspat1" d="M731.184 113.904C727.862 51.5778 777.416 0 839.014 0C877.98 0 912.082 20.6635 931.055 51.6027C937.027 61.331 947.391 67.489 958.799 67.489H962.196C973.605 67.489 983.981 61.331 989.94 51.6027C1008.91 20.651 1043.02 0 1081.98 0C1143.58 0 1193.15 51.5778 1189.81 113.904C1186.78 170.831 1138.28 216.338 1081.27 215.965C1042.64 215.716 1008.88 195.165 990.002 164.462C984.006 154.696 973.642 148.476 962.183 148.476H958.812C947.353 148.476 936.99 154.696 930.993 164.462C912.119 195.165 878.341 215.716 839.723 215.965C782.716 216.326 734.22 170.831 731.184 113.904ZM1323.01 0C1263.36 0 1215.02 48.3433 1215.02 107.982C1215.02 182.525 1154.58 242.96 1080.03 242.96H839.026C779.382 242.96 731.035 291.304 731.035 350.943V377.939C731.035 437.578 682.688 485.921 623.043 485.921H594.067C534.423 485.921 486.076 534.264 486.076 593.903C486.076 653.543 534.423 701.886 594.067 701.886H1323.01C1382.65 701.886 1431 653.543 1431 593.903V107.982C1431 48.3433 1382.65 0 1323.01 0Z" fill="#fff" />
                                 </mask>
-                                <!-- Apply the mask to a rectangle -->
                                 <!-- <rect width="100%" height="100%" fill="#000" mask="url(#mask)" />       -->
-                                <image href="<?php echo get_template_directory_uri() . '/assets/img/assets/insight-slide.png'; ?>" width="100%" height="100%" mask="url(#mask)" />
+                                <image href="<?php the_field('image_hero'); ?>" width="100%" height="100%" mask="url(#mask)" />
                             </svg>
                         </div>
                     </div>

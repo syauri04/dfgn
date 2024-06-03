@@ -1,4 +1,5 @@
 <div class="df-list">
+
     <div class="border-head-df">
         <div style="display:flex; justify-content:center;width:100%">
             <div class="scroll-container boxies" style="overflow-x: auto;">
@@ -14,7 +15,7 @@
         </div>
     </div>
 
-    <!-- CSS -->
+    <?php RenderStyle::Style() ?>
     <style>
         .border-head-df {
             padding: 30px;
@@ -45,8 +46,8 @@
             font-weight: bold;
         }
     </style>
-
-    <!-- JavaScript -->
+    <?php RenderStyle::EndStyle() ?>
+    <?php RenderJS::start() ?>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const listChronicles = document.querySelector('.boxies');
@@ -75,40 +76,100 @@
                 if (!isDown) return;
                 e.preventDefault();
                 const x = e.pageX - listChronicles.offsetLeft;
-                const walk = (x - startX) * 1; // Scroll-fast
+                const walk = (x - startX) * 1;
                 listChronicles.scrollLeft = scrollLeft - walk;
             });
         });
     </script>
+    <?php RenderJS::end() ?>
 </div>
 
 <div id="factoriesContainer" class="row" style="margin-bottom: 60px;">
+    <!-- nanti bisa pake ajax biar load per jumlah -->
     <?php
-    include 'df-list/factory-data.php';
+    $listdf = new WP_Query([
+        'post_type' => 'design-factories',
+        'meta_key' => 'year_of_joining',
+        'orderby' => 'meta_value_num',
+        'order' => 'ASC',
+    ]);
+    ?>
+
+    <?php
     include 'df-list/factory-functions.php';
-    foreach ($factoriesData as $factory) {
-        echo createFactoryEntry($factory);
-    }
     echo createFactoryModal();
     ?>
+
+    <?php if ($listdf->have_posts()) : ?>
+        <?php
+        $index = 0;
+        ?>
+        <?php foreach ($listdf->get_posts() as $post) : ?>
+            <?php
+            setup_postdata($post);
+            $index++;
+            $continents = get_field('continents') ?? '';
+            if ($continents == "Europe and the middle east") {
+                $continentClass = 'europe';
+            } else  if ($continents == "Americas") {
+                $continentClass = 'america';
+            } else  if ($continents == "Asia pacific") {
+                $continentClass = 'asia';
+            }
+
+            $factoriesData = [
+                'continentClass' => $continentClass,
+                'flagImage' => get_template_directory_uri() . '/assets/img/assets/country/flags/' . get_field('alpha_code_countries') . '.svg',
+                'country' => get_field('city') . ', ' . get_field('countries'),
+                'year' => get_field('year_of_joining'),
+                'name' => get_the_title(),
+                'image' => get_field('df_logo'),
+                'profileImage' => get_field('picture'),
+                'profileName' => get_field('contact'),
+                'profilePosition' => get_field('position_of_cp'),
+                'profileLinkedIn' => '#',
+                'profileEmail' => get_field('email_of_cp'),
+                'description' => 'Fusion Point believes that creativity and innovation are the tools and mindset that future leaders need to navigate uncertainty and create a positive impact for a sustainable future.',
+                'focus' => nl2br(get_field('unique_focus')),
+                'signatureCourses' => nl2br(get_field('signature_courses')),
+                'collaborationPartners' => nl2br(get_field('collaboration_partners')),
+                'countryFlag' => '',
+                'logo' => ''
+            ];
+
+            echo createFactoryEntry($factoriesData);
+            ?>
+        <?php endforeach; ?>
+    <?php endif; ?>
+    <?php
+    wp_reset_postdata();
+    ?>
+
 </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         $('#factoryModal').on('show.bs.modal', function(event) {
             $('html').addClass('modal-open');
-            var button = $(event.relatedTarget); 
-            var factory = button.data('factory'); 
+            var button = $(event.relatedTarget);
+            var factory = button.closest('.card-factory').find('.factory-data');
 
             var modal = $(this);
-            modal.find('#modalCountryFlag').attr('src', factory.countryFlag);
-            modal.find('#modalCountry').text(factory.country);
-            modal.find('#modalName').text(factory.name);
-            modal.find('#modalYear').text(factory.year);
-            modal.find('#modalLogo').attr('src', factory.logo);
-            modal.find('#modalFocus').text(factory.focus);
-            modal.find('#modalDescription').text(factory.description);
-            
+            modal.find('#modalCountryFlag').attr('src', factory.data('flag'));
+            modal.find('#modalCountry').text(factory.data('country'));
+            modal.find('#modalName').text(factory.data('name'));
+            modal.find('#modalYear').text(factory.data('year'));
+            modal.find('#modalLogo').attr('src', factory.data('image'));
+            modal.find('#modalFocus').text(factory.data('focus'));
+            modal.find('#modalDescription').text(factory.data('description'));
+            modal.find('#modalProfileName').text(factory.data('profileName'));
+            modal.find('#modalprofilePosition').text(factory.data('profilePosition'));
+            modal.find('#modalLinkedinLink').attr('href', factory.data('profileLinkedIn'));
+            modal.find('#modalLinkedinLink').attr('href', factory.data('profileLinkedIn'));
+            modal.find('#modalProfilePicture').css('background-image', 'url(' + factory.data('profileImage') + ')');
+            modal.find('#modalSosFb').attr('href', factory.data('profileFacebook'));
+            modal.find('#modalSosIg').attr('href', factory.data('profileInstagram'));
+            modal.find('#modalSosX').attr('href', factory.data('profileX'));
         });
 
         $('#factoryModal').on('hidden.bs.modal', function() {
@@ -116,6 +177,7 @@
         });
     });
 </script>
+
 
 <?php RenderStyle::Style() ?>
 <style>
