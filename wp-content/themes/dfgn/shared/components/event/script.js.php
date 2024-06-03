@@ -71,4 +71,25 @@
     document.querySelectorAll('.countdown').forEach(initializeCountdown);
 </script>
 
+<script>
+    $(document).ready(function() {
+        $(".grid-events").imagesLoaded(function() {
+            var $grid = $(".grid-events").isotope({
+                itemSelector: ".grid-events-items",
+                layoutMode: 'fitRows'
+            });
+
+            // Trigger layout after initialization
+            $grid.isotope('layout');
+
+            $('#select-event').on('change', function() {
+                var filterValue = $(this).val();
+                $grid.isotope({
+                    filter: filterValue
+                });
+            });
+        });
+    });
+</script>
+
 <?php RenderJS::end() ?>
