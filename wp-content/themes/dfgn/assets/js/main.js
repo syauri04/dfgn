@@ -126,19 +126,6 @@
     ]
   });
 
-  $('.slider-publication').slick({
-    dots: false,
-    centerMode: true,
-    centerPadding: '24px',
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    variableWidth: true,
-    prevArrow: '<a class="slick-prev"><img src="' + theme_directory + '/assets/img/assets/slide-right.png" /></a>',
-      nextArrow:
-        '<a class="slick-next"><img src="' + theme_directory + '/assets/img/assets/slide-right.png" /></a>',
-  });
-
   $('.slider-v-inm').slick({
     dots: false,
     centerMode: true,
@@ -156,19 +143,7 @@
 
 
   // isotope
-  $(".grid-events").imagesLoaded(function() {
-    var $grid = $(".grid-events").isotope({
-    itemSelector: ".grid-events-items",
-    layoutMode: 'fitRows'
-    });
-
-    // filter items on button click
-    $('#select-event').on('change', function() {
-        var filterValue = $(this).val();
-        // alert(filterValue);
-        $grid.isotope({ filter: filterValue });
-    });
-});
+  
   
   $(".factory-active").imagesLoaded(function() {
     var $grid = $(".factory-active").isotope({
@@ -202,9 +177,9 @@
     // filter items on button click
     $(".filter-cron").on("click", "a", function () {
       // alert("sadsad");
-        var filterValuec = $(this).attr("data-filter");
+        var filterValue = $(this).attr("data-filter");
         
-        $grid.isotope({ filter: filterValuec });
+        $grid.isotope({ filter: filterValue });
     });
   });
   //for menu active class

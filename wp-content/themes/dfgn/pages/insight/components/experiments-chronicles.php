@@ -1,7 +1,7 @@
 <section id="experiments-chronicles" class="section-area pt-120">
     <div class="container">
 
-        <div class="row border-head-inm">
+        <div class="row border-head-inm" style=" width: 100%; margin: 0; ">
             <div class="head-content ">
                 <div class="">
                     <h1>Experiments and chronicles of DF's</h1>
@@ -28,10 +28,10 @@
             </div>
         </div>
 
-        <div class="row pt-27 cron-active">
+        <div class="row pt-27 cron-active" style="margin:0">
 
             <?php foreach ($param["data"] as $data) : ?>
-                <div class="col-xl-4 col-md-4 grid-cron <?= $data['category_slug'] ?>">
+                <div class="col-xl-4 col-md-4 grid-cron <?= $data['category_slug'] ?>" style="padding:0">
                     <div class="boxies-cronicles">
                         <div class="img-cronicles">
                             <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/cronicle_1.jpg'; ?>" alt="">
