@@ -104,6 +104,15 @@
                                     $timestamp_end = strtotime($item['date_end']);
                                     $month_st = date('F', $timestamp_st);
                                     $month_end = date('F', $timestamp_end);
+
+                                    $timestampend = strtotime($item['date_end']);
+                                    $formatted_dateend = date('Ymd\THis\Z', $timestampend);
+
+                                    $timestampstart = strtotime($item['date_start']);
+                                    $formatted_datestart = date('Ymd\THis\Z', $timestampstart);
+
+                                    $event_id = get_the_ID();
+                                    // print_r($event_id);
                     ?>
                                     <div class="col-12 pb-27 grid-events-items <?php echo $category->slug;?>">
                                         <div class="event-sec">
@@ -123,7 +132,7 @@
                                                     </div>
                                                     <div class="loc">
                                                         <img src="<?php echo get_template_directory_uri().'/assets/img/assets/Isolation_loc_white.png'; ?>" alt="">
-                                                        <span>zoom</span>
+                                                        <span><?php echo $item['location']; ?></span>
                                                     
                                                     </div>
                                                 </div>
@@ -141,7 +150,7 @@
                                                     </div>
                                                     <div class="wbs">
                                                         
-                                                        <a href="<?php echo $item['link']; ?>">Add to calendar</a>
+                                                        <a href="<?php echo $item['link']; ?>" class="calendar-link" data-dstart="<?php echo $formatted_datestart; ?>" data-dend="<?php echo $formatted_dateend; ?>">Add to calendar</a>
                                                         
                                                         
                                                     </div>
@@ -223,6 +232,29 @@
 
     </main>
 <?php get_footer(); ?>
+
+    <script>
+        document.querySelectorAll('.calendar-link').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                
+                // Ambil tanggal dari data-target
+                const targetDate = this.getAttribute('data-dend');
+                const mulaiDate = this.getAttribute('data-dstart');
+                
+                // Buat URL Google Calendar
+                const eventTitle = 'Acara Saya';  
+                const eventDescription = 'Deskripsi acara';  
+                const eventLocation = 'Lokasi acara';  
+                const endDate = targetDate;  
+
+                const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${mulaiDate}/${endDate}&details=${encodeURIComponent(eventDescription)}&location=${encodeURIComponent(eventLocation)}&sf=true&output=xml`;
+
+                // Arahkan ke URL Google Calendar
+                window.open(googleCalendarUrl, '_blank');
+            });
+        });
+    </script>
 
     <script>
        $(document).ready(function(){
