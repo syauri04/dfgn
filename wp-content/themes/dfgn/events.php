@@ -95,7 +95,7 @@
 
                         // Loop untuk menampilkan data yang telah diurutkan
                             if ($repeater_calendar) {
-                                
+                                $row_index = 0;
                                 foreach ($repeater_calendar as $item) {
                                     $category_id = $item['type_events']; // Adjust this to match the name of your category field
                                     $category = get_term_by('id', $category_id, 'category');
@@ -104,6 +104,20 @@
                                     $timestamp_end = strtotime($item['date_end']);
                                     $month_st = date('F', $timestamp_st);
                                     $month_end = date('F', $timestamp_end);
+                                    $timestampend = strtotime($item['date_end']);
+                                    $formatted_dateend = date('Ymd\THis\Z', $timestampend);
+
+                                    $timestampstart = strtotime($item['date_start']);
+                                    $formatted_datestart = date('Ymd\THis\Z', $timestampstart);
+
+                                    $google_calendar_url = sprintf(
+                                        'https://www.google.com/calendar/render?action=TEMPLATE&text=%s&dates=%s/%s&details=%s&location=%s&sf=true&output=xml',
+                                        urlencode($item['title_events']),
+                                        $formatted_datestart,
+                                        $formatted_datestart,
+                                        urlencode($item['description_events']),
+                                        urlencode($item['location'])
+                                    );
                     ?>
                                     <div class="col-12 pb-27 grid-events-items <?php echo $category->slug;?>">
                                         <div class="event-sec">
@@ -123,7 +137,7 @@
                                                     </div>
                                                     <div class="loc">
                                                         <img src="<?php echo get_template_directory_uri().'/assets/img/assets/Isolation_loc_white.png'; ?>" alt="">
-                                                        <span>zoom</span>
+                                                        <span><?php echo $item['location']; ?></span>
                                                     
                                                     </div>
                                                 </div>
@@ -141,7 +155,7 @@
                                                     </div>
                                                     <div class="wbs">
                                                         
-                                                        <a href="<?php echo $item['link']; ?>">Add to calendar</a>
+                                                        <a href="<?php echo $google_calendar_url; ?>" target="_blank" class="calendar-link" data-dstart="<?php echo $formatted_datestart; ?>" data-dend="<?php echo $formatted_dateend; ?>">Add to calendar</a>
                                                         
                                                         
                                                     </div>
@@ -223,7 +237,7 @@
 
     </main>
 <?php get_footer(); ?>
-
+    
     <script>
        $(document).ready(function(){
             $('#select-event').awselect({
