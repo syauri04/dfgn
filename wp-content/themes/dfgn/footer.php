@@ -101,7 +101,7 @@
                 type: 'POST',
                 data: {
                     action: 'check_passcode',
-                    passcode: passcode
+                    passcode: passcode,
                 },
                 success: function(response) {
                     // console.log(response);

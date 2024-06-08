@@ -48,7 +48,7 @@
                        
                                 <svg xmlns="http://www.w3.org/2000/svg" id="pink-bulet-ev" width="217" height="216" viewBox="0 0 217 216" fill="none">
                                     <!-- <g style="mix-blend-mode:color"> -->
-                                      <path d="M108.261 215.692C167.863 215.692 216.18 167.408 216.18 107.846C216.18 48.2844 167.863 0 108.261 0C48.6582 0 0.34082 48.2844 0.34082 107.846C0.34082 167.408 48.6582 215.692 108.261 215.692Z" fill="#FA5448"/>
+                                      <path d="M108.261 215.692C167.863 215.692 216.18 167.408 216.18 107.846C216.18 48.2844 167.863 0 108.261 0C48.6582 0 0.34082 48.2844 0.34082 107.846C0.34082 167.408 48.6582 215.692 108.261 215.692Z" fill="#00CC74"/>
                                     <!-- </g> -->
                                   </svg>
                                 <div class="main-image-team">
@@ -77,67 +77,104 @@
                             
                         <div class="txt-right select-df">
                             
-                            <select id="select-event" name="pilihan" data-placeholder="All Event">
-                                <option value="*">All Event</option>
+                            <select id="select-event" name="pilihan" data-placeholder="All">
+                                <option value="*">All</option>
                                 <option value=".courses">Courses</option>
                                 <option value=".trainings">Trainings</option>
+                                <option value=".events">Events</option>
                             </select>
                         </div>
                     </div>
                 </div>
                 <div class="row pt-27 grid-events">
                     <?php
-                        // Dapatkan data dari repeater ACF
-                        $repeater_calendar = get_field('input_events');
+                        $events_list = new WP_Query(
+                            array(
+                                'post_type' => 'events-posts',
+                                'meta_query'     => array(
+                                                        array(
+                                                            'key'     => 'status_events', 
+                                                            'value'   => 'Public', 
+                                                            'compare' => '='
+                                                        )
+                                                ),
+                                'order'          => 'DESC',
+                                'posts_per_page' => -1
+                            )
+                        );
+                       
+                        // $repeater_calendar = get_field('input_events');
 
-                        // Balik urutan array
-                        $repeater_calendar = array_reverse($repeater_calendar);
+                       
+                        // $repeater_calendar = array_reverse($repeater_calendar);
 
                         // Loop untuk menampilkan data yang telah diurutkan
-                            if ($repeater_calendar) {
-                                $row_index = 0;
-                                foreach ($repeater_calendar as $item) {
-                                    $category_id = $item['type_events']; // Adjust this to match the name of your category field
+                            if($events_list->have_posts()) :
+                                $index = 1;
+                                while($events_list->have_posts()) : $events_list->the_post();
+                                   
+                                    $category_id = get_field('type_events'); // Adjust this to match the name of your category field
                                     $category = get_term_by('id', $category_id, 'category');
-                                
-                                    $timestamp_st = strtotime($item['date_start']);
-                                    $timestamp_end = strtotime($item['date_end']);
+
+                                    $date_status = get_field('date_status');
+                                    //  print_r(the_title());die();
+                                    // print_r($category);
+                                    $timestamp_st = strtotime(get_field('date_start'));
+                                    $timestamp_end = strtotime(get_field('date_end'));
                                     $month_st = date('F', $timestamp_st);
                                     $month_end = date('F', $timestamp_end);
-                                    $timestampend = strtotime($item['date_end']);
+                                    
+                                    // Konverso ke date spesifik
+                                    $date_start_obj = DateTime::createFromFormat('Y-m-d', get_field('date_start'));
+                                    $date_end_obj = DateTime::createFromFormat('Y-m-d', get_field('date_end'));
+                        
+                                    $date_frist_spesific = $date_start_obj->format('d F');
+                                    $date_end_spesific = $date_end_obj->format('d F Y');
+
+                                    // Konfersi ke date calandar
+                                    $timestampend = strtotime(get_field('date_end'));
                                     $formatted_dateend = date('Ymd\THis\Z', $timestampend);
 
-                                    $timestampstart = strtotime($item['date_start']);
+                                    $timestampstart = strtotime(get_field('date_start'));
                                     $formatted_datestart = date('Ymd\THis\Z', $timestampstart);
 
                                     $google_calendar_url = sprintf(
                                         'https://www.google.com/calendar/render?action=TEMPLATE&text=%s&dates=%s/%s&details=%s&location=%s&sf=true&output=xml',
-                                        urlencode($item['title_events']),
+                                        urlencode(get_the_title()),
                                         $formatted_datestart,
-                                        $formatted_datestart,
-                                        urlencode($item['description_events']),
-                                        urlencode($item['location'])
+                                        $formatted_dateend,
+                                        urlencode(get_field('description_events')),
+                                        urlencode(get_field('location'))
                                     );
                     ?>
                                     <div class="col-12 pb-27 grid-events-items <?php echo $category->slug;?>">
                                         <div class="event-sec">
                                             <div class="ev-image">
-                                                <img src="<?php echo $item['thumbnail_events']; ?>" alt="">
+                                                <img src="<?php the_field('thumbnail_events') ?>" alt="">
                                             </div>
                                             <div class="ev-info">
                                                 <div class="eventso">
-                                                    <h1><?php echo $item['title_events']; ?></h1>
-                                                    <p><?php echo $item['description_events']; ?></p>
+                                                    <h1><?php the_title(); ?></h1>
+                                                    <p><?php the_field('description_events'); ?></p>
                                                 </div>
                                                 <div class="eventags">
                                                     <div class="mon">
                                                         <img src="<?php echo get_template_directory_uri().'/assets/img/assets/Isolation_Mode.png'; ?>" alt="">
-                                                        <span>Typically held in  <?php echo $month_st; ?>-<?php echo $month_end; ?></span>
+                                                        <span>
+                                                            <?php 
+                                                                if($date_status != 'Specific'){
+                                                                    echo 'Typically held in '.$month_st.' - '.$month_end;
+                                                                }else{
+                                                                    echo $date_frist_spesific . ' - ' . $date_end_spesific; 
+                                                                }
+                                                            ?>
+                                                            
+                                                        </span>
                                                     
                                                     </div>
                                                     <div class="loc">
                                                         <img src="<?php echo get_template_directory_uri().'/assets/img/assets/Isolation_loc_white.png'; ?>" alt="">
-                                                        <span><?php echo $item['location']; ?></span>
+                                                        <span><?php the_field('location'); ?></span>
                                                     
                                                     </div>
                                                 </div>
@@ -145,9 +182,9 @@
                                                    
                                                     <div class="wbs innel_left">
                                                         <?php 
-                                                            if($item['link'] != ''){
+                                                            if(get_field('link') != ''){
                                                         ?>
-                                                                <a href="<?php echo $item['link']; ?>">Visit site</a>
+                                                                <a href="<?php the_field('link'); ?>>">Visit site</a>
                                                         <?php
                                                             }
                                                         ?>
@@ -165,10 +202,9 @@
                                         </div>
                                     </div>
                     <?php
-                                }
-                            } else {
-                                echo '<p>No data found.</p>';
-                            }
+                               endwhile;
+                            endif;
+                            wp_reset_postdata();
                     ?>
                         
                         

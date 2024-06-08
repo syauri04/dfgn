@@ -237,7 +237,7 @@
                                     <span><?php echo $first_row['sub_title']; ?></span>
                                 </div>
                                 <div class="w-vimeo">
-                                    <a class="wv" href="#" data-toggle="modal" data-target="#vim-1" data-vimeo="<?php echo $first_row['id_vimeo']; ?>">Watch in Vimeo</a>
+                                    <a class="wv" href="#" data-toggle="modal" data-target="#vim-1" data-vimeo="<?php echo $first_row['id_vimeo']; ?>">Watch on Vimeo</a>
                                     <!-- <div class="rounded-play">
                                         <a href="#" data-toggle="modal" data-target="#vim-1"><img src="" alt=""></a> 
                                     </div> -->

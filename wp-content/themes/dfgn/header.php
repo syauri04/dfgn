@@ -15,7 +15,7 @@ include 'library/Render/index.php';
     <link rel="icon" href="<?php echo get_template_directory_uri().'/assets/img/assets/favicon.png'; ?>">
     <!-- Bootstrap CSS -->
     <?php wp_head(); ?>
-    <title>DFGN</title>
+    <title>Design Factory Global Network</title>
     <script>
         theme_directory = "<?php echo get_template_directory_uri() ?>";
     </script>

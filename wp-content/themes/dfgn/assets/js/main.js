@@ -170,24 +170,7 @@
     });
 });
   
-  $(".factory-active").imagesLoaded(function() {
-    var $grid = $(".factory-active").isotope({
-      itemSelector: ".grid-facto",
-      percentPosition: true,
-      masonry: {
-        // use outer width of grid-sizer for columnWidth
-        // columnWidth: 1
-      }
-    });
 
-    // filter items on button click
-    $(".filter-factory").on("click", "a", function () {
-      // alert("sadsad");
-        var filterValue = $(this).attr("data-filter");
-        
-        $grid.isotope({ filter: filterValue });
-    });
-  });
 
   $(".cron-active").imagesLoaded(function() {
     var $grid = $(".cron-active").isotope({

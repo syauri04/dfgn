@@ -77,31 +77,55 @@
                         </div>
                         
                         <div class="txt-right select-df">
-                            
-                            <select id="select-cronogical" name="pilihan" data-placeholder="Sort by: chronological">
-                                <option value="sort_year">Chronological</option>
-                                <option value="sort_df">A-Z</option>
-                            </select>
+                            <form id="sort-form" method="GET">
+                                <select id="select-cronogical" name="sort_by" data-placeholder="Sort by: chronological">
+                                    <option value="sort_chronological">Chronological</option>
+                                    <option value="sort_alphabet">A-Z</option>
+                                </select>
+                            </form>
                         </div>
                     </div>
                     
                 </div>
-                <div class="row factory-active" >
+                <div class="row factory-active">
                     <!-- <div class="tab1"> -->
                     <?PHP
+                        // $sort_by = isset($_GET['sort_by']) ? $_GET['sort_by'] : 'sort_chronological';
+                        // if ($sort_by === 'sort_chronological') {
+                        //     $listdf = new WP_Query(
+                        //         array(
+                        //             'post_type' => 'design-factories',
+                        //             'meta_key'        => 'year_of_joining',
+                        //             'orderby'        => 'meta_value_num',
+                        //             'order'          => 'ASC',
+                        //             'posts_per_page' => -1
+                        //         )
+                        //     );
+                        // } elseif ($sort_by === 'sort_alphabet') {
+                        //     $listdf = new WP_Query(
+                        //         array(
+                        //             'post_type' => 'design-factories',
+                        //             'orderby'        => 'title',
+                        //             'order'          => 'ASC',
+                        //             'posts_per_page' => -1
+                        //         )
+                        //     );
+                        // }
                         $listdf = new WP_Query(
                             array(
                                 'post_type' => 'design-factories',
                                 'meta_key'        => 'year_of_joining',
                                 'orderby'        => 'meta_value_num',
                                 'order'          => 'ASC',
+                                'posts_per_page' => -1
                             )
                         );
-
+                        $total_posts = $listdf->found_posts;
+                        // print_r($total_posts);die();
                         if($listdf->have_posts()) :
                             $index = 1;
                             while($listdf->have_posts()) : $listdf->the_post();
-                            
+                            $slug = get_post_field('post_name', get_the_ID());
                             $continents = get_field('continents');
                             $code_aplha = get_field('alpha_code_countries').'.svg';
                             $post_id = get_the_ID();
@@ -109,6 +133,13 @@
                             $uniqe_focus = get_field('unique_focus');
                             $signature_focus = get_field('signature_courses');
                             $collaboration_focus = get_field('collaboration_partners');
+
+                            $city = get_field('city');
+                            if($city != ''){
+                                $city_n = $city.',';
+                            }else{
+                                $city_n = '';
+                            }
                         
                             if($continents == "Europe and the middle east"){
                                 $class_continents = 'europe';
@@ -125,7 +156,7 @@
                                 <div class="f-top">
                                     <div class="f-country">
                                         <img src="<?php echo get_template_directory_uri().'/assets/img/assets/country/flags/'.$code_aplha; ?>" alt="">
-                                        <span><?php the_field('city') ?>, <?php the_field('countries') ?></span>
+                                        <span><?php echo $city_n ?> <?php the_field('countries') ?></span>
                                     </div>
                                     <div class="f-year">
                                         <span><?php the_field('year_of_joining') ?></span>
@@ -142,7 +173,7 @@
                                             <!-- <li><a href="#"><img src="img/assets/df/icw-ig.png" alt=""></a></li>
                                             <li><a href="#"><img src="img/assets/df/icw-fb.png" alt=""></a></li>
                                             <li><a href="#"><img src="img/assets/df/icw-x.png" alt=""></a></li> -->
-                                            <li class="mr-0"><a href="" class="rm" data-toggle="modal" data-target="#pop_df_<?php echo $index ?>" data-id="<?php echo $post_id; ?>">Read more</a></li>
+                                            <li class="mr-0"><a href="" class="rm" data-toggle="modal" data-target="#<?php echo $slug ?>" data-id="<?php echo $post_id; ?>">Read more</a></li>
 
                                         </ul>
                                     </div>
@@ -166,7 +197,7 @@
                         </div>
 
                         <!-- Pop UP DF -->
-                        <div id="pop_df_<?php echo $index ?>" class="modal fade" role="dialog">
+                        <div id="<?php echo $slug ?>" class="modal fade" role="dialog">
                             <div class="modal-dialog factory-detail">
                                 <div class="modal-content">
                                     <div class="modal-body">
@@ -174,7 +205,7 @@
                                             <div class="row mb-50" style="align-items: center;">
                                                 <div class="col-xl-5 col-md-5 f-country">
                                                     <img src="<?php echo get_template_directory_uri().'/assets/img/assets/country/flags/'.$code_aplha; ?>" alt="">
-                                                    <span><?php the_field('city') ?>, <?php the_field('countries') ?></span>
+                                                    <span><?php the_field('city') ?> <?php the_field('countries') ?></span>
                                                 </div>
                                                 <div class="col-xl-7 col-md-7">
                                                     <div class="innerf">
@@ -346,9 +377,7 @@
         //     $('#dfjaveriana').modal('show'); // Show the modal
         //   }
         };
-    </script>
-
- 
+    </script>  
 
     <script>
         $(document).ready(function(){
@@ -364,3 +393,55 @@
             });
         });
     </script>
+
+    <script>
+        jQuery(document).ready(function($) {
+            function initializeIsotope() {
+                var $grid = $('.factory-active').imagesLoaded(function() {
+                    $grid.isotope({
+                        itemSelector: '.grid-facto',
+                        percentPosition: true,
+                        masonry: {
+                            // use outer width of grid-sizer for columnWidth
+                            // columnWidth: 1
+                        }
+                    });
+
+                    // Filter items on button click
+                    $('.filter-factory').on('click', 'a', function() {
+                        var filterValue = $(this).attr('data-filter');
+                        $grid.isotope({ filter: filterValue });
+                    });
+                });
+            }
+
+            // Initialize Isotope on page load
+            initializeIsotope();
+            $('#select-cronogical').on('change', function() {
+                // alert("asdsad");
+                var sortValue = $(this).val();
+                
+                $.ajax({
+                    url: '<?php echo admin_url('admin-ajax.php'); ?>',
+                    type: 'POST',
+                    data: {
+                        action: 'sort_posts',
+                        sort_by: sortValue,
+                    },
+                    success: function(response) {
+                        // console.log(response);
+                        $('.factory-active').html(response);
+
+                        // Reinitialize Isotope after updating the content
+                        initializeIsotope();
+                        
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('AJAX error:', status, error);
+                    }
+                });
+
+               
+            });
+        });
+    </script>       

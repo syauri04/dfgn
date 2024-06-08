@@ -34,44 +34,51 @@
                         
                     </div>
                     <div class="slide-frist">
-                            <div class="shape1" id="image1">
-                                <svg id="svg-main">
-                                    <mask id="mask">
-                                        <path id="pat1" d="M1362.01 197C1302.36 197 1254.02 245.343 1254.02 304.982C1254.02 379.525 1193.58 439.96 1119.03 439.96H878.026C818.382 439.96 770.035 488.304 770.035 547.943V574.939C770.035 634.578 721.688 682.921 662.043 682.921H633.067C573.423 682.921 525.076 731.264 525.076 790.903C525.076 850.543 573.423 898.886 633.067 898.886H1362.01C1421.65 898.886 1470 850.543 1470 790.903V304.982C1470 245.343 1421.65 197 1362.01 197Z" fill="#D9DDE3"/>
-                                        <path id="patdots" fill-rule="evenodd" clip-rule="evenodd" d="M878.014 197C816.416 197 766.862 248.578 770.184 310.904C773.22 367.831 821.716 413.326 878.723 412.965C917.341 412.716 951.119 392.165 969.993 361.462C975.99 351.696 986.353 345.476 997.812 345.476H1001.18C1012.64 345.476 1023.01 351.696 1029 361.462C1047.88 392.165 1081.64 412.716 1120.27 412.965C1177.28 413.338 1225.78 367.831 1228.81 310.904C1232.15 248.578 1182.58 197 1120.98 197C1082.02 197 1047.91 217.651 1028.94 248.603C1022.98 258.331 1012.6 264.489 1001.2 264.489H997.799C986.39 264.489 976.027 258.331 970.055 248.603C951.082 217.663 916.98 197 878.014 197Z" fill="#D9DDE3"/>
+                        <div class="shape1" id="image1">
+                       
+                            <svg id="svg-main">
+                                <mask id="mask">
+                                    <path id="pat1" d="M1362.01 197C1302.36 197 1254.02 245.343 1254.02 304.982C1254.02 379.525 1193.58 439.96 1119.03 439.96H878.026C818.382 439.96 770.035 488.304 770.035 547.943V574.939C770.035 634.578 721.688 682.921 662.043 682.921H633.067C573.423 682.921 525.076 731.264 525.076 790.903C525.076 850.543 573.423 898.886 633.067 898.886H1362.01C1421.65 898.886 1470 850.543 1470 790.903V304.982C1470 245.343 1421.65 197 1362.01 197Z" fill="#D9DDE3"/>
+                                    <path id="patdots" fill-rule="evenodd" clip-rule="evenodd" d="M878.014 197C816.416 197 766.862 248.578 770.184 310.904C773.22 367.831 821.716 413.326 878.723 412.965C917.341 412.716 951.119 392.165 969.993 361.462C975.99 351.696 986.353 345.476 997.812 345.476H1001.18C1012.64 345.476 1023.01 351.696 1029 361.462C1047.88 392.165 1081.64 412.716 1120.27 412.965C1177.28 413.338 1225.78 367.831 1228.81 310.904C1232.15 248.578 1182.58 197 1120.98 197C1082.02 197 1047.91 217.651 1028.94 248.603C1022.98 258.331 1012.6 264.489 1001.2 264.489H997.799C986.39 264.489 976.027 258.331 970.055 248.603C951.082 217.663 916.98 197 878.014 197Z" fill="#D9DDE3"/>
 
-                                       
-                                        <path id="pat2" d="M105.208 701H1288.79C1346.9 701 1394 652.718 1394 593.154V107.846C1394 48.2823 1346.9 0 1288.79 0H578.642C520.535 0 473.434 48.2823 473.434 107.846C473.434 167.41 520.535 215.692 578.642 215.692H606.871C664.977 215.692 712.078 263.975 712.078 323.538V377.462C712.078 437.025 664.977 485.308 606.871 485.308H315.623C257.516 485.308 210.415 437.025 210.415 377.462V350.5C210.415 290.936 163.314 242.654 105.208 242.654C47.101 242.654 0 290.936 0 350.5V593.154C0 652.718 47.101 701 105.208 701Z" fill="#D9D9D9"/>
-                                        
-                                        <path id="pat3" d="M1206.4 903H305.598C171.734 903 63 789.273 63 648.129V334.871C63 194.235 171.734 80 305.598 80H1206.4C1340.27 80 1449 194.235 1449 334.871V648.129C1449 789.273 1340.27 903 1206.4 903Z" fill="white"/>
+                                    
+                                    <path id="pat2" d="M105.208 701H1288.79C1346.9 701 1394 652.718 1394 593.154V107.846C1394 48.2823 1346.9 0 1288.79 0H578.642C520.535 0 473.434 48.2823 473.434 107.846C473.434 167.41 520.535 215.692 578.642 215.692H606.871C664.977 215.692 712.078 263.975 712.078 323.538V377.462C712.078 437.025 664.977 485.308 606.871 485.308H315.623C257.516 485.308 210.415 437.025 210.415 377.462V350.5C210.415 290.936 163.314 242.654 105.208 242.654C47.101 242.654 0 290.936 0 350.5V593.154C0 652.718 47.101 701 105.208 701Z" fill="#D9D9D9"/>
+                                    <!-- <path id="pat2" fill-rule="evenodd" clip-rule="evenodd" d="M1056 112C1056 50.1441 1005.86 0 944 0H325C322.88 0 320.774 0.0610933 318.684 0.181616C292.182 -1.44565 265.134 7.86642 244.882 28.1178C224.151 48.8489 214.884 76.7025 217.08 103.802C217.027 105.194 217 106.594 217 108C217 167.647 168.397 216 108.751 216C48.8277 216 0 264.577 0 324.5V362V408V512C0 573.856 50.1441 624 112 624H944C1005.86 624 1056 573.856 1056 512V408V362V312V216V112ZM960 482C934.595 482 914 502.595 914 528C914 553.405 934.595 574 960 574C985.405 574 1006 553.405 1006 528C1006 502.595 985.405 482 960 482Z" fill="#D9D9D9"/> -->
+                                    <path id="pat3" d="M1206.4 903H305.598C171.734 903 63 789.273 63 648.129V334.871C63 194.235 171.734 80 305.598 80H1206.4C1340.27 80 1449 194.235 1449 334.871V648.129C1449 789.273 1340.27 903 1206.4 903Z" fill="white"/>
+                                    <!-- <path id="pat3" fill-rule="evenodd" clip-rule="evenodd" d="M827.76 1.04747e-07C827.763 -3.49154e-08 827.766 -3.49157e-08 827.769 1.04746e-07L1260 1.1921e-07C1313.02 1.1921e-07 1356 42.9807 1356 96C1356 149.019 1398.98 192 1452 192H1554C1615.86 192 1666 242.144 1666 304V408V536C1666 597.856 1615.86 648 1554 648H33C-28.8559 648 -79 597.856 -79 536V520C-79 458.144 -28.8559 408 33 408H168C227.647 408 276 359.647 276 300V288C276 234.981 233.019 192 180 192C126.981 192 84 149.019 84 96C84 42.9807 126.981 1.1921e-07 180 1.1921e-07L827.76 1.04747e-07Z" fill="#182224"/> -->
 
-                                        
-                                    </mask>
-                                </svg>
-                                
-                                <div class="main-image">
-                                    <img src="<?php the_field('image_hero'); ?>" alt="Balloons">
-                                </div>
-                                <svg xmlns="http://www.w3.org/2000/svg" id="main-shape-ylw" fill="none">
-                                    <path id="s-yellow" opacity="0.7" d="M0.288869 113.821C-3.03211 51.5402 46.5089 0 108.102 0C147.059 0 181.152 20.6484 200.12 51.5651C206.09 61.2863 216.451 67.4398 227.857 67.4398H231.252C242.658 67.4398 253.031 61.2863 258.989 51.5651C277.97 20.6484 312.063 0 351.019 0C412.6 0 462.153 51.5402 458.82 113.821C455.785 170.707 407.301 216.18 350.31 215.807C311.69 215.559 277.932 195.022 259.064 164.342C253.069 154.583 242.708 148.368 231.252 148.368H227.882C216.426 148.368 206.065 154.583 200.07 164.342C181.201 195.022 147.432 215.559 108.824 215.807C51.8324 216.168 3.34867 170.707 0.313769 113.821H0.288869Z" fill="#FAC201"/>
-                                
-                                </svg>
-                                
-                                <svg xmlns="http://www.w3.org/2000/svg" id="main-shape-blw" width="408" height="193" viewBox="0 0 459 218" fill="none">
                                     
-                                    <path id="patlonj" d="M350.884 0.0761719H107.964C48.3372 0.0761719 0 48.3868 0 107.981C0 167.575 48.3372 215.886 107.964 215.886H350.884C410.511 215.886 458.848 167.575 458.848 107.981C458.848 48.3868 410.511 0.0761719 350.884 0.0761719Z" fill="#A4A2E0"/>
-                                    
-                                </svg>
-                                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="408" height="193" viewBox="0 0 408 193" fill="none">
-                                    <path id="patlonj" d="M311.811 0.979004H95.9419C42.9547 0.979004 0 43.913 0 96.8747C0 149.837 42.9547 192.771 95.9419 192.771H311.811C364.798 192.771 407.753 149.837 407.753 96.8747C407.753 43.913 364.798 0.979004 311.811 0.979004Z" fill="#A4A2E0"/> -->
-                                </svg>
+                                </mask>
+                            </svg>
+                            
+                            <div class="main-image">
+                                <img src="<?php the_field('image_hero'); ?>" alt="Balloons">
                             </div>
-               
-                            <div class="main-text-ab" id="">
-                                <p>
-                                    <?php the_field('dfgn_mission_statement'); ?>
-                                </p>
-                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" id="main-shape-ylw" fill="none">
+                                <path id="s-yellow" opacity="0.7" d="M0.288869 113.821C-3.03211 51.5402 46.5089 0 108.102 0C147.059 0 181.152 20.6484 200.12 51.5651C206.09 61.2863 216.451 67.4398 227.857 67.4398H231.252C242.658 67.4398 253.031 61.2863 258.989 51.5651C277.97 20.6484 312.063 0 351.019 0C412.6 0 462.153 51.5402 458.82 113.821C455.785 170.707 407.301 216.18 350.31 215.807C311.69 215.559 277.932 195.022 259.064 164.342C253.069 154.583 242.708 148.368 231.252 148.368H227.882C216.426 148.368 206.065 154.583 200.07 164.342C181.201 195.022 147.432 215.559 108.824 215.807C51.8324 216.168 3.34867 170.707 0.313769 113.821H0.288869Z" fill="#FAC201"/>
+                                <!-- <path id="y-p-2" fill-rule="evenodd" clip-rule="evenodd" d="M0 96C0 42.9807 42.9807 0 96 0H305.911C305.96 0 306 0.0400224 306 0.0893927C306 0.140927 306.043 0.181784 306.095 0.178663C308.048 0.0601383 310.017 1.43222e-05 312 1.44956e-05C365.019 1.91307e-05 408 42.9807 408 96C408 149.019 365.019 192 312 192H306.08C306.036 192 306 192.036 306 192.08C306 192.125 305.962 192.162 305.916 192.159C303.957 192.054 301.985 192 300 192C240.353 192 192 240.353 192 300C192 301.985 192.054 303.957 192.159 305.916C192.162 305.962 192.125 306 192.08 306C192.036 306 192 306.036 192 306.08V312C192 365.019 149.019 408 96 408C42.9807 408 0 365.019 0 312C0 310.017 0.0601237 308.048 0.178648 306.095C0.181769 306.043 0.140915 306 0.089385 306C0.040019 306 0 305.96 0 305.911V96Z" fill="#FEC601"/> -->
+                                <!-- <path id="y-p-3" fill-rule="evenodd" clip-rule="evenodd" d="M46 0C20.5949 0 0 20.5949 0 46C0 71.4051 20.5949 92 46 92C71.4051 92 92 71.4051 92 46C92 20.5949 71.4051 0 46 0Z" fill="#FEC601"/> -->
+
+                            </svg>
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" id="main-shape-blw" width="408" height="193" viewBox="0 0 459 218" fill="none">
+                                <path id="patlonj" fill-rule="evenodd" clip-rule="evenodd" d="M216 0H96C42.9807 0 0 42.9807 0 96C0 149.019 42.9807 192 96 192H216H312C365.019 192 408 149.019 408 96C408 42.9807 365.019 0 312 0H216Z" fill="#A4A2E0"/>
+
+                                <!-- <path id="patlonj" d="M350.884 0.0761719H107.964C48.3372 0.0761719 0 48.3868 0 107.981C0 167.575 48.3372 215.886 107.964 215.886H350.884C410.511 215.886 458.848 167.575 458.848 107.981C458.848 48.3868 410.511 0.0761719 350.884 0.0761719Z" fill="#A4A2E0"/> -->
+                                <!-- <path id="patlonj-bulet" fill-rule="evenodd" clip-rule="evenodd" d="M192 96C192 42.9807 149.019 0 96 0C42.9807 0 0 42.9807 0 96C0 149.019 42.9807 192 96 192C149.019 192 192 149.019 192 96Z" fill="#A4A2E0"/>
+                                <path id="patlonj-white" fill-rule="evenodd" clip-rule="evenodd" d="M154 77C154 34.4741 119.526 0 77 0C34.4741 0 0 34.4741 0 77C0 119.526 34.4741 154 77 154C119.526 154 154 119.526 154 77Z" fill="white"/> -->
+
+                            </svg>
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="408" height="193" viewBox="0 0 408 193" fill="none">
+                                <path id="patlonj" d="M311.811 0.979004H95.9419C42.9547 0.979004 0 43.913 0 96.8747C0 149.837 42.9547 192.771 95.9419 192.771H311.811C364.798 192.771 407.753 149.837 407.753 96.8747C407.753 43.913 364.798 0.979004 311.811 0.979004Z" fill="#A4A2E0"/> -->
+                            </svg>
+                        </div>
+            
+                        <div class="main-text-ab" id="">
+                            <p>
+                                <?php the_field('dfgn_mission_statement'); ?>
+                            </p>
+                        </div>
                        
                            
 
@@ -892,19 +899,28 @@
                                     array(
                                         'post_type' => 'design-factories',
                                         'order'          => 'ASC',
+                                        'posts_per_page' => -1
                                     )
                                 );
+                                $total_posts = $listdf->found_posts;
+                                
                                 $double_displayed = false; 
                                 if($listdf->have_posts()) :
                                     $index = 1;
                                     while($listdf->have_posts()) : $listdf->the_post();
-                                    
+                                    $slug = get_post_field('post_name', get_the_ID());
                                     $continents = get_field('continents');
+                                    $contriess = get_field('countries');
                                     $stat = get_field('status');
                                 
                                 
                                     if($continents == "Europe and the middle east"){
-                                        $class_continents = 'europe';
+                                        if($contriess == 'Türkiye' OR $contriess == 'Israel' ){
+                                            $class_continents = 'europe-middle';
+                                        }else{
+                                            $class_continents = 'europe';
+                                        }
+                                        
                                     }else  if($continents == "Americas"){
                                         $class_continents = 'america';
                                     }else  if($continents == "Asia pacific"){
@@ -914,7 +930,7 @@
                                     $cy = get_field('cy').'%';
                                     if($stat == "Single"){
                             ?>
-                                        <div class="dots-map <?php echo $class_continents; ?>" data-cek="full" data-id="<?php the_title(); ?>" style="left: <?php echo $cx ?>;top: <?php echo $cy ?>;"></div>
+                                        <div class="dots-map <?php echo $class_continents; ?>" data-cek="full" data-id="<?php echo $slug; ?>" style="left: <?php echo $cx ?>;top: <?php echo $cy ?>;"></div>
                             <?php
                                     }elseif ($stat == 'Double' && !$double_displayed) {
                             ?>
@@ -931,63 +947,206 @@
                         </div>
 
                         <div class="box-dots" id="b-m-europe">
+                            <!-- btn bacl to all continent -->
+                            <div class="btn-back-map">
+                                <svg id="back_continent" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                    <g filter="url(#filter0_b_3353_10321)">
+                                        <circle cx="30" cy="30" r="20" fill="#D9D9D9" fill-opacity="0.5"/>
+                                    </g>
+                                    <path d="M32.3899 38.79L23.9999 30.4L32.3899 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <defs>
+                                        <filter id="filter0_b_3353_10321" x="0" y="0" width="60" height="60" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
+                                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_3353_10321"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_3353_10321" result="shape"/>
+                                        </filter>
+                                    </defs>
+                                </svg>
+                                
+                            </div>
                             <!-- Europe & Midle east -->
-                            <div class="dots-map europe" data-cek="detail" data-id="spain-barcelona" style="left: 402px;top: 294px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="swiss-geneva" style="left: 456px;top: 237px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="italy-bologna" style="left: 495px;top: 252px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="italy-salerno" style="left: 530px;top: 301px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="estonia-tartu" style="left: 596px;top: 121px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="portugal" style="left: 337px;top: 315px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="germany" style="left: 491px;top: 184px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="germany-stuttgart" style="left: 480px;top: 212px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="portugal-porto" style="left: 342px;top: 292px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="latvia-riga" style="left: 599px;top: 137px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="uk-london" style="left: 401px;top: 189px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="uk-manchester" style="left: 394px;top: 159px;"></div>    
-                            <div class="dots-map europe" data-cek="detail" data-id="nl-friesland" style="left: 450px;top: 182px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="lithuania-vilnius" style="left: 583px;top: 150px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="spain" style="left: 378px;top: 319px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="france-nantes" style="left: 413px;top: 241px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="finland-espoo" style="left: 584px;top: 100px;"></div>
-                            <div class="dots-map europe-middle" data-cek="detail" data-id="turkey-ankara" style="left: 665px;top: 294px;"></div>
-                            <div class="dots-map europe-middle" data-cek="detail" data-id="israel" style="left: 684px;top: 398px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="ireland" style="left: 353px;top: 174px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="poland-warsaw" style="left: 553px;top: 193px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="germany-pforzheim" style="left: 469px;top: 200px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="finland-helsinki" style="left: 595px;top: 96px;"></div>
-                            <div class="dots-map europe" data-cek="detail" data-id="finland-hamk" style="left: 581px;top: 89px;"></div>
+                            <?PHP
+                                $listErupe = new WP_Query(
+                                    array(
+                                        'post_type' => 'design-factories',
+                                        'order'          => 'ASC',
+                                        'posts_per_page' => -1,
+                                        'meta_query' => array(
+                                            array(
+                                                'key' => 'continents',
+                                                'value' => 'Europe and the middle east',
+                                                'compare' => '='
+                                            )
+                                        )
+                                    )
+                                );
+                                $total_posts = $listErupe->found_posts;
+                                
+                                $double_displayed = false; 
+                                if($listErupe->have_posts()) :
+                                    $index = 1;
+                                    while($listErupe->have_posts()) : $listErupe->the_post();
+                                    $slug = get_post_field('post_name', get_the_ID());
+                                    $continents = get_field('continents');
+                                    $contriess = get_field('countries');
+                                    $stat = get_field('status');
+                                
+                                
+                                    if($continents == "Europe and the middle east"){
+                                        if($contriess == 'Türkiye' OR $contriess == 'Israel' ){
+                                            $class_continents = 'europe-middle';
+                                        }else{
+                                            $class_continents = 'europe';
+                                        }
+                                        
+                                    }
+                                    $cx = get_field('cx_per_continents').'%';
+                                    $cy = get_field('cy_per_continents').'%';
+                                   
+                            ?>
+                                        <div class="dots-map <?php echo $class_continents; ?>" data-cek="detail" data-id="<?php echo $slug; ?>" style="left: <?php echo $cx ?>;top: <?php echo $cy ?>"></div>
+                           <?php
+                                    $index++;
+                                    endwhile;
+                                endif;
+                                wp_reset_postdata();
+                            ?>
+                            
+                            
                         </div>
 
                         <div class="box-dots" id="b-m-asia">
+                            <!-- btn bacl to all continent -->
+                            <div class="btn-back-map">
+                                <svg id="back_continent" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                    <g filter="url(#filter0_b_3353_10321)">
+                                        <circle cx="30" cy="30" r="20" fill="#D9D9D9" fill-opacity="0.5"/>
+                                    </g>
+                                    <path d="M32.3899 38.79L23.9999 30.4L32.3899 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <defs>
+                                        <filter id="filter0_b_3353_10321" x="0" y="0" width="60" height="60" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
+                                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_3353_10321"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_3353_10321" result="shape"/>
+                                        </filter>
+                                    </defs>
+                                </svg>
+                                
+                            </div>
                             <!-- Asia -->
-                            <div class="dots-map asia" data-cek="full" data-id="au-sydney" style="left: 805px;top: 606px;"></div>
-                            <div class="dots-map asia" data-cek="full" data-id="au-melbourne" style="left: 783px;top: 626px;"></div>
-                            <div class="dots-map asia" data-cek="full" data-id="nz-hamilton" style="left: 884px;top: 631px;"></div>
-                            <div class="dots-map asia" data-cek="full" data-id="cina-sanghai" style="left: 675px;top: 254px;"></div>
-                            <div class="dots-map asia" data-cek="full" data-id="korea-seol" style="left: 702px;top: 219px;"></div>
-                            <div class="dots-map asia" data-cek="full" data-id="singapore" style="left: 620px;top: 406px;"></div>
-                            <div class="dots-map asia" data-cek="full" data-id="jpn-kyoto" style="left: 744px;top: 220px;"></div>
-                            <div class="dots-map asia" data-cek="full" data-id="korea-hannam" style="left: 696px;top: 207px;"></div>
+                            <?PHP
+                                $listAsia = new WP_Query(
+                                    array(
+                                        'post_type' => 'design-factories',
+                                        'order'          => 'ASC',
+                                        'posts_per_page' => -1,
+                                        'meta_query' => array(
+                                            array(
+                                                'key' => 'continents',
+                                                'value' => 'Asia pacific',
+                                                'compare' => '='
+                                            )
+                                        )
+                                    )
+                                );
+                                $total_posts = $listAsia->found_posts;
+                                
+                                $double_displayed = false; 
+                                if($listAsia->have_posts()) :
+                                    $index = 1;
+                                    while($listAsia->have_posts()) : $listAsia->the_post();
+                                    $slug = get_post_field('post_name', get_the_ID());
+                                    $continents = get_field('continents');
+                                    $contriess = get_field('countries');
+                                    $stat = get_field('status');
+                                
+                                
+                                
+                                    $cx = get_field('cx_per_continents').'%';
+                                    $cy = get_field('cy_per_continents').'%';
+                                   
+                            ?>
+                                        <div class="dots-map asia" data-cek="detail" data-id="<?php echo $slug; ?>" style="left: <?php echo $cx ?>;top: <?php echo $cy ?>"></div>
+                                       
+                           <?php
+                                    $index++;
+                                    endwhile;
+                                endif;
+                                wp_reset_postdata();
+                            ?>
+                        
                         </div>
 
                         <div class="box-dots" id="b-m-america">
+                            <!-- btn bacl to all continent -->
+                            <div class="btn-back-map">
+                                <svg id="back_continent" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                    <g filter="url(#filter0_b_3353_10321)">
+                                        <circle cx="30" cy="30" r="20" fill="#D9D9D9" fill-opacity="0.5"/>
+                                    </g>
+                                    <path d="M32.3899 38.79L23.9999 30.4L32.3899 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <defs>
+                                        <filter id="filter0_b_3353_10321" x="0" y="0" width="60" height="60" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
+                                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_3353_10321"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_3353_10321" result="shape"/>
+                                        </filter>
+                                    </defs>
+                                </svg>
+                                
+                            </div>
                             <!-- America -->
-                            <div class="dots-map america" data-cek="full" data-id="nyc" style="left: 592px;top: 173px;"></div>
-                            <div class="dots-map america" data-cek="full" data-id="queens" style="left: 566px;top: 193px;"></div>
-                            <div class="dots-map america" data-cek="full" data-id="colombia-bogota" style="left: 575px;top: 368px;"></div>
-                            <div class="dots-map america" data-cek="full" data-id="colombia-cali" style="left: 547px;top: 381px;"></div>
-                            <div class="dots-map america" data-cek="full" data-id="chile-santiago" style="left: 589px;top: 568px;"></div>
-                            <div class="dots-map america" data-cek="full" data-id="chile-concepcion" style="left: 586px;top: 583px;"></div>
+                            <?PHP
+                                $listAmerica = new WP_Query(
+                                    array(
+                                        'post_type' => 'design-factories',
+                                        'order'          => 'ASC',
+                                        'posts_per_page' => -1,
+                                        'meta_query' => array(
+                                            array(
+                                                'key' => 'continents',
+                                                'value' => 'Americas',
+                                                'compare' => '='
+                                            )
+                                        )
+                                    )
+                                );
+                                $total_posts = $listAmerica->found_posts;
+                                
+                                $double_displayed = false; 
+                                if($listAmerica->have_posts()) :
+                                    $index = 1;
+                                    while($listAmerica->have_posts()) : $listAmerica->the_post();
+                                    $slug = get_post_field('post_name', get_the_ID());
+                                    $continents = get_field('continents');
+                                    $contriess = get_field('countries');
+                                    $stat = get_field('status');
+                                    $cx = get_field('cx_per_continents').'%';
+                                    $cy = get_field('cy_per_continents').'%';
+                                   
+                            ?>
+                                        <div class="dots-map america" data-cek="detail" data-id="<?php echo $slug; ?>" style="left: <?php echo $cx ?>;top: <?php echo $cy ?>"></div>
+                                       
+                           <?php
+                                    $index++;
+                                    endwhile;
+                                endif;
+                                wp_reset_postdata();
+                            ?>
+                            
                           
                         </div>
 
-                        <div class="hover-dots" style="left: 278px;top: 183px;">
+                        <div class="hover-dots" style="">
                             <div class="int">
-                                <h1 class="nm-x-fac">Aalto Design Factory</h1>
-                                <img src="<?php echo get_template_directory_uri() . '/assets/img/assets/ic_loc.png'; ?>" alt="">
-                                <span class="loc-x-fac">Espoo, Finland</span>
+                                <h1 class="nm-x-fac"></h1>
+                                <img src="" alt="">
+                                <span class="loc-x-fac"></span>
                                 <div class="b-read">
-                                    <a id="readMoreLink" class="tolink" href="factory.html"> Read more</a>
+                                    <a id="readMoreLink" class="tolink" href="<?php echo home_url(); ?>/the-network"> Read more</a>
                                 </div>
                             </div>
                             <div class="inlo">
@@ -1071,6 +1230,232 @@
         </section>
     </main>
 <?php get_footer(); ?>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger, MorphSVGPlugin, ScrollSmoother, Draggable);
+        
+        var endShape = document.getElementById("pat2");
+        // gsap.set(".menu-area", {
+        //     position : 'fixed',
+        //     top: '0',
+        //     width : '100%'
+        // });                       
+        gsap.set("#patdots", {
+            transformOrigin: "top top",
+            translate: "-150px -170px",
+            scale: 0.9
+        });
+        gsap.set("#pat1", {
+            transformOrigin: "top top",
+            translate: "-125px -170px",
+            opacity: 1,
+            visibility: "visible",
+            scale: 0.9
+        });
+
+        gsap.set(endShape, {
+            scale: 1,
+            transformOrigin: "center center",
+            opacity: 0,
+            visibility: "hidden",
+        });
+        gsap.set("#pat3", {
+            scale:1,
+            transformOrigin: "center center",
+            opacity: 0,
+            visibility: "hidden",
+        });
+        var tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".slider-scroll",
+                scrub: 1,
+                pin: true,
+                // markers: true,
+                start: "-70 top",
+                end: "+=100%",
+                toggleActions: "play pause play reset",
+            },
+        });
+
+        tl.to("#pat1", {
+            morphSVG: {
+                shape: "#pat2",
+                type: "rotational",
+                origin: "50% 70%",
+                // map: "complexity"
+            },
+            translate: "190px 20px",
+            duration: 1,
+            delay: 1,
+            ease: "Power0.easeNone",
+            scale: 1,
+
+        });
+        tl.to(".main-slide-scroll", {
+            maxWidth: '100%',
+            padding:0,
+
+        });
+
+        tl.to("#pat1", {
+            morphSVG: {
+                shape: "#pat3",
+                type: "rotational"
+            },
+            duration: 3,
+            translate: "10px 60px",
+            ease: "power3.in",
+            scale: 1,
+            opacity: 0.6
+
+        });
+        
+
+
+        gsap.to(".main-text-ab", {
+            scrollTrigger: {
+                trigger: "#pat3",
+                start: "300 top",
+                end: "+=100%",
+                scrub: 1,
+                // markers:true,
+
+            },
+            visibility: "visible",
+            delay: 3,
+            duration: 3,
+            ease: "power1.out",
+            yPercent: -100
+
+        });
+        gsap.set("#patlonj", {
+            transformOrigin: "center center",
+            translate: "-60% -28px",
+        });
+        gsap.set("#patlonj-bulet", {
+            transformOrigin: "center center",
+            translate: "-60% -28px",
+            visibility: "hidden",
+        });
+        gsap.set("#patlonj-white", {
+            visibility: "hidden",
+        });
+        gsap.to("#patlonj", {
+            scrollTrigger: {
+                trigger: ".slide-frist",
+                start: "top top",
+                end: "+=100",
+                scrub: 1,
+                // markers:true,
+
+            },
+            morphSVG: {
+                shape: "#patlonj-bulet",
+                type: "rotational",
+                origin: "50% -50%",
+            },
+            // x: "-180%",
+
+        });
+
+        gsap.to("#patlonj-bulet", {
+            scrollTrigger: {
+                trigger: ".slide-frist",
+                start: "350 top",
+                end: "+=100",
+                scrub: 1,
+                markers:true,
+
+            },
+            
+            // translate: "-64.5% 0px",
+            x: "200px",
+
+        });
+        
+        gsap.set("#s-yellow", {
+            translate: "64.5% -12px",
+            scale: 0.9
+        });
+        gsap.set("#y-p-2", {
+            translate: "20.5% -12px",
+            scale: 0.9,
+            visibility: "hidden",
+        });
+        gsap.set("#y-p-3", {
+            scale: 0.9,
+            visibility: "hidden",
+        });
+
+       
+        gsap.to("#s-yellow", {
+            scrollTrigger: {
+                trigger: ".slide-frist",
+                start: "top top",
+                end: "+=100",
+                scrub: 1,
+                // markers:true
+            },
+            morphSVG: {
+                shape: "#y-p-2",
+                type: "rotational",
+                origin: "50% 50%, 20% 16%",
+                map: "complexity"
+            },
+            x: "-154%",
+            opacity:1,
+            duration: 5
+
+        });
+        
+        // gsap.to("#s-yellow", {
+        //     scrollTrigger: {
+        //         trigger: ".slide-frist",
+        //         start: "350 top",
+        //         end: "+=100",
+        //         scrub: 1,
+        //         // markers:true
+        //     },
+        //     morphSVG: {
+        //         shape: "#y-p-3",
+        //         type: "rotational"
+        //     },
+        //     scale:1,
+        //     translate: "30.5% 64px",
+        //     opacity:1,
+        //     duration: 5
+
+        // });
+        gsap.to("#patdots", {
+            scrollTrigger: {
+                trigger: ".slide-frist",
+                start: "top top",
+                end: "+=100",
+                scrub: 1,
+                // markers:true
+            },
+            opacity:0,
+            duration: 3
+
+        });
+
+        gsap.to(".text-ss", {
+            scrollTrigger: {
+                trigger: ".menu-area",
+                start: "top top",
+                end: "+=100",
+                scrub: 3,
+                // markers:true,
+
+            },
+            // y: "-80%",
+            x: "-100%", // Geser ke kiri sejauh 100%
+            duration: 3,
+            ease: "power1.out",
+            opacity: 0,
+
+        });
+    </script>
 
     <script>
         document.getElementById('learnmore').addEventListener('click', function(event) {
@@ -1166,655 +1551,46 @@
             window.location.href = this.getAttribute('href') + "?showModal=" + datafac; // Redirect to factories.html with query parameter
         });
     </script>
-<script>
+    <script>
     $(document).ready(function() {
         $(".dots-map").click(function(event) {
             event.preventDefault();
             var dataValue = $(this).data('id');
             var dataCek = $(this).data('cek');
-
-            $('.hover-dots').css('display', 'flex').animate({
-                opacity: 1
-            }, 100);
-            if (dataCek == 'full') {
-                if (dataValue == 'au-sydney') {
-                    $('.hover-dots').css({
-                        left: '650px',
-                        top: '473px'
-                    });
-                    $('.nm-x-fac').text('Nandin Innovation Centre');
-                    $('.loc-x-fac').text('Sydney, Australia');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/nandin.png'; ?>');
-                    $('.tolink').attr('data-id', 'nandin');
-                } else if (dataValue == 'germany-pforzheim') {
-                    $('.hover-dots').css({
-                        left: '594px',
-                        top: '147px'
-                    });
-                    $('.nm-x-fac').text('Design Factory Pforzheim');
-                    $('.loc-x-fac').text('Pforzheim, Germany');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/Pforzheim.png'; ?>');
-                    $('.tolink').attr('data-id', 'pforzheim');
-                } else if (dataValue == 'poland-warsaw') {
-                    $('.hover-dots').css({
-                        left: '631px',
-                        top: '138px'
-                    });
-                    $('.nm-x-fac').text('Warsaw Design Factory');
-                    $('.loc-x-fac').text('Warsaw, Poland');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/Warsaw_niversity.png'; ?>');
-                    $('.tolink').attr('data-id', 'warsaw');
-                } else if (dataValue == 'ireland') {
-                    $('.hover-dots').css({
-                        left: '536px',
-                        top: '133px'
-                    });
-                    $('.nm-x-fac').text('Forge Design Factory');
-                    $('.loc-x-fac').text('Ireland');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/forge.png'; ?>');
-                    $('.tolink').attr('data-id', 'forge');
-                } else if (dataValue == 'korea-hannam') {
-                    $('.hover-dots').css({
-                        left: '663px',
-                        top: '211px'
-                    });
-                    $('.nm-x-fac').text('Hannam Design Factory');
-                    $('.loc-x-fac').text('Hannam, South Korea');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/HDF_final_color_logo.png'; ?>');
-                    $('.tolink').attr('data-id', 'hannam');
-                } else if (dataValue == 'jpn-kyoto') {
-                    $('.hover-dots').css({
-                        left: '680px',
-                        top: '221px'
-                    });
-                    $('.nm-x-fac').text('Kyoto Design Lab');
-                    $('.loc-x-fac').text('Kyoto, Japan');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/df-3.png'; ?>');
-                    $('.tolink').attr('data-id', 'kyoto');
-                } else if (dataValue == 'singapore') {
-                    $('.hover-dots').css({
-                        left: '660px',
-                        top: '393px'
-                    });
-                    $('.nm-x-fac').text('Design Factory SIT');
-                    $('.loc-x-fac').text('Singapore');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/SIT.png'; ?>');
-                    $('.tolink').attr('data-id', 'sit');
-                } else if (dataValue == 'korea-seol') {
-                    $('.hover-dots').css({
-                        left: '660px',
-                        top: '221px'
-                    });
-                    $('.nm-x-fac').text('Design Factory Korea');
-                    $('.loc-x-fac').text('Seoul, Republic of Korea');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/korseldf-01s.png'; ?>');
-                    $('.tolink').attr('data-id', 'korsel');
-                } else if (dataValue == 'cina-sanghai') {
-                    $('.hover-dots').css({
-                        left: '660px',
-                        top: '253px'
-                    });
-                    $('.nm-x-fac').text('Sino-Finnish Centre');
-                    $('.loc-x-fac').text('Shanghai, China');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/sfc_cina.png'; ?>');
-                    $('.tolink').attr('data-id', 'sfc');
-                } else if (dataValue == 'nz-hamilton') {
-                    $('.hover-dots').css({
-                        left: '660px',
-                        top: '399px'
-                    });
-                    $('.nm-x-fac').text('Design Factory NZ');
-                    $('.loc-x-fac').text('Hamilton, New Zealand');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/df_nz.png'; ?>');
-                    $('.tolink').attr('data-id', 'dfnz');
-                } else if (dataValue == 'au-melbourne') {
-                    $('.hover-dots').css({
-                        left: '650px',
-                        top: '495px'
-                    });
-                    $('.nm-x-fac').text('Swinburne Design Factory Melbourne');
-                    $('.loc-x-fac').text('Melbourne, Australia');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/df-4.png'; ?>');
-                    $('.tolink').attr('data-id', 'melbourne');
-                } else if (dataValue == 'spain-barcelona') {
-                    $('.hover-dots').css({
-                        left: '563px',
-                        top: '195px'
-                    });
-                    $('.nm-x-fac').text('Fusion Point');
-                    $('.loc-x-fac').text('Barcelona, Spain');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/fusiopoint.png'; ?>');
-                    $('.tolink').attr('data-id', 'fusion');
-                } else if (dataValue == 'italy-bologna') {
-                    $('.hover-dots').css({
-                        left: '606px',
-                        top: '173px'
-                    });
-                    $('.nm-x-fac').text('Oper.Space');
-                    $('.loc-x-fac').text('Bologna, Italy');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/operspace.png'; ?>');
-                    $('.tolink').attr('data-id', 'operspace');
-                } else if (dataValue == 'israel') {
-                    $('.hover-dots').css({
-                        left: '707px',
-                        top: '237px'
-                    });
-                    $('.nm-x-fac').text('Design Factory Shenkar');
-                    $('.loc-x-fac').text('Tel-Aviv, Israel');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/dfs.png'; ?>');
-                    $('.tolink').attr('data-id', 'dfs');
-                } else if (dataValue == 'turkey-ankara') {
-                    $('.hover-dots').css({
-                        left: '692px',
-                        top: '196px'
-                    });
-                    $('.nm-x-fac').text('METU Design Factory');
-                    $('.loc-x-fac').text('Ankara, Türkiye');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/Metudf.png'; ?>.png');
-                    $('.tolink').attr('data-id', 'metu');
-                } else if (dataValue == 'finland-espoo') {
-                    $('.hover-dots').css({
-                        left: '649px',
-                        top: '96px'
-                    });
-                    $('.nm-x-fac').text('Aalto Design Factory');
-                    $('.loc-x-fac').text('Espoo, Finland');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/df-2.png'; ?>');
-                    $('.tolink').attr('data-id', 'alto');
-                } else if (dataValue == 'france-nantes') {
-                    $('.hover-dots').css({
-                        left: '564px',
-                        top: '169px'
-                    });
-                    $('.nm-x-fac').text('Design Factory Nantes');
-                    $('.loc-x-fac').text('Nantes, France');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/francenantes.png'; ?>');
-                    $('.tolink').attr('data-id', 'france');
-                } else if (dataValue == 'spain') {
-                    $('.hover-dots').css({
-                        left: '548px',
-                        top: '206px'
-                    });
-                    $('.nm-x-fac').text('UPV Design Factory');
-                    $('.loc-x-fac').text('Spain');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/upv.png'; ?>');
-                    $('.tolink').attr('data-id', 'upv');
-                } else if (dataValue == 'lithuania-vilnius') {
-                    $('.hover-dots').css({
-                        left: '646px',
-                        top: '124px'
-                    });
-                    $('.nm-x-fac').text('VILNIUS TECH');
-                    $('.loc-x-fac').text('Vilnius, Lithuania');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/df-6.png'; ?>');
-                    $('.tolink').attr('data-id', 'vilnus');
-                } else if (dataValue == 'nl-friesland') {
-                    $('.hover-dots').css({
-                        left: '585px',
-                        top: '138px'
-                    });
-                    $('.nm-x-fac').text('Future Design Factory');
-                    $('.loc-x-fac').text('Friesland, Netherlands');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/netherlanddf.png'; ?>');
-                    $('.tolink').attr('data-id', 'futurenl');
-                } else if (dataValue == 'uk-manchester') {
-                    $('.hover-dots').css({
-                        left: '554px',
-                        top: '124px'
-                    });
-                    $('.nm-x-fac').text('Design Factory Manchester');
-                    $('.loc-x-fac').text('Manchester, UK');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/manchesterdf.png'; ?>');
-                    $('.tolink').attr('data-id', 'manchester');
-                } else if (dataValue == 'uk-london') {
-                    $('.hover-dots').css({
-                        left: '559px',
-                        top: '141px'
-                    });
-                    $('.nm-x-fac').text('Design Factory London');
-                    $('.loc-x-fac').text('London, UK');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/londondf.png'; ?>');
-                    $('.tolink').attr('data-id', 'londondf');
-                } else if (dataValue == 'latvia-riga') {
-                    $('.hover-dots').css({
-                        left: '658px',
-                        top: '118px'
-                    });
-                    $('.nm-x-fac').text('RTU Design Factory');
-                    $('.loc-x-fac').text('Riga, Latvia');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/rtu.png'; ?>');
-                    $('.tolink').attr('data-id', 'rtu');
-                } else if (dataValue == 'portugal-porto') {
-                    $('.hover-dots').css({
-                        left: '530px',
-                        top: '190px'
-                    });
-                    $('.nm-x-fac').text('Porto Design Factory');
-                    $('.loc-x-fac').text('Porto, Portugal');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/df_porto.png'; ?>');
-                    $('.tolink').attr('data-id', 'dfporto');
-                } else if (dataValue == 'germany-stuttgart') {
-                    $('.hover-dots').css({
-                        left: '600px',
-                        top: '154px'
-                    });
-                    $('.nm-x-fac').text('Design Factory Stuttgart');
-                    $('.loc-x-fac').text('Stuttgart, Germany');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/df_stutgart.png'; ?>');
-                    $('.tolink').attr('data-id', 'dfstutgart');
-                } else if (dataValue == 'germany') {
-                    $('.hover-dots').css({
-                        left: '607px',
-                        top: '140px'
-                    });
-                    $('.nm-x-fac').text('inno.space Design Factory Mannheim');
-                    $('.loc-x-fac').text('Germany');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/inno_space.png'; ?>');
-                    $('.tolink').attr('data-id', 'innospace');
-                } else if (dataValue == 'portugal') {
-                    $('.hover-dots').css({
-                        left: '524px',
-                        top: '206px'
-                    });
-                    $('.nm-x-fac').text('Design Factory Aveiro');
-                    $('.loc-x-fac').text('Portugal');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/df-aveiro.png'; ?>');
-                    $('.tolink').attr('data-id', 'dfaveiro');
-                } else if (dataValue == 'estonia-tartu') {
-                    $('.hover-dots').css({
-                        left: '658px',
-                        top: '105px'
-                    });
-                    $('.nm-x-fac').text('Sandbox University of Tartu');
-                    $('.loc-x-fac').text('Tartu, Estonia');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/sandbox.png'; ?>');
-                    $('.tolink').attr('data-id', 'sandbox');
-                } else if (dataValue == 'italy-salerno') {
-                    $('.hover-dots').css({
-                        left: '622px',
-                        top: '197px'
-                    });
-                    $('.nm-x-fac').text('SEIUNISA');
-                    $('.loc-x-fac').text('Salerno, Italy');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/SEIUNISA.png'; ?>');
-                    $('.tolink').attr('data-id', 'seiunisa');
-                } else if (dataValue == 'swiss-geneva') {
-                    $('.hover-dots').css({
-                        left: '583px',
-                        top: '164px'
-                    });
-                    $('.nm-x-fac').text('CERN IdeaSquare');
-                    $('.loc-x-fac').text('Geneva, Switzerland');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/cern.png'; ?>');
-                    $('.tolink').attr('data-id', 'cern');
-                } else if (dataValue == 'nyc') {
-                    $('.hover-dots').css({
-                        left: '278px',
-                        top: '183px'
-                    });
-                    $('.nm-x-fac').text('NYC Design Factory');
-                    $('.loc-x-fac').text('New York City, USA');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/NYCDF_logo-01.png'; ?>');
-                    $('.tolink').attr('data-id', 'nyc');
-                } else if (dataValue == 'queens') {
-                    $('.hover-dots').css({
-                        left: '268px',
-                        top: '203px'
-                    });
-                    $('.nm-x-fac').text('St. Johns University Design Factory');
-                    $('.loc-x-fac').text('Queens, USA');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/stqueensny.webp'; ?>');
-                    $('.tolink').attr('data-id', 'stqueens');
-                } else if (dataValue == 'colombia-bogota') {
-                    $('.hover-dots').css({
-                        left: '263px',
-                        top: '378px'
-                    });
-                    $('.nm-x-fac').text('Design Factory Javeriana');
-                    $('.loc-x-fac').text('Bogota, Colombia');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/df-5.png'; ?>');
-                    $('.tolink').attr('data-id', 'dfjaveriana');
-                } else if (dataValue == 'colombia-cali') {
-                    $('.hover-dots').css({
-                        left: '226px',
-                        top: '391px'
-                    });
-                    $('.nm-x-fac').text('Cali Design Factory');
-                    $('.loc-x-fac').text('Cali, Colombia');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/cali_df-01.png'; ?>');
-                    $('.tolink').attr('data-id', 'cali');
-                } else if (dataValue == 'chile-santiago') {
-                    $('.hover-dots').css({
-                        left: '278px',
-                        top: '578px'
-                    });
-                    $('.nm-x-fac').text('DDHUB - Duoc Design Hub');
-                    $('.loc-x-fac').text('Santiago, Chile');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/ddhub.png'; ?>');
-                    $('.tolink').attr('data-id', 'ddhub');
-                } else if (dataValue == 'chile-concepcion') {
-                    $('.hover-dots').css({
-                        left: '261px',
-                        top: '583px'
-                    });
-                    $('.nm-x-fac').text('iCubo UDD');
-                    $('.loc-x-fac').text('Concepción, Chile');
-                    $('#img-x-fac').attr('src', 'img/assets/df/icubo.png');
-                    $('.tolink').attr('data-id', 'icubo');
-                }
-            } else {
-                if (dataValue == 'au-sydney') {
-                    $('.hover-dots').css({
-                        left: '650px',
-                        top: '573px'
-                    });
-                    $('.nm-x-fac').text('Nandin Innovation Centre');
-                    $('.loc-x-fac').text('Sydney, Australia');
-                    $('#img-x-fac').attr('src', 'img/assets/df/nandin.png');
-                } else if (dataValue == 'finland-hamk') {
-                    $('.hover-dots').css({
-                        left: '635px',
-                        top: '86px'
-                    });
-                    $('.nm-x-fac').text('HAMK Design Factory');
-                    $('.loc-x-fac').text('Hamk, Finland');
-                    $('#img-x-fac').attr('src', 'img/assets/df/hamk-design-factory-logo-valkoinen-pohja.png');
-                    $('.tolink').attr('data-id', 'hamk');
-                } else if (dataValue == 'finland-helsinki') {
-                    $('.hover-dots').css({
-                        left: '643px',
-                        top: '97px'
-                    });
-                    $('.nm-x-fac').text('Viikki Food Design Factory');
-                    $('.loc-x-fac').text('Helsinki, Finland');
-                    $('#img-x-fac').attr('src', 'img/assets/df/df-1.png');
-                    $('.tolink').attr('data-id', 'Viikki');
-                } else if (dataValue == 'germany-pforzheim') {
-                    $('.hover-dots').css({
-                        left: '479px',
-                        top: '210px'
-                    });
-                    $('.nm-x-fac').text('Design Factory Pforzheim');
-                    $('.loc-x-fac').text('Pforzheim, Germany');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/Pforzheim.png'; ?>');
-                    $('.tolink').attr('data-id', 'pforzheim');
-                } else if (dataValue == 'poland-warsaw') {
-                    $('.hover-dots').css({
-                        left: '553px',
-                        top: '193px'
-                    });
-                    $('.nm-x-fac').text('Warsaw Design Factory');
-                    $('.loc-x-fac').text('Warsaw, Poland');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/Warsaw_niversity.png'; ?>');
-                    $('.tolink').attr('data-id', 'warsaw');
-                } else if (dataValue == 'ireland') {
-                    $('.hover-dots').css({
-                        left: '353px',
-                        top: '174'
-                    });
-                    $('.nm-x-fac').text('Forge Design Factory');
-                    $('.loc-x-fac').text('Ireland');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/forge.png'; ?>');
-                    $('.tolink').attr('data-id', 'forge');
-                } else if (dataValue == 'korea-hannam') {
-                    $('.hover-dots').css({
-                        left: '663px',
-                        top: '211px'
-                    });
-                    $('.nm-x-fac').text('Hannam Design Factory');
-                    $('.loc-x-fac').text('Hannam, South Korea');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/HDF_final_color_logo.png'; ?>');
-                    $('.tolink').attr('data-id', 'hannam');
-                } else if (dataValue == 'singapore') {
-                    $('.hover-dots').css({
-                        left: '660px',
-                        top: '393px'
-                    });
-                    $('.nm-x-fac').text('Design Factory SIT');
-                    $('.loc-x-fac').text('Singapore');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/SIT.png'; ?>');
-                } else if (dataValue == 'korea-seol') {
-                    $('.hover-dots').css({
-                        left: '660px',
-                        top: '221px'
-                    });
-                    $('.nm-x-fac').text('Design Factory Korea');
-                    $('.loc-x-fac').text('Seoul, Republic of Korea');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/korseldf-01s.png'; ?>');
-                } else if (dataValue == 'cina-sanghai') {
-                    $('.hover-dots').css({
-                        left: '660px',
-                        top: '253px'
-                    });
-                    $('.nm-x-fac').text('Sino-Finnish Centre');
-                    $('.loc-x-fac').text('Shanghai, China');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/sfc_cina.png'; ?>');
-                } else if (dataValue == 'nz-hamilton') {
-                    $('.hover-dots').css({
-                        left: '660px',
-                        top: '589px'
-                    });
-                    $('.nm-x-fac').text('Design Factory NZ');
-                    $('.loc-x-fac').text('Hamilton, New Zealand');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/df_nz.png'; ?>');
-
-                } else if (dataValue == 'au-melbourne') {
-                    $('.hover-dots').css({
-                        left: '650px',
-                        top: '595px'
-                    });
-                    $('.nm-x-fac').text('Swinburne Design Factory Melbourne');
-                    $('.loc-x-fac').text('Melbourne, Australia');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/df-4.png'; ?>');
-
-                } else if (dataValue == 'spain-barcelona') {
-                    $('.hover-dots').css({
-                        left: '412px',
-                        top: '304px'
-                    });
-                    $('.nm-x-fac').text('Fusion Point');
-                    $('.loc-x-fac').text('Barcelona, Spain');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/fusiopoint.png'; ?>');
-
-                } else if (dataValue == 'italy-bologna') {
-                    $('.hover-dots').css({
-                        left: '606px',
-                        top: '173px'
-                    });
-                    $('.nm-x-fac').text('Oper.Space');
-                    $('.loc-x-fac').text('Bologna, Italy');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/operspace.png'; ?>');
-                } else if (dataValue == 'israel') {
-                    $('.hover-dots').css({
-                        left: '707px',
-                        top: '237px'
-                    });
-                    $('.nm-x-fac').text('Design Factory Shenkar');
-                    $('.loc-x-fac').text('Tel-Aviv, Israel');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/dfs.png'; ?>');
-                } else if (dataValue == 'turkey-ankara') {
-                    $('.hover-dots').css({
-                        left: '692px',
-                        top: '196px'
-                    });
-                    $('.nm-x-fac').text('METU Design Factory');
-                    $('.loc-x-fac').text('Ankara, Türkiye');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/Metudf.png'; ?>.png');
-                } else if (dataValue == 'finland-espoo') {
-                    $('.hover-dots').css({
-                        left: '649px',
-                        top: '96px'
-                    });
-                    $('.nm-x-fac').text('Aalto Design Factory');
-                    $('.loc-x-fac').text('Espoo, Finland');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/df-2.png'; ?>');
-                } else if (dataValue == 'france-nantes') {
-                    $('.hover-dots').css({
-                        left: '423px',
-                        top: '251px'
-                    });
-                    $('.nm-x-fac').text('Design Factory Nantes');
-                    $('.loc-x-fac').text('Nantes, France');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/francenantes.png'; ?>');
-                } else if (dataValue == 'spain') {
-                    $('.hover-dots').css({
-                        left: '388px',
-                        top: '329px'
-                    });
-                    $('.nm-x-fac').text('UPV Design Factory');
-                    $('.loc-x-fac').text('Spain');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/upv.png'; ?>');
-                } else if (dataValue == 'lithuania-vilnius') {
-                    $('.hover-dots').css({
-                        left: '646px',
-                        top: '124px'
-                    });
-                    $('.nm-x-fac').text('VILNIUS TECH');
-                    $('.loc-x-fac').text('Vilnius, Lithuania');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/df-6.png'; ?>');
-                } else if (dataValue == 'nl-friesland') {
-                    $('.hover-dots').css({
-                        left: '460px',
-                        top: '192px'
-                    });
-                    $('.nm-x-fac').text('Future Design Factory');
-                    $('.loc-x-fac').text('Friesland, Netherlands');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/netherlanddf.png'; ?>');
-                } else if (dataValue == 'uk-manchester') {
-                    $('.hover-dots').css({
-                        left: '404px',
-                        top: '169px'
-                    });
-                    $('.nm-x-fac').text('Design Factory Manchester');
-                    $('.loc-x-fac').text('Manchester, UK');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/manchesterdf.png'; ?>');
-                } else if (dataValue == 'uk-london') {
-                    $('.hover-dots').css({
-                        left: '411px',
-                        top: '199px'
-                    });
-                    $('.nm-x-fac').text('Design Factory London');
-                    $('.loc-x-fac').text('London, UK');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/londondf.png'; ?>');
-                } else if (dataValue == 'latvia-riga') {
-                    $('.hover-dots').css({
-                        left: '658px',
-                        top: '118px'
-                    });
-                    $('.nm-x-fac').text('RTU Design Factory');
-                    $('.loc-x-fac').text('Riga, Latvia');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/rtu.png'; ?>');
-                } else if (dataValue == 'portugal-porto') {
-                    $('.hover-dots').css({
-                        left: '352px',
-                        top: '302px'
-                    });
-                    $('.nm-x-fac').text('Porto Design Factory');
-                    $('.loc-x-fac').text('Porto, Portugal');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/df_porto.png'; ?>');
-                } else if (dataValue == 'germany-stuttgart') {
-                    $('.hover-dots').css({
-                        left: '490px',
-                        top: '222px'
-                    });
-                    $('.nm-x-fac').text('Design Factory Stuttgart');
-                    $('.loc-x-fac').text('Stuttgart, Germany');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/df_stutgart.png'; ?>');
-                } else if (dataValue == 'germany') {
-                    $('.hover-dots').css({
-                        left: '501px',
-                        top: '194px'
-                    });
-                    $('.nm-x-fac').text('inno.space Design Factory Mannheim');
-                    $('.loc-x-fac').text('Germany');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/inno_space.png'; ?>');
-                } else if (dataValue == 'portugal') {
-                    $('.hover-dots').css({
-                        left: '347px',
-                        top: '325'
-                    });
-                    $('.nm-x-fac').text('Design Factory Aveiro');
-                    $('.loc-x-fac').text('Portugal');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/df-aveiro.png'; ?>');
-                } else if (dataValue == 'estonia-tartu') {
-                    $('.hover-dots').css({
-                        left: '658px',
-                        top: '105px'
-                    });
-                    $('.nm-x-fac').text('Sandbox University of Tartu');
-                    $('.loc-x-fac').text('Tartu, Estonia');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/sandbox.png'; ?>');
-                } else if (dataValue == 'italy-salerno') {
-                    $('.hover-dots').css({
-                        left: '622px',
-                        top: '197px'
-                    });
-                    $('.nm-x-fac').text('SEIUNISA');
-                    $('.loc-x-fac').text('Salerno, Italy');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/SEIUNISA.png'; ?>');
-                } else if (dataValue == 'swiss-geneva') {
-                    $('.hover-dots').css({
-                        left: '466px',
-                        top: '247px'
-                    });
-                    $('.nm-x-fac').text('CERN IdeaSquare');
-                    $('.loc-x-fac').text('Geneva, Switzerland');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/cern.png'; ?>');
-                } else if (dataValue == 'nyc') {
-                    $('.hover-dots').css({
-                        left: '602px',
-                        top: '183px'
-                    });
-                    $('.nm-x-fac').text('NYC Design Factory');
-                    $('.loc-x-fac').text('New York City, USA');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/NYCDF_logo-01.png'; ?>');
-
-                } else if (dataValue == 'queens') {
-                    $('.hover-dots').css({
-                        left: '576px',
-                        top: '203px'
-                    });
-                    $('.nm-x-fac').text('St. Johns University Design Factory');
-                    $('.loc-x-fac').text('Queens, USA');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/stqueensny.webp'; ?>');
-
-                } else if (dataValue == 'colombia-bogota') {
-                    $('.hover-dots').css({
-                        left: '585px',
-                        top: '378px'
-                    });
-                    $('.nm-x-fac').text('Design Factory Javeriana');
-                    $('.loc-x-fac').text('Bogota, Colombia');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/df-5.png'; ?>');
-                } else if (dataValue == 'colombia-cali') {
-                    $('.hover-dots').css({
-                        left: '557px',
-                        top: '391px'
-                    });
-                    $('.nm-x-fac').text('Cali Design Factory');
-                    $('.loc-x-fac').text('Cali, Colombia');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/cali_df-01.png'; ?>');
-
-                } else if (dataValue == 'chile-santiago') {
-                    $('.hover-dots').css({
-                        left: '599px',
-                        top: '578px'
-                    });
-                    $('.nm-x-fac').text('DDHUB - Duoc Design Hub');
-                    $('.loc-x-fac').text('Santiago, Chile');
-                    $('#img-x-fac').attr('src', '<?php echo get_template_directory_uri() . '/assets/img/assets/df/ddhub.png'; ?>');
-
-                } else if (dataValue == 'chile-concepcion') {
-                    $('.hover-dots').css({
-                        left: '596px',
-                        top: '583px'
-                    });
-                    $('.nm-x-fac').text('iCubo UDD');
-                    $('.loc-x-fac').text('Concepción, Chile');
-                    $('#img-x-fac').attr('src', 'img/assets/df/icubo.png');
-
-                }
-            }
+            console.log(dataValue);
+            
+                $.ajax({
+                    url: '<?php echo admin_url('admin-ajax.php'); ?>',
+                    type: 'POST',
+                    data: {
+                        action: 'get_factory',
+                        slug: dataValue,
+                        mapCek: dataCek,
+                    },
+                    success: function(response) {
+                        var data = JSON.parse(response);
+                        console.log(response)
+                        if (data.error) {
+                            alert(data.error);
+                        } else {
+                            $('.hover-dots').css('display', 'flex').animate({
+                                opacity: 1
+                            }, 100);
+                            $('.hover-dots').css({
+                                left: data.cx,
+                                top: data.cy
+                            });
+                            $('.nm-x-fac').text(data.title);
+                            $('.loc-x-fac').text(data.location);
+                            $('#img-x-fac').attr('src', data.image);
+                            $('.tolink').attr('data-id', data.tolink);
+                        }
+                       
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('AJAX error:', status, error);
+                    }
+                });
 
         });
 
@@ -1869,6 +1645,28 @@
 
         $(".dots-map-dob").click(function() {
             var selectedContinent = "m-europe";
+            $('.continent').css('display', 'none').animate({
+                opacity: 0
+            }, 500);
+            $('#' + selectedContinent).css('display', 'inline-block').animate({
+                opacity: 1
+            }, 500);
+            // $('.continent').fadeOut();
+            // $('#' + selectedContinent).fadeIn();
+
+            $('.box-dots').css('display', 'none').animate({
+                opacity: 0
+            }, 500);
+            // $('.box-dots').fadeOut();
+            // $('#b-' + selectedContinent).fadeIn();
+            $('#b-' + selectedContinent).css('display', 'block').animate({
+                opacity: 1
+            }, 500);
+        });
+
+        $(document).on('click', '#back_continent', function() {
+        
+            var selectedContinent = "m-full";
             $('.continent').css('display', 'none').animate({
                 opacity: 0
             }, 500);
@@ -1995,211 +1793,7 @@
         animateMarquee(); // Mulai animasi pertama kali
     });
 </script>
-<script>
-    gsap.registerPlugin(ScrollTrigger, MorphSVGPlugin, ScrollSmoother);
 
-    var endShape = document.getElementById("pat2");
-
-
-
-        // var txtl = gsap.timeline({
-        //     scrollTrigger: {
-        //     trigger: ".df-in-numbers",
-        //     scrub: 1,
-        //     // markers: true,
-        //     start: "50 top",
-        //     end: "+=100%",
-        //     toggleActions: 'play none none none'
-        //     },
-        // });
-
-        // txtl.from(".fsec-title", {
-        //     y: "100%",
-        //     opacity: 1,
-        //     stagger: 0.3,
-        //     duration: 1.2,
-        //     delay: 0.6,
-        //     ease: "power4.out",
-        //     stagger: {
-        //         each: 0.3,
-        //         from: "start",
-        //         ease: "none"
-        //     }
-        // });
-
-        // var t_fade = gsap.timeline({
-        //     scrollTrigger: {
-        //     trigger: ".title-fade",
-        //     scrub: 1,
-        //     // markers: true,
-        //     start: "top top",
-        //     end: "+=100%",
-        //     toggleActions: 'play none none none'
-        //     },
-        // });
-
-        // t_fade.from(".fade-tile, .text", {
-        //     y: "100%",
-        //     opacity: 1,
-        //     stagger: 0.3,
-        //     duration: 1.2,
-        //     delay: 0.6,
-        //     ease: "power4.out",
-        //     stagger: {
-        //         each: 0.3,
-        //         from: "start",
-        //         ease: "none"
-        //     }
-        // });
-
-
-    gsap.set("#patdots", {
-        transformOrigin: "top top",
-        translate: "-150px -170px",
-        scale: 0.9
-    });
-    gsap.set("#pat1", {
-        transformOrigin: "top top",
-        translate: "-125px -170px",
-        opacity: 1,
-        visibility: "visible",
-        scale: 0.9
-    });
-
-    gsap.set(endShape, {
-        scale: 0.2,
-        transformOrigin: "center center",
-        opacity: 0,
-        visibility: "hidden",
-    });
-    gsap.set("#pat3", {
-        scale: 0.2,
-        transformOrigin: "center center",
-        opacity: 0,
-        visibility: "hidden",
-    });
-    var tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".slider-scroll",
-            scrub: 1,
-            pin: true,
-            // markers: true,
-            start: "-60 top",
-            end: "+=100%",
-            // toggleActions: "play pause play reset",
-        },
-    });
-
-    tl.to("#pat1", {
-        morphSVG: {
-            shape: "#pat2",
-            type: "rotational",
-            origin: "50% 70%",
-            // map: "complexity"
-        },
-        translate: "-55px 0px",
-        duration: 1,
-        delay: 1,
-        ease: "Power0.easeNone",
-        scale: 0.89,
-
-    });
-
-    tl.to("#pat1", {
-        morphSVG: {
-            shape: "#pat3",
-            type: "rotational",
-            origin: "65% 60%",
-        },
-        duration: 3,
-        translate: "0px 0px",
-        ease: "power3.in",
-        scale: 2,
-        opacity: 0.6,
-        visibility: "visible",
-
-    });
-
-
-
-    gsap.to(".main-text-ab", {
-        scrollTrigger: {
-            trigger: "#pat3",
-            start: "300 top",
-            end: "+=100%",
-            scrub: 1,
-            // markers:true,
-
-        },
-        visibility: "visible",
-        delay: 3,
-        duration: 3,
-        ease: "power1.out",
-        yPercent: -100
-
-    });
-    gsap.set("#patlonj", {
-        transformOrigin: "center center",
-        translate: "-64% -36px",
-    });
-    gsap.to("#patlonj", {
-        scrollTrigger: {
-            trigger: ".slide-frist",
-            start: "top top",
-            end: "+=100",
-            scrub: 3,
-            // markers:true,
-
-        },
-        x: "-180%",
-        // x: "-100%", // Geser ke kiri sejauh 100%
-        duration: 3,
-        delay: 3,
-        ease: "power1.out",
-
-    });
-
-    gsap.set("#s-yellow", {
-        translate: "64.5% -12px",
-        scale: 0.9
-    });
-    gsap.to("#s-yellow, #patdots", {
-        scrollTrigger: {
-            trigger: ".slide-frist",
-            start: "top top",
-            end: "+=100",
-            scrub: 3,
-            // markers:true
-
-        },
-        x: "-350%",
-        // x: "-100%", // Geser ke kiri sejauh 100%
-        duration: 3,
-        delay: 3,
-        ease: "power1.out",
-
-    });
-   
-  
-
-
-    gsap.to(".text-ss", {
-        scrollTrigger: {
-            trigger: ".menu-area",
-            start: "top top",
-            end: "+=100",
-            scrub: 3,
-            // markers:true,
-
-        },
-        y: "-80%",
-        // x: "-100%", // Geser ke kiri sejauh 100%
-        duration: 3,
-        ease: "power1.out",
-        opacity: 0,
-
-    });
-</script>
 <script>
     // Function to format numbers
     function formatNumber(num) {

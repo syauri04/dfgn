@@ -136,6 +136,10 @@ function add_script()
 
    wp_enqueue_script( 'ScrollSmoother');
 
+   wp_register_script('Drag', get_template_directory_uri() . '/assets/js/minified/Draggable.min.js', array ( 'jquery' ), 1.1, true);
+
+   wp_enqueue_script( 'Drag');
+
    wp_register_script('awselect', get_template_directory_uri() . '/assets/js/awselect.js', array ( 'jquery' ), 1.1, true);
 
    wp_enqueue_script( 'awselect');
@@ -177,6 +181,103 @@ function df_post_type(){
 
 add_action('init', 'df_post_type', 20);
 
+function event_post_type(){
+   register_post_type('events-posts', array(
+         'public' => true,
+         'supports' => array('title'),
+         'labels' => array(
+            'name' => 'Events Post',
+            'add_new_item' => 'Add New Events',
+            'edit_item' => 'Edit Events',
+            'all_items' => 'All Events'
+         ),
+         'menu_icon' => 'dashicons-list-view'
+   ));
+
+   
+}
+
+add_action('init', 'event_post_type', 20);
+
+
+function get_factory(){
+   if (isset($_POST['slug'])) {
+         $slug = sanitize_text_field($_POST['slug']);
+         $mapCek = sanitize_text_field($_POST['mapCek']);
+
+         // Query post by slug
+         $args = array(
+            'name'        => $slug,
+            'post_type'   => 'design-factories',
+            'post_status' => 'publish',
+            'numberposts' => 1
+         );
+         $post = get_posts($args);
+
+         // Check if post exists
+         if ($post) {
+            $post_id = $post[0]->ID;
+          
+            // Get post data
+            $title = get_the_title($post_id);
+            $city = get_field('city',$post_id);
+            if($city != ''){
+               $city_n = $city.', ';
+            }else{
+                  $city_n = '';
+            }
+            $countries = get_field('countries',$post_id);
+            $continents = get_field('continents',$post_id);
+            $location = $city_n. $countries;
+            
+            $image = get_field('df_logo',$post_id);
+            if($mapCek == 'full'){
+               if($continents == 'Asia pacific'){
+                  $cx = '46%';
+               }else{
+                  $cx_hov = get_field('cx',$post_id)-10;
+                  $cx = $cx_hov.'%';
+               }
+              
+               $cy = get_field('cy',$post_id).'%';
+            }else{
+               if($slug == 'design-factory-nz' OR $slug == 'nandin-innovation-centre' OR $slug == 'swinburne-design-factory-melbourne'){
+                  $cx = '46%';
+                  $cy = '85.4%';
+               }else{
+                  $cx_hov = get_field('cx_per_continents',$post_id)-10;
+                  $cx = $cx_hov.'%';
+
+                  $cy = get_field('cy_per_continents',$post_id).'%';
+               }
+               
+            }
+            
+
+            // Return data as JSON
+            echo wp_json_encode(array(
+               'title' => $title,
+               'continents' => $continents ,
+               'location'  => $location,
+               'image' => $image,
+               'tolink' => $slug,
+               'cx' => $cx,
+               'cy' => $cy
+
+            ));
+         } else {
+            echo json_encode(array('error' => 'Post not found'));
+         }
+   } else {
+         echo json_encode(array('error' => 'No slug provided'));
+   }
+
+   wp_die();
+ 
+    
+}
+add_action('wp_ajax_get_factory', 'get_factory');
+add_action('wp_ajax_nopriv_get_factory', 'get_factory'); 
 
 
 function check_passcode(){
@@ -200,6 +301,111 @@ add_action('wp_ajax_check_passcode', 'check_passcode');
 add_action('wp_ajax_nopriv_check_passcode', 'check_passcode');  
 
 
+function sort_posts(){
+      $sort_by = $_POST['sort_by'];
+      if ($sort_by === 'sort_chronological') {
+          $listdf = new WP_Query(
+              array(
+                  'post_type' => 'design-factories',
+                  'meta_key'        => 'year_of_joining',
+                  'orderby'        => 'meta_value_num',
+                  'order'          => 'ASC',
+                  'posts_per_page' => -1
+              )
+          );
+      } elseif ($sort_by === 'sort_alphabet') {
+          $listdf = new WP_Query(
+              array(
+                  'post_type' => 'design-factories',
+                  'orderby'        => 'title',
+                  'order'          => 'ASC',
+                  'posts_per_page' => -1
+              )
+          );
+      }
+
+     
+      if ($listdf->have_posts()) :
+         $index = 1;
+         while ($listdf->have_posts()) : $listdf->the_post(); 
+            $continents = get_field('continents');
+            $code_aplha = get_field('alpha_code_countries').'.svg';
+            $post_id = get_the_ID();
+            
+            $uniqe_focus = get_field('unique_focus');
+            $signature_focus = get_field('signature_courses');
+            $collaboration_focus = get_field('collaboration_partners');
+
+            $city = get_field('city');
+            if($city != ''){
+               $city_n = $city.',';
+            }else{
+               $city_n = '';
+            }
+      
+            if($continents == "Europe and the middle east"){
+               $class_continents = 'europe';
+            }else  if($continents == "Americas"){
+               $class_continents = 'america';
+            }else  if($continents == "Asia pacific"){
+               $class_continents = 'asia';
+            }
+            echo '<div class="col-xl-6 col-md-6 grid-facto '.$class_continents.'">';
+               echo '<div class="factory-box">';
+                  echo '<div class="f-top">';
+                     echo '<div class="f-country">';
+                      echo '<img src="'.get_template_directory_uri().'/assets/img/assets/country/flags/'.$code_aplha.'" alt="">';
+                      echo   '<span>'.$city_n.' '.get_field('countries').'</span>';
+                     echo '</div>';
+                     echo '<div class="f-year">';
+                        echo '<span>'.the_field('year_of_joining').'</span>';
+                     echo '</div>';
+                  echo '</div>';
+
+              echo '<div class="f-bottom">';
+                  echo '<div class="f-factories">';
+                      echo '<img src="'.get_field('df_logo').'" alt="">';
+                  echo '</div>';
+                  echo '<div class="f-factories-name">';
+                      echo '<span>'.get_the_title().'</span>';
+                      echo '<ul>';
+                         
+                          echo '<li class="mr-0"><a href="" class="rm" data-toggle="modal" data-target="#pop_df_'.$index.'" data-id="'.$post_id.'">Read more</a></li>';
+
+                      echo '</ul>';
+                  echo '</div>';
+              echo '</div>';
+              
+              echo '<div class="f-profil">';
+                  echo '<div class="inn-left">';
+                      
+                      echo '<div class="user-image" style="background: linear-gradient(0deg, #0C1618 0%, #0C1618 100%), url('.get_field('picture').') lightgray 50% / cover no-repeat;">';
+                          
+                      echo '</div>';
+                      echo '<span>'.get_field('contact').'</span>';
+                  echo '</div>';
+                  echo '<div class="inn-right">';
+                      echo '<a href="#"><img src="'.get_template_directory_uri().'/assets/img/assets/df/icw_linkedin.png'.'" alt=""></a>';
+                      echo '<a href="mailto:'.get_field('email_of_cp').'"><img src="'.get_template_directory_uri().'/assets/img/assets/df/icw_email.png'.'" alt=""></a>';
+
+                  echo '</div>';
+              echo '</div>';
+         echo '</div>';
+      echo '</div>';
+         endwhile;
+         wp_reset_postdata();
+      else :
+         echo '<p>No posts found</p>';
+      endif;
+   
+      wp_die();
+ 
+    
+}
+add_action('wp_ajax_sort_posts', 'sort_posts');
+add_action('wp_ajax_nopriv_sort_posts', 'sort_posts');
+
+
  
 
 function change_default_title_placeholder( $title ) {
@@ -207,6 +413,8 @@ function change_default_title_placeholder( $title ) {
 
    if ( 'design-factories' == $screen->post_type ) { // Ganti 'custom_post_type' dengan nama custom post type Anda
        $title = 'Enter DF Name';
+   }else if('events-posts' == $screen->post_type){
+      $title = 'Title Events';
    }
 
    return $title;

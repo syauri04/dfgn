@@ -132,6 +132,8 @@ html, body{
 }
 .res_overly_info .title_res_ct{
 	width: 239px;
+	display: flex;
+    align-items: center;
 }
 
 .res_overly_info .title_res_ct h1{
@@ -1003,7 +1005,7 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
 	right: 31.5%;
     top: 29.9%;
     z-index: 2;
-    opacity: .8;
+    opacity: .9;
 }
 #pink-bulet-ev path{
 	scale: 0.89;
@@ -1060,6 +1062,8 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
 }
 .mon{
 	width: 60%;
+	display: flex;
+    align-items: center;
 }
 .mon span{
 	color: #FFF;
@@ -1118,7 +1122,7 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
 .box-train {
     border-radius: 108px;
 	width: 100%;
-    min-height: 690px;
+    height: 610px;
     padding: 86px;
     position: relative;
 }
@@ -1198,6 +1202,12 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
 	line-height: 23.408px; /* 23.408px */
 }
 /* MAP SVG */ 
+.btn-back-map{
+	text-align: right;
+}
+.btn-back-map svg:hover{
+	cursor: pointer;
+}
 .box-dots{
 	position: absolute;
 	width: 90%;
@@ -1207,7 +1217,7 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
     transform: translate(-50%, -50%);
 }
 .box-dots .dots-map{
-    position: relative;
+    position: absolute;
     
     width: 10.872px;
     height: 10.882px;
@@ -1342,7 +1352,7 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
 
  /* POP UP FACTORY */
 .factory-detail{
-	max-width: 1440px;
+	max-width: 1280px;
 }
 .factory-detail .modal-content{
 	border-radius: 108px;
@@ -1363,9 +1373,9 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
 	margin-top: -1px;
 	font-weight: 700;
 	color: #FFFFFF;
-	font-size: 20px;
+	font-size: 16px;
 	letter-spacing: 0;
-	line-height: 29.3px;
+    line-height: 23.408px;
 }
 .text .text-wrapper-2{
 	position: relative;
@@ -1373,17 +1383,17 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
 	margin-top: -1px;
 	font-weight: 700;
 	color: #FFFFFF;
-	font-size: 20px;
+	font-size: 16px;
 	letter-spacing: 0;
-	line-height: 29.3px;
+    line-height: 23.408px;
 	white-space: nowrap;
 }
 .text p{
 	color: #FFF;
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 146.3%; /* 29.26px */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23.408px;
 }
 .body-pop{
 	padding: 50px;
@@ -1395,7 +1405,7 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
 .body-pop .innerf .fussion-title{
 	flex: 1 0;
 	color: #FFF;
-	font-size: 32px;
+	font-size: 24px;
 	font-style: normal;
 	font-weight: 700;
 	line-height: normal;
@@ -1443,7 +1453,7 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
 }
 .df-institue p{
 	color: #FFF;
-	font-size: 20px;
+	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
@@ -1458,7 +1468,7 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
 .btn-f-web a{
 	color: #FFF;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -1474,14 +1484,14 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
 }
 .somd p{
 	color: #FFF;
-	font-size: 20px;
+	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
 }
 .somd h1{
 	color: #FFF;
-	font-size: 20px;
+	font-size: 14px;
 	font-style: normal;
 	font-weight: 700;
 	line-height: normal;
@@ -1711,9 +1721,9 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
 }
 
 .factory-box .f-bottom .f-factories-name{
-	max-width: 350px;
+	max-width: 230px;
 	color: #FFF;
-	font-size: 24px;
+	font-size: 22px;
 	font-style: normal;
 	font-weight: 700;
 	line-height: normal;
@@ -2160,6 +2170,9 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
     right: 187px;
     /* width: 440px; */
 }
+#yellow-path-2{
+	position: absolute;
+}
 #svg-main{
 	position: absolute;
 }
@@ -2179,7 +2192,12 @@ background: linear-gradient(90deg, #119DA4 0%, #A4A2E0 100%);
 	mask-image: url(#mask);
 
 }
-
+/* .main-slide-scroll{
+	max-width: 1280px;
+	margin: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+} */
 
 .slide-frist{
 	position: relative;
